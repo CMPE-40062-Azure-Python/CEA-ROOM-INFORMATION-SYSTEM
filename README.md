@@ -1,7 +1,5 @@
 # CEA Room Information System
 
-**Description:** GUI-based web application for efficient room management within PUP's College of Engineering and Architecture (CEA) building.
-
 ---
 
 ## Table of Contents
