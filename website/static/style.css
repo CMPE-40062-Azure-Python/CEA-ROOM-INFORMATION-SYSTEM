@@ -8,8 +8,9 @@ body {
 }
 
 .center-box {
-  width: 1150px;
-  height: 742.4px;
+  width: 100%; /* Use full width on smaller screens */
+  max-width: 1400px; /* Limit the width for larger screens */
+  height: 958px;
   background-color: #fffff2;
   text-align: center;
   line-height: 200px;
@@ -19,6 +20,26 @@ body {
   justify-content: center;
 }
 
-.text {
+.body-text {
   color: #810403;
+}
+
+.pup-logo {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin-bottom: 0px;
+  margin: 0 auto;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .center-box {
+    line-height: 100px;
+  }
+
+  .pup-logo {
+    width: 150px;
+    height: 150px;
+  }
 }
