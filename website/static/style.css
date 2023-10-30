@@ -8,8 +8,8 @@ body {
 }
 
 .center-box {
-  width: 100%; /* Use full width on smaller screens */
-  max-width: 1400px; /* Limit the width for larger screens */
+  width: 100%;
+  max-width: 1400px;
   height: 958px;
   background-color: #fffff2;
   text-align: center;
@@ -18,6 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .body-text {
@@ -32,14 +33,92 @@ body {
   margin: 0 auto;
 }
 
+.landing-page-button {
+  justify-content: center;
+  background: linear-gradient(to bottom, #66819e, #58597d);
+  border: 30px solid #3b4652;
+  border-width: 5px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  height: 145px;
+  width: 150px;
+  border-radius: 20%;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.login-redirect-image {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -5px;
+}
+
+.redirect-img-text {
+  font-size: 15px;
+  color: #fffff2;
+}
+
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #612d39;
+  }
   .center-box {
-    line-height: 100px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: #fffff2;
+    text-align: center;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .body-text {
+    color: #810403;
   }
 
   .pup-logo {
-    width: 150px;
-    height: 150px;
+    width: 60%;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .landing-page-button {
+    background: linear-gradient(to bottom, #66819e, #58597d);
+    border: none;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    height: auto;
+    width: 70%;
+    border-radius: 10px;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .login-redirect-image {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .redirect-img-text {
+    font-size: 12px;
+    color: #fffff2;
   }
 }

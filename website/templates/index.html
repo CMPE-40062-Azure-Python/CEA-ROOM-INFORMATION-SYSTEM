@@ -19,10 +19,37 @@
         src="{{ url_for('static', filename='images/pup_logo.png') }}"
         alt="PUP LOGO"
       />
-      <h1 class="body-text" style="font-size: 20px">
+      <h1 class="body-text" style="font-size: 30px; margin-bottom: -100px">
         CEA ROOM INFORMATION SYSTEM
       </h1>
-      <h2></h2>
+      <h2 class="body-text" style="font-size: 20px">CHOOSE DESTINATION:</h2>
+      <div class="button-row" style="margin-top: -60px">
+        <button
+          class="landing-page-button"
+          id="studentRepButton"
+          data-route="{{ url_for('views.student_rep') }}"
+        >
+          <img
+            class="login-redirect-image"
+            src="{{ url_for('static', filename='images/student-rep-redirect-img.png') }}"
+            alt="STUDENT REP REDIRECT"
+          />
+          <h3 class="redirect-img-text">STUDENT REP</h3>
+        </button>
+
+        <button
+          class="landing-page-button"
+          id="adminButton"
+          data-route="{{ url_for('views.admin') }}"
+        >
+          <img
+            class="login-redirect-image"
+            src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
+            alt="STUDENT REP REDIRECT"
+          />
+          <h3 class="redirect-img-text">ADMIN</h3>
+        </button>
+      </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
