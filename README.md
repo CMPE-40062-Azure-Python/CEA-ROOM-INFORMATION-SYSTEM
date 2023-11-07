@@ -44,11 +44,15 @@ The CEA Room Information System is a versatile web-based application designed to
     ```
     Versions of installed Python and pip should be displayed.
 
-- On the root directory of the project, run the following command to install necessary [Python packages](https://github.com/Deep-Computer-Vision/image-data-asset-management-tool-deep-computer-vision-team/blob/main/requirements.txt) using pip.
+- On the root directory of the project, run the following command to install necessary [Python packages](https://github.com/CMPE-40062-Azure-Python/CEA-ROOM-INFORMATION-SYSTEM/blob/main/requirements.txt) using pip.
 
   ```
   pip install -r requirements.txt
   ```
+
+- Download python's latest version if error occurs (version mismatch):
+
+  https://www.python.org/downloads/
 
 - On the root directory of the project, run the following command to start the project.
 
