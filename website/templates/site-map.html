@@ -12,17 +12,88 @@
     />
   </head>
   <body>
-    <img
-      src="{{ url_for('static', filename='images/LANDING PAGE - SITEMAP.png') }}"
-      alt="Sitemap Image"
-    />
-    <img
-      src="{{ url_for('static', filename='images/LANDING PAGE - SITEMAP.png') }}"
-      alt="Sitemap Image"
-    />
-    <img
-      src="{{ url_for('static', filename='images/LANDING PAGE - SITEMAP.png') }}"
-      alt="Sitemap Image"
-    />
+    <div class="image-section clickable" onclick="bringToFront(this)">
+      <img
+        src="{{ url_for('static', filename='images/landing-page-not-logged-in.png') }}"
+        alt="landing-page-not-logged-in"
+      />
+    </div>
+    <div class="row-landing-page-redirects">
+      <div class="column-landing-page-redirects">
+        <div class="image-section clickable" onclick="bringToFront(this)">
+          <img
+            src="{{ url_for('static', filename='images/student-rep-dashboard.png') }}"
+            alt="student-rep-dashboard"
+          />
+        </div>
+        <div class="row-student-rep-admin-dashboard">
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/rooms-webpage.png') }}"
+              alt="rooms-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/my-reservations-webpage.png') }}"
+              alt="my-reservations-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/about-us-webpage.png') }}"
+              alt="about-us-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/student-rep-profile-webpage.png') }}"
+              alt="student-rep-profile-webpage"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="column-landing-page-redirects">
+        <div class="image-section clickable" onclick="bringToFront(this)">
+          <img
+            src="{{ url_for('static', filename='images/admin-dashboard.png') }}"
+            alt="admin-dashboard"
+          />
+        </div>
+        <div class="row-student-rep-admin-dashboard">
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/statistics-overview-webpage.png') }}"
+              alt="statistics-overview-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/user-management-webpage.png') }}"
+              alt="user-management-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/room-management-webpage.png') }}"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/reservation-management-webpage.png') }}"
+              alt="reservation-management-webpage"
+            />
+          </div>
+          <div class="image-section clickable" onclick="bringToFront(this)">
+            <img
+              src="{{ url_for('static', filename='images/admin-profile-webpage.png') }}"
+              alt="admin-profile-webpage"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='site-map.js') }}"></script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  background-color: #fffff2;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Set a fixed height for the container */
+  margin: 10px;
+  cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
+  position: relative; /* Establish a stacking context */
+  overflow: hidden; /* Hide any image overflow */
+}
+
+.image-section img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Maintain aspect ratio and fit within the container */
+  transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.image-section.clicked img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  min-width: 300px;
+  min-height: 250px;
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.row-landing-page-redirects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-landing-page-redirects {
+  flex: 1;
+  margin: 5px;
+}
+
+.row-student-rep-admin-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+}
