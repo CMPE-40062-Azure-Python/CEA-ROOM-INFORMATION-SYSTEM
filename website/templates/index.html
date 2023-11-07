@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>CEA Room Information System</title>
+    <title>CEA Room Information System (Beta)</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -48,6 +48,30 @@
             alt="STUDENT REP REDIRECT"
           />
           <h3 class="redirect-img-text">ADMIN</h3>
+        </button>
+        <button
+          class="landing-page-button"
+          id="siteMap"
+          data-route="{{ url_for('views.site_map') }}"
+        >
+          <img
+            class="login-redirect-image"
+            src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
+            alt="STUDENT REP REDIRECT"
+          />
+          <h3 class="redirect-img-text">SITE MAP</h3>
+        </button>
+        <button
+          class="landing-page-button"
+          id="useCases"
+          data-route="{{ url_for('views.use_cases') }}"
+        >
+          <img
+            class="login-redirect-image"
+            src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
+            alt="STUDENT REP REDIRECT"
+          />
+          <h3 class="redirect-img-text">USE CASES</h3>
         </button>
       </div>
     </div>

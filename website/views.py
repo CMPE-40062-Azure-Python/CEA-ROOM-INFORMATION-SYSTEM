@@ -14,3 +14,10 @@ def student_rep():
 def admin():
     return render_template("admin-login.html")
 
+@views.route('/site-map')
+def site_map():
+    return render_template("site-map.html")
+
+@views.route('/use-cases')
+def use_cases():
+    return render_template("use-cases.html")
