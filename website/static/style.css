@@ -9,7 +9,12 @@ body {
 
 .align-left {
   text-align: left;
-  margin-left: -1000px; /* Example: Move 20 pixels to the left */
+  margin-left: -900px;
+  margin-top: 100px;
+}
+
+.website-title {
+  margin-top: -80px;
 }
 
 .body-text {
@@ -22,15 +27,11 @@ body {
   height: 250px;
   margin-bottom: -10px;
   margin-top: -400px;
-  align-self: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.cearis-logo {
-  max-width: 300px;
-  height: 250px;
-  margin-bottom: -10px;
-  margin-top: -400px;
-  position: relative;
-  left: 50%; /* Move 50% of its container's width to the right */
-  transform: translateX(-50%); /* Centering based on its own width */
+.landing-page-side-bg {
+  align-items: right;
 }
