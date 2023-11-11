@@ -10,7 +10,7 @@ body {
 .align-left {
   text-align: left;
   margin-left: -900px;
-  margin-top: 150px;
+  margin-top: 250px;
 }
 
 .website-title {
@@ -71,4 +71,9 @@ body {
   margin: 10px;
   padding: 15px 20px;
   font-size: 16px;
+  background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
 }
