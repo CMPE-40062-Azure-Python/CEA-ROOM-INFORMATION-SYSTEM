@@ -7,74 +7,34 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
   <body>
-    <div class="center-box">
+    <div class="align-left">
       <img
         class="pup-logo"
         style="margin-bottom: -90px"
         src="{{ url_for('static', filename='images/cearis-logo.png') }}"
-        alt="PUP LOGO"
+        alt="CEARIS LOGO"
       />
       <h1 class="body-text" style="font-size: 30px; margin-bottom: -100px">
-        CEA ROOM INFORMATION SYSTEM
+        CEA<br />
+        ROOM INFORMATION SYSTEM
       </h1>
-      <h2 class="body-text" style="font-size: 20px">CHOOSE DESTINATION:</h2>
-      <div class="button-row" style="margin-top: -60px">
-        <button
-          class="landing-page-button"
-          id="studentRepButton"
-          data-route="{{ url_for('views.student_rep') }}"
-        >
-          <img
-            class="login-redirect-image"
-            src="{{ url_for('static', filename='images/student-rep-redirect-img.png') }}"
-            alt="STUDENT REP REDIRECT"
-          />
-          <h3 class="redirect-img-text">STUDENT REP</h3>
-        </button>
-
-        <button
-          class="landing-page-button"
-          id="adminButton"
-          data-route="{{ url_for('views.admin') }}"
-        >
-          <img
-            class="login-redirect-image"
-            src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
-            alt="STUDENT REP REDIRECT"
-          />
-          <h3 class="redirect-img-text">ADMIN</h3>
-        </button>
-        <button
-          class="landing-page-button"
-          id="siteMap"
-          data-route="{{ url_for('views.site_map') }}"
-        >
-          <img
-            class="login-redirect-image"
-            src="{{ url_for('static', filename='images/site-maps-img.png') }}"
-            alt="STUDENT REP REDIRECT"
-          />
-          <h3 class="redirect-img-text">SITE MAP</h3>
-        </button>
-        <button
-          class="landing-page-button"
-          id="useCases"
-          data-route="{{ url_for('views.use_cases') }}"
-        >
-          <img
-            class="login-redirect-image"
-            src="{{ url_for('static', filename='images/use-cases-img.png') }}"
-            alt="STUDENT REP REDIRECT"
-          />
-          <h3 class="redirect-img-text">USE CASES</h3>
-        </button>
-      </div>
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
