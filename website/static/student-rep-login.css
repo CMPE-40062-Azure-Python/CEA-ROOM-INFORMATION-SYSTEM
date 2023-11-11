@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffff;
+}
+
+.align-left {
+  text-align: left;
+  margin-left: -900px;
+  margin-top: 100px;
+}
+
+.website-title {
+  margin-top: -80px;
+}
+
+.body-text {
+  text-align: center;
+  color: #810403;
+}
+
+.cearis-logo {
+  max-width: 300px;
+  height: 250px;
+  margin-bottom: -10px;
+  margin-top: -400px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing-page {
+  position: relative;
+}
+
+.landing-page-side-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.landing-page-side-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

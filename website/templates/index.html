@@ -31,11 +31,14 @@
         </h2>
       </div>
     </div>
-    <img
-      class="landing-page-side-bg"
-      src="{{ url_for('static', filename='images/landing-page-side-bg.png') }}"
-      alt="landing-page-side-bg"
-    />
+    <div class="landing-page">
+      <div class="landing-page-side-bg">
+        <img
+          src="{{ url_for('static', filename='images/landing-page-side-bg.png') }}"
+          alt="landing-page-side-bg"
+        />
+      </div>
+    </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

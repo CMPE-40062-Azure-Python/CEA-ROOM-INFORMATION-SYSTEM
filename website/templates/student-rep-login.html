@@ -3,13 +3,47 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>CEARIS - Student Rep Module (Beta)</title>
+    <title>CEA Room Information System (Beta)</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="{{ url_for('static', filename='student-rep-login.css') }}"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="align-left">
+      <img
+        class="cearis-logo"
+        src="{{ url_for('static', filename='images/cearis-logo.png') }}"
+        alt="CEARIS LOGO"
+      />
+      <div class="website-title">
+        <h1 class="body-text" style="font-size: 30px">CEA</h1>
+        <h2 class="body-text" style="font-size: 20px">
+          ROOM INFORMATION SYSTEM
+        </h2>
+      </div>
+    </div>
+    <div class="landing-page">
+      <div class="landing-page-side-bg">
+        <img
+          src="{{ url_for('static', filename='images/landing-page-side-bg.png') }}"
+          alt="landing-page-side-bg"
+        />
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
