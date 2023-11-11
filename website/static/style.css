@@ -8,5 +8,29 @@ body {
 }
 
 .align-left {
-  left: 0;
+  text-align: left;
+  margin-left: -1000px; /* Example: Move 20 pixels to the left */
+}
+
+.body-text {
+  text-align: center;
+  color: #810403;
+}
+
+.cearis-logo {
+  max-width: 300px;
+  height: 250px;
+  margin-bottom: -10px;
+  margin-top: -400px;
+  align-self: center;
+}
+
+.cearis-logo {
+  max-width: 300px;
+  height: 250px;
+  margin-bottom: -10px;
+  margin-top: -400px;
+  position: relative;
+  left: 50%; /* Move 50% of its container's width to the right */
+  transform: translateX(-50%); /* Centering based on its own width */
 }
