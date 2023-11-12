@@ -36,16 +36,19 @@
     width: 35px;
     margin-right: auto;
     margin-left: 20px;
+    cursor: pointer;
   }
   .Logo {
     height: 50px;
     width: 50px;
+    cursor: pointer;
   }
   .Acc_Settings {
     height: 45px;
     width: 45px;
     margin-left: auto;
     margin-right: 20px;
+    cursor: pointer;
   }
   .Nav-bar {
     height: 80px;
@@ -71,6 +74,7 @@
   .Nav-left_img img{
     height: 35px;
     width: 35px;
+    cursor: pointer;
   }
   .Nav-left_text h1 {
     font-size: 16px;
@@ -118,8 +122,88 @@
     height: 30px;
     width: 30px;
     margin-right: 5px;
+    cursor: pointer;
 }
-.Home-Icon h2 {
+.Nav-Right-Content > div h2 {
     font-size: 15px;
     font-weight: 400;
+    cursor: pointer;
 }
+.Side-bar {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 750px;
+    margin-right: 0;
+    background-color: #810403;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-top: 4px solid #DBA729;
+  }
+  .Side-bar > .Rooms, .Reservations {
+    width: 220px;
+    height: 270px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    opacity: 4;
+    margin-top: 50px;
+  }
+  div.Reservations {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .Side-bar > .Reservations > .Reservation-img-Container {
+    width: 220px;
+    height: 270px;
+  }
+  .Side-bar > .Rooms > .Room-img-Container {
+    width: 220px;
+    height: 270px;
+  }
+  div.Reservation-img-Container {
+    width: 220px;
+    height: 270px;
+  }
+  .Side-bar > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
+    height: 100px;
+    width: 100px;
+  }
+  .Rooms > .Room-img-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Reservations > .Reservation-img-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   div.Rooms > .Rooms-bttn button {
+    height: 50px;
+    width: 220px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-top: -10px;
+    font-family: 'Cardo-Regular', sans-serif;
+    font-size: 1.1rem;
+    color: #810403;
+    cursor: pointer;
+  }
+  div.Reserve-bttn button {
+    height: 50px;
+    width: 220px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-top: -10px;
+    font-family: 'Cardo-Regular', sans-serif;
+    font-size: 1.1rem;
+    color: #810403;
+    cursor: pointer;
+  }
