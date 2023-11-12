@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  div {
+    display: block;
+  }
+  body {
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #ffffff, #dfdfdf);
+    margin: auto;
+    padding: 0;
+    height: auto;
+    overflow: auto;
+  }
+  .Nav-upper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Menu_icon {
+    height: 40px;
+    width: 40px;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .Logo {
+    height: 50px;
+    width: 50px;
+  }
+  .Acc_Settings {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
