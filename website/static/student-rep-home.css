@@ -47,12 +47,18 @@
     margin-left: auto;
     margin-right: 20px;
   }
+  .Nav-bar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
   .Nav-left {
     display: flex;
     align-items: center;
     width: 270px;
     height: 80px;
-    margin-right: auto;
+    margin-right: 0;
     background-color: #ffffff;
     margin-top: 5px;
   }
@@ -88,3 +94,32 @@
     flex-direction: column;
     margin-left: 10px;
   }
+  .Nav-bar > .Nav-Right {
+    width: calc(100% - 270px);
+    height: 80px;
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .Nav-Right > .Nav-Right-Content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .Nav-Right-Content > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.Nav-Right-Content > div img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+.Home-Icon h2 {
+    font-size: 15px;
+    font-weight: 400;
+}
