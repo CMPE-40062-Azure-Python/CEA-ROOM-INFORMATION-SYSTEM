@@ -11,5 +11,26 @@
       href="{{ url_for('static', filename='admin-login.css') }}"
     />
   </head>
-  <body></body>
+  <body>
+    <div class="background-login">
+      <div class="login-credentials-container">
+        <div class="text-login-credentials">
+          <h1 class="student-rep-text" style="font-size: 12px">CEA RIS - STUDENT REPRESENTATIVE MODULE</h1>
+          <div class="logo-login"> 
+          <img
+          src="{{ url_for('static', filename='images/cearis-logo.png') }}"
+          alt="cearis-logo">
+          </div>
+          <div class="student-number-alignment">  
+            <div class="student-number-input"> <input type="text" placeholder="Student Number"> </div>
+          </div>
+          <div class="password-alignment">  
+            <div class="password-input"> <input type="password" placeholder="Password"> </div>
+          </div>
+        </div>
+        <div class="top-designer"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
