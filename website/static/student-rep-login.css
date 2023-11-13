@@ -1,52 +1,101 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #ffff;
+  margin: 0px;
+  padding: 0px;
+
 }
 
-.align-left {
-  text-align: left;
-  margin-left: -900px;
+.background-login {
+  background-image: url('images/landing-page-full.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+}
+
+.login-credentials-container {
+  width: 564px;
+  height: 439px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-designer {
+  width: 564px;
+  height: 22.24px;
+  flex-shrink: 0;
+  background: #DBA729;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.student-rep-text {
+  text-align: center;
+  color: #810403;
   margin-top: 100px;
 }
 
-.website-title {
-  margin-top: -80px;
+.logo-login {
+  position: absolute; /* Change to absolute to position it inside .login-credentials-container */
+  top: 60px; /* Adjust the top position as needed */
+  right: 252px; /* Adjust the right position as needed */
+  width: 50px;
+  height: 50px;
+  
 }
 
-.body-text {
-  text-align: center;
-  color: #810403;
-}
+.logo-login img {
 
-.cearis-logo {
-  max-width: 300px;
-  height: 250px;
-  margin-bottom: -10px;
-  margin-top: -400px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.landing-page {
-  position: relative;
-}
-
-.landing-page-side-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100vh;
-  overflow: hidden; /* Ensure the image doesn't overflow */
-}
-
-.landing-page-side-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.student-number-input {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.student-number-input :focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.student-number-alignment {
+  text-align: left;
+  color: #810403;
+  margin-top: 70px;
+}
+
+.password-input {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+
+.password-input :focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.password-alignment {
+  text-align: left;
+  color: #810403;
+  margin-top: 10px;
 }

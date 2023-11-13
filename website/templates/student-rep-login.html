@@ -14,36 +14,29 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
+      href="{{ url_for('static', filename='student-rep-login.css') }}"
     />
   </head>
   <body>
-    <div class="align-left">
-      <img
-        class="cearis-logo"
-        src="{{ url_for('static', filename='images/cearis-logo.png') }}"
-        alt="CEARIS LOGO"
-      />
-      <div class="website-title">
-        <h1 class="body-text" style="font-size: 30px">CEA</h1>
-        <h2 class="body-text" style="font-size: 20px">
-          ROOM INFORMATION SYSTEM
-        </h2>
+    <div class="background-login">
+      <div class="login-credentials-container">
+        <div class="text-login-credentials">
+          <h1 class="student-rep-text" style="font-size: 12px">CEA RIS - STUDENT REPRESENTATIVE MODULE</h1>
+          <div class="logo-login"> 
+          <img
+          src="{{ url_for('static', filename='images/cearis-logo.png') }}"
+          alt="cearis-logo">
+          </div>
+          <div class="student-number-alignment">  
+            <div class="student-number-input"> <input type="text" placeholder="Student Number"> </div>
+          </div>
+          <div class="password-alignment">  
+            <div class="password-input"> <input type="password" placeholder="Password"> </div>
+          </div>
+        </div>
+        <div class="top-designer"></div>
+        </div>
       </div>
     </div>
-    <div class="landing-page">
-      <div class="landing-page-side-bg">
-        <img
-          src="{{ url_for('static', filename='images/landing-page-side-bg.png') }}"
-          alt="landing-page-side-bg"
-        />
-      </div>
-    </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
