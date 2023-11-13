@@ -9,12 +9,12 @@ body {
 
 .align-left {
   text-align: left;
-  margin-left: -900px;
+  margin-left: -60%;
   margin-top: 250px;
 }
 
 .website-title {
-  margin-top: -130px;
+  margin-top: -110px;
 }
 
 .body-text {
@@ -23,9 +23,9 @@ body {
 }
 
 .cearis-logo {
-  max-width: 300px;
-  height: 200px;
-  margin-top: -500px;
+  max-width: 500px;
+  height: 300px;
+  margin-top: -550px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -68,12 +68,27 @@ body {
 }
 
 .redirect-login-buttons button {
+  position: relative;
+  overflow: hidden;
   margin: 10px;
   padding: 15px 20px;
   font-size: 16px;
-  background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 12px;
+  background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
+  width: 250px;
+  padding-left: 60px;
+}
+
+.redirect-login-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%; /* Positioned at 30% from the left */
+  bottom: 0;
+  width: 3%; /* 20% of the button's width */
+  background: #dba729;
+  z-index: 1;
 }
