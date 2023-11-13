@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='student-rep-home.css') }}"/>
+</head>
+<body>
+    <div class="Nav-upper">
+        <img 
+        class="Menu_icon"
+        src="{{ url_for('static', filename='images/student-rep-menu.png') }}"
+        alt="Menu Icon"
+        />
+        <img 
+        class="Logo"
+        src="{{ url_for('static', filename='images/cearis-logo.png') }}"
+        alt="CEA RIS Logo"
+        />
+        <img 
+        class="Acc_Settings"
+        src="{{ url_for('static', filename='images/student-rep-account.png') }}"
+        alt="Account Settings"
+        />
+    </div>
+    <div class="Nav-bar">
+        <div class="Nav-left">
+            <div class="Nav-left_Content">
+                <div class="Nav-left_img">
+                    <img
+                    class="Acc_Edit"
+                    src="{{ url_for('static', filename='images/student-rep-acc_edit.png') }}"
+                    alt="Account Edit"
+                />
+                </div>
+                <div class="Nav-left_text">
+                    <h1><B>CEA RIS</B></h1>
+                    <h2>STUDENT REPRESENTATIVE MODULE</h2>
+                </div>
+            </div>
+        </div>
+        <div class="Nav-Right">
+            <div class="Nav-Right-Content">
+                <div class="Home-Icon">
+                    <img 
+                class="Home-bttn"
+                src="{{ url_for('static', filename='images/student-rep-home-icon.png') }}"
+                alt="Home Button"
+                />
+                <h2>Home</h2>
+                </div>
+                <div class="Home-Icon">
+                    <img 
+                class="Home-bttn"
+                src="{{ url_for('static', filename='images/student-rep-policies-icon.png') }}"
+                alt="Policies Button"
+                />
+                <h2>Policies</h2>
+                </div>
+                <div class="Home-Icon">
+                    <img 
+                class="Home-bttn"
+                src="{{ url_for('static', filename='images/student-rep-faqs-icon.png') }}"
+                alt="FAQs"
+                />
+                <h2>FAQs</h2>
+                </div>
+                <div class="Home-Icon">
+                    <img 
+                class="Home-bttn"
+                src="{{ url_for('static', filename='images/student-rep-us-icon.png') }}"
+                alt="About Us Button"
+                />
+                <h2>About Us</h2>
+                </div>
+                <div class="Home-Icon">
+                    <img 
+                class="Home-bttn"
+                src="{{ url_for('static', filename='images/student-rep-contact-icon.png') }}"
+                alt="Contact Us Button"
+                />
+                <h2>Contact Us</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Side-bar">
+        <div class="Rooms">
+            <div class="Room-img-Container">
+                <img 
+                class="Rooms-img"
+                src="{{ url_for('static', filename='images/student-rep-rooms.png') }}"
+                alt="Rooms Image"
+                />
+        </div>
+        <div class="Rooms-bttn">
+            <button onclick="handleRoomsButtonClick()">
+                Rooms
+            </button>
+        </div>
+        <div class="Reservations">
+            <div class="Reservation-img-Container">
+                <img 
+                class="Reserve-img"
+                src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
+                alt="My Reservation Image"
+                />
+            </div>
+            <div class="Reserve-bttn">
+                <button onclick="handleReservationsButtonClick()">
+                    My Reservation
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
