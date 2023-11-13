@@ -37,14 +37,17 @@
         </h3>
       </div>
       <div class="redirect-login-buttons">
-        <button>
+        <button
+          id="studentRepButton"
+          data-route="{{ url_for('views.student_rep') }}"
+        >
           STUDENT REPRESENTATIVE
           <img
             src="{{ url_for('static', filename='images/student-rep-redirect-img.png') }}"
             alt="student-rep-redirect-img"
           />
         </button>
-        <button>
+        <button id="adminButton" data-route="{{ url_for('views.admin') }}">
           ADMINISTRATOR
           <img
             src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
