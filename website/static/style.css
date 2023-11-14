@@ -7,25 +7,34 @@ body {
   background-color: #ffff;
 }
 
+@font-face {
+  font-family: "Cardo-Regular";
+  src: url("../static/fonts/Cardo-Regular.ttf") format("truetype");
+}
+
 .align-left {
   text-align: left;
-  margin-left: -900px;
-  margin-top: 250px;
+  margin-left: -60%;
+  margin-top: 300px;
 }
 
 .website-title {
-  margin-top: -130px;
+  margin-top: -110px;
 }
 
 .body-text {
   text-align: center;
   color: #810403;
+  font-family: "Cardo-Regular", sans-serif;
 }
 
+.bold-text {
+  font-family: "Cardo-Bold", sans-serif;
+}
 .cearis-logo {
-  max-width: 300px;
-  height: 200px;
-  margin-top: -500px;
+  max-width: 500px;
+  height: 300px;
+  margin-top: -550px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -68,12 +77,49 @@ body {
 }
 
 .redirect-login-buttons button {
+  position: relative;
+  overflow: hidden;
   margin: 10px;
   padding: 15px 20px;
   font-size: 16px;
-  background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 15px;
+  border-radius: 7px;
+  font-size: 12px;
+  width: 250px;
+  padding-left: 60px;
+  background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.redirect-login-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  background: white;
+  z-index: 1;
+}
+
+.redirect-login-buttons button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  bottom: 0;
+  width: 3%;
+  background: #dba729;
+  z-index: 2;
+}
+
+.redirect-login-buttons button img {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: auto;
+  z-index: 3;
 }

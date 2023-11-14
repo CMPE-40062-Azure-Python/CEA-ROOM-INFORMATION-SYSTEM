@@ -8,15 +8,15 @@ def home():
 
 @views.route('/student-rep')
 def student_rep():
-    return render_template("student-rep-login.html")
+    return render_template("student-rep/student-rep-login.html")
 
 @views.route('/student-rep-home')
 def student_rep_home():
-    return render_template("student-rep-home.html")
+    return render_template("student-rep/student-rep-home.html")
 
 @views.route('/admin')
 def admin():
-    return render_template("admin-login.html")
+    return render_template("admin/admin-login.html")
 
 @views.route('/site-map')
 def site_map():

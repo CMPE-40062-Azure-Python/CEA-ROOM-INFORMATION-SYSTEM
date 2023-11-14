@@ -29,13 +29,31 @@
         <h2 class="body-text" style="font-size: 25px">
           ROOM INFORMATION SYSTEM
         </h2>
-        <h3 class="body-text" style="font-size: 15px; margin-top: 70px">
+        <h3
+          class="body-text"
+          style="font-size: 15px; margin-top: 100px; margin-bottom: 15px"
+        >
           CHOOSE DESTINATION:
         </h3>
       </div>
       <div class="redirect-login-buttons">
-        <button>STUDENT REPRESENTATIVE</button>
-        <button>ADMINISTRATOR</button>
+        <button
+          id="studentRepButton"
+          data-route="{{ url_for('views.student_rep') }}"
+        >
+          STUDENT REPRESENTATIVE
+          <img
+            src="{{ url_for('static', filename='images/student-rep-redirect-img.png') }}"
+            alt="student-rep-redirect-img"
+          />
+        </button>
+        <button id="adminButton" data-route="{{ url_for('views.admin') }}">
+          ADMINISTRATOR
+          <img
+            src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"
+            alt="admin-redirect-img.png"
+          />
+        </button>
       </div>
     </div>
     <div class="landing-page">
