@@ -10,7 +10,11 @@ def home():
 def student_rep():
     return render_template("student-rep/student-rep-login.html")
 
-@views.route('/student-rep-home')
+@views.route('/student-rep/register')
+def student_rep_register():
+    return render_template("student-rep/student-rep-register.html")
+
+@views.route('/student-rep/home')
 def student_rep_home():
     return render_template("student-rep/student-rep-home.html")
 
