@@ -19,7 +19,7 @@ policies.addEventListener("mouseout", function () {
     policiesIcon.src = "/static/images/student-rep-policies-icon.png";
 })
 
-//FAQs
+//FAQs - Hover
 
 const Faqs = document.querySelector('.Faqs-Icon');
 const FaqsIcon = document.querySelector('.Faqs-bttn');
@@ -36,7 +36,7 @@ Faqs.addEventListener("mouseout", function () {
     FaqsIcon.src = "/static/images/student-rep-faqs-icon.png";
 });
 
-//About Us
+//About Us - Hover
 
 const AboutUs = document.querySelector('.AboutUs-Icon');
 const AboutUsIcon = document.querySelector('.AboutUs-bttn');
@@ -53,7 +53,8 @@ AboutUs.addEventListener("mouseout", function () {
     AboutUsIcon.src = "/static/images/student-rep-us-icon.png";
 });
 
-//Contact Us
+
+//Contact Us - Hover
 
 const ContactUs = document.querySelector('.Contact-Icon');
 const ContactUsIcon = document.querySelector('.Contact-bttn');
@@ -68,4 +69,102 @@ ContactUs.addEventListener("mouseout", function () {
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
     ContactUsIcon.src = "/static/images/student-rep-contact-icon.png";
+});
+
+//Menu - hover
+
+const MenuIcon = document.querySelector('.Menu_icon');
+
+MenuIcon.addEventListener("mouseover", function () {
+    MenuIcon.src = "/static/images/student-rep-menu-yellow.png";
+});
+
+MenuIcon.addEventListener("mouseout", function (){
+    MenuIcon.src = "/static/images/student-rep-menu.png";
+});
+
+//Account Setting - Hover 
+const Account_Icon = document.querySelector('.Acc_Settings');
+
+Account_Icon.addEventListener("mouseover", function (){
+    Account_Icon.src = "/static/images/student-rep-account-yellow.png";
+});
+
+Account_Icon.addEventListener("mouseout", function (){
+    Account_Icon.src = "/static/images/student-rep-account.png";
+});
+
+// Account Setting - Clicked
+
+const AccSettings = document.querySelector('.Profile-Setting');
+let isOpen = false; // Display State to None
+
+Account_Icon.addEventListener("click", function (event) {
+  if (!isOpen) {
+    AccSettings.style.display = "block";
+    isOpen = true; // Show Container
+    Account_Icon.src = "/static/images/student-rep-account-yellow.png";
+  } else {
+    AccSettings.style.display = "none";
+    Account_Icon.src = "/static/images/student-rep-account.png";
+    isOpen = false;
+  }
+  event.stopPropagation();
+});
+
+// Account Settings Hide When Anything in the Screen is Clicked
+document.addEventListener("click", function () {
+  AccSettings.style.display = "none";
+  Account_Icon.src = "/static/images/student-rep-account.png";
+  isOpen = false;
+});
+
+// Rooms - Hover
+const RoomContainer = document.querySelector('.Room-img-Container');
+const RoomsImg = document.querySelector('.Rooms-img');
+const RoomsBttn = document.querySelector('.Rooms-bttn');
+
+RoomContainer.addEventListener("mouseover", function () {
+    RoomsImg.src = "/static/images/student-rep-rooms-yellow.png";
+    RoomsBttn.style.color = '#DBA729';
+});
+
+RoomContainer.addEventListener("mouseout", function () {
+    RoomsImg.src = "/static/images/student-rep-rooms.png";
+    RoomsBttn.style.color = '#810403';
+});
+
+RoomsBttn.addEventListener("mouseover", function () {
+    RoomsImg.src = "/static/images/student-rep-rooms-yellow.png";
+    RoomsBttn.style.color = '#DBA729';
+});
+
+RoomsBttn.addEventListener("mouseout", function () {
+    RoomsImg.src = "/static/images/student-rep-rooms.png";
+    RoomsBttn.style.color = '#810403';
+});
+
+//Reservations - Hover
+const ReservationContainer = document.querySelector('.Reservation-img-Container');
+const ReserveImg = document.querySelector('.Reserve-img');
+const ReserveBttn = document.querySelector('.Reserve-bttn')
+
+ReservationContainer.addEventListener("mouseover", function () {
+    ReserveImg.src = "/static/images/student-rep-reserve-yellow.png";
+    ReserveBttn.style.color = '#DBA729';
+});
+
+ReservationContainer.addEventListener("mouseout", function () {
+    ReserveImg.src = "/static/images/student-rep-reserve.png";
+    ReserveBttn.style.color = '#810403';
+});
+
+ReserveBttn.addEventListener("mouseover", function () {
+    ReserveImg.src = "/static/images/student-rep-reserve-yellow.png";
+    ReserveBttn.style.color = '#DBA729';
+});
+
+ReserveBttn.addEventListener("mouseout", function () {
+    ReserveImg.src = "/static/images/student-rep-reserve.png";
+    ReserveBttn.style.color = '#810403';
 });

@@ -26,29 +26,76 @@
   .Nav-upper {
     margin-top: 10px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
     background-color: #FFFFFF;
     height: 70px;
   }
-  .Menu_icon {
-    height: 35px;
-    width: 35px;
+  div.Menu-Container {
     margin-right: auto;
     margin-left: 20px;
+  }
+  .Menu_icon {
+    height: 37px;
+    width: 37px;
+    padding: 5px;
     cursor: pointer;
+  }
+  .Menu_icon:hover {
+    background-color: rgba(166, 166, 166, 0.2);
+    border-radius: 5px;
   }
   .Logo {
     height: 50px;
     width: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  div.Acc_Setting-Container {
+    margin-left: auto;
+    margin-right: 20px;
   }
   .Acc_Settings {
     height: 45px;
     width: 45px;
-    margin-left: auto;
-    margin-right: 20px;
     cursor: pointer;
+  }
+  ul.Profile-Setting {
+    display: none;
+    list-style: none;
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    background-color: whitesmoke;
+    color: #abb0b8;
+    z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: -150px;
+    margin-top: -5px;
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #612d39, #531b2e, #3d1226, #31111e);
+    border-image-slice: 1;
+    border-radius: 7px;
+  }
+  ul.Profile-Setting li {
+    font-size: 1rem;
+    color: #810403;
+    margin-top: 12px;
+    padding: 0;
+    cursor: pointer;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+  img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
   }
   .Nav-bar {
     height: 80px;
@@ -165,6 +212,7 @@
   .Side-bar > .Rooms > .Room-img-Container {
     width: 220px;
     height: 270px;
+    cursor: pointer;
   }
   div.Reservation-img-Container {
     width: 220px;
@@ -196,6 +244,9 @@
     color: #810403;
     cursor: pointer;
   }
+  div.Rooms > .Rooms-bttn button:hover {
+    color: #DBA729;
+  }
   div.Reserve-bttn button {
     height: 50px;
     width: 220px;
@@ -207,6 +258,9 @@
     font-size: 1.1rem;
     color: #810403;
     cursor: pointer;
+  }
+  div.Reserve-bttn button:hover {
+    color: #DBA729;
   }
 
   .side-bar-and-content {

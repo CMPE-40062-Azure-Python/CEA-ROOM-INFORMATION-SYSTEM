@@ -11,21 +11,42 @@
 </head>
 <body>
     <div class="Nav-upper">
-        <img 
+        <div class="Menu-Container">
+            <img 
         class="Menu_icon"
         src="{{ url_for('static', filename='images/student-rep-menu.png') }}"
         alt="Menu Icon"
         />
+        </div>
         <img 
         class="Logo"
         src="{{ url_for('static', filename='images/cearis-logo.png') }}"
         alt="CEA RIS Logo"
         />
-        <img 
+        <div class="Acc_Setting-Container">
+            <img 
         class="Acc_Settings"
         src="{{ url_for('static', filename='images/student-rep-account.png') }}"
         alt="Account Settings"
         />
+        <ul class="Profile-Setting">
+            <li><img 
+                class="Profile-Icon"
+                src="{{ url_for('static', filename='images/student-rep-profile.png') }}"
+                alt="Profile Icon">
+            Profile</li>
+            <li><img 
+                class="Change_Password-Icon"
+                src="{{ url_for('static', filename='images/student-rep-change-pass.png') }}"
+                alt="Change Password Icon">
+            Change Password</li>
+            <li><img 
+                class="Logout-Icon"
+                src="{{ url_for('static', filename='images/student-rep-log-out.png') }}"
+                alt="Log Out Icon">
+            Log Out</li>
+        </ul>
+        </div>
     </div>
     <div class="Nav-bar">
         <div class="Nav-left">
