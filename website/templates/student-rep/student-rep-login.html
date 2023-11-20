@@ -32,26 +32,36 @@
               alt="cearis-logo"
             />
           </div>
-
-          <div class="input-container">
-            <div class="student-number-input">
-              <input type="text" placeholder="Student Number" />
+          <form action="{{ url_for('views.student_rep_login') }}" method="post">
+            <div class="input-container">
+              <div class="student-number-input">
+                <input
+                  type="text"
+                  placeholder="Student Number"
+                  name="student_number"
+                  required
+                />
+              </div>
+              <div class="password-input">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+              </div>
+              <button
+                class="button-container"
+                id="student-rep-login-btn"
+                data-route="{{ url_for('views.student_rep_home') }}"
+              >
+                LOGIN
+              </button>
             </div>
-            <div class="password-input">
-              <input type="password" placeholder="Password" />
+            <div class="forgot-pass">
+              <a href="#">Forgot Password?</a>
             </div>
-            <button
-              class="button-container"
-              id="student-rep-login-btn"
-              data-route="{{ url_for('views.student_rep_home') }}"
-            >
-              LOGIN
-            </button>
-          </div>
-          <div class="forgot-pass">
-            <a href="#">Forgot Password?</a>
-          </div>
-
+          </form>
           <div class="register-login-page">
             <a href="#">Register as Student Representative</a>
             <!--TRY LANG BAKIT BA-->

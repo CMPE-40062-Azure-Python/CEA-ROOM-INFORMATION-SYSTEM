@@ -22,14 +22,24 @@ mycursor = db.cursor()
 def home():
     return render_template("index.html")
 
-@views.route('/student-rep')
-def student_rep():
-    
-    mycursor.execute("SELECT * from users")
-    
-    myresult = mycursor.fetchall()
-    
-    return render_template("student-rep/student-rep-login.html", data = myresult)
+@views.route('/student-rep', methods=['GET', 'POST'])
+def student_rep_login():
+    if request.method == 'POST':
+        student_number = request.form['student_number']
+        password = request.form['password']
+
+        # Print the credentials for debugging purposes
+        print(f"Attempting login with student_number: {student_number}, password: {password}")
+
+        # Query the database to check for authentication
+        mycursor.execute("SELECT * FROM users WHERE studentNumber = %s AND password = %s", (student_number, password))
+        user = mycursor.fetchone()
+
+        if user:
+            # Authentication successful, reirect to the student_rep_home route
+            return redirect(url_for('views.student_rep_home'))
+
+    return render_template("student-rep/student-rep-login.html", error="Invalid student number or password")
 
 @views.route('/student-rep/register', methods=['GET', 'POST'])
 def student_rep_register():
