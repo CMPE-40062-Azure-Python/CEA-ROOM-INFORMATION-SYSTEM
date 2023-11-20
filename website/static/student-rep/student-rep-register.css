@@ -100,6 +100,17 @@ body {
   display: flex;
 }
 
+.student-last-name-input,
+.student-first-name-input {
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
+  width: 50%;
+}
+
+.birthdate-input {
+  width: 400px; /* Adjust the width to your desired size */
+}
+
 .student-number-input input {
   width: 400px; /* Adjust the width to your desired size */
 }
