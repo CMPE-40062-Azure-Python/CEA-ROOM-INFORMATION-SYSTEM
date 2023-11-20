@@ -322,3 +322,41 @@
     margin: 0;
     color: #ffffff;
   }
+
+  .Updates-Container > .room-inuse-container {
+    width: 220px;
+    height: 150px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(90deg, #337656, #314b4b);
+  }
+
+  .Updates-Container > .room-inuse-container > .no-of-inuse {
+    height: 150px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Updates-Container > .room-inuse-container > .no-of-inuse h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  .Updates-Container > .room-inuse-container > .inuse-text {
+    height: 150px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3.5px solid white;
+  }
+  .Updates-Container > .room-inuse-container > .inuse-text p {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+  }
