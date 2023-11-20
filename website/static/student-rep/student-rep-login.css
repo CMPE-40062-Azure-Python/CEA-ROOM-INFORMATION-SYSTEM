@@ -106,6 +106,13 @@ body {
   color: #fff;
 }
 
+.student-rep-login-btn:active,
+.button-container:active {
+  background-color: #DBA729;
+  color: #DBA729;
+  box-shadow: #DBA729;
+}
+
 .forgot-pass {
   text-align: center;
   margin-top: 10px; 
