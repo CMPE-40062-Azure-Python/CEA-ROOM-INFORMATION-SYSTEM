@@ -47,7 +47,10 @@
             alt="student-rep-redirect-img"
           />
         </button>
-        <button id="adminButton" data-route="{{ url_for('views.admin') }}">
+        <button
+          id="adminButton"
+          data-route="{{ url_for('views.admin_login') }}"
+        >
           ADMINISTRATOR
           <img
             src="{{ url_for('static', filename='images/admin-redirect-img.png') }}"

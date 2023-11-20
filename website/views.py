@@ -75,9 +75,24 @@ def student_rep_register():
 def student_rep_home():
     return render_template("student-rep/student-rep-home.html")
 
-@views.route('/admin')
-def admin():
-    return render_template("admin/admin-login.html")
+@views.route('/admin', methods=['GET', 'POST'])
+def admin_login():
+    if request.method == 'POST':
+        faculty_number = request.form['faculty_number']
+        password = request.form['password']
+
+        # Print the credentials for debugging purposes
+        print(f"Attempting login with faculty_number: {faculty_number}, password: {password}")
+
+        # Query the database to check for authentication
+        mycursor.execute("SELECT * FROM admin WHERE facultyNumber = %s AND password = %s", (faculty_number, password))
+        admin = mycursor.fetchone()
+
+        if admin:
+            # Authentication successful, reirect to the student_rep_home route
+            return redirect(url_for('views.student_rep_home'))
+
+    return render_template("admin/admin-login.html", error="Invalid faculty number or password")
 
 @views.route('/site-map')
 def site_map():
