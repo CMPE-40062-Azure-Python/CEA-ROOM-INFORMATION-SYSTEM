@@ -78,20 +78,37 @@ body {
   margin-top: 30px;
 }
 
+.student-name-input,
+.confirm-password-input,
 .password-input,
 .student-number-input,
 .button-container {
   margin: 5px;
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
 }
 
-.student-name-input input {
-  width: 200px; /* Adjust the width to your desired size */
+.student-last-name-input,
+.student-first-name-input {
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
+  width: 50%;
 }
+
+.student-name-input-row {
+  width: 400px;
+  display: flex;
+}
+
 .student-number-input input {
   width: 400px; /* Adjust the width to your desired size */
 }
 
 .password-input input {
+  width: 400px; /* Adjust the width to your desired size */
+}
+
+.confirm-password-input input {
   width: 400px; /* Adjust the width to your desired size */
 }
 
