@@ -23,8 +23,8 @@ body {
 }
 
 .login-credentials-container {
-  width: 600px; /* Change to your preferred width */
-  height: 500px; /* Change to your preferred height */
+  width: 600px;
+  height: 500px; 
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -61,9 +61,9 @@ body {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 20%; /* Position from the vertical center */
-  left: 50%; /* Position from the horizontal center */
-  transform: translate(-50%, -50%); /* Center the element precisely */
+  top: 20%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
 
 .logo-login img {
@@ -85,17 +85,18 @@ body {
 }
 
 .student-number-input input {
-  width: 400px; /* Adjust the width to your desired size */
+  width: 400px;
 }
 
 .password-input input {
-  width: 400px; /* Adjust the width to your desired size */
+  width: 400px;
+  margin-top: 10px; 
 }
 
 .button-container {
   position: relative;
   overflow: hidden;
-  margin: 10px;
+  margin: 20px;
   padding: 5px;
   font-size: 16px;
   border-radius: 7px;
@@ -104,3 +105,67 @@ body {
   background: linear-gradient(to bottom, #612d39, #531b2e, #3d1226, #31111e);
   color: #fff;
 }
+
+.forgot-pass {
+  text-align: center;
+  margin-top: 10px; 
+  font-size: 12px;
+  font-family: "Cardo-Regular", sans-serif
+}
+
+.forgot-pass label input {
+  accent-color: #810403;
+}
+
+.forgot-pass a {
+  color: #810403;
+  text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+.register-login-page {
+  text-align: center;
+  margin-top: 10px; 
+  font-size: 12px;
+  font-family: "Cardo-Regular", sans-serif
+}
+
+.register-login-page label input {
+  accent-color: #810403;
+}
+
+.register-login-page a {
+  color: #810403;
+  text-decoration: none;
+}
+
+.register-login-page a:hover {
+  text-decoration: underline;
+}
+
+/* TRY LANG MUNA SA TOOLTIP */
+
+.register-login-page .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+  border: 0 !important;
+  border-radius: 6px;
+  border-color: #000;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.register-login-page:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* END OF TRY WHAHAH */
