@@ -207,3 +207,71 @@
     color: #810403;
     cursor: pointer;
   }
+  .side-bar-and-content > .Updates-Container {
+    width: calc(100% - 290px); /* Calculate the remaining width */
+    background-color: #E8E8E8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .side-bar-and-content {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Updates-Container {
+    background-color: #ffffff;
+    margin-top: 10px;
+    height: 200px;
+
+  }
+
+  .Updates-Container > .date-container {
+    width: 220px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 7px;
+  }
+  
+  .Updates-Container > .date-container > .month-year {
+    height: 25px;
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  .Updates-Container > .date-container > .month-year p {
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .Updates-Container > .date-container > .day-container {
+    height: 100px;
+    width: 219px;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #612D39;
+  }
+
+  .Updates-Container > .date-container > .current-time {
+    height: 25px;
+    width: 219px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px solid black;
+    border-radius: 7px;
+    align-items: center;
+  }
+
+  .Updates-Container > .date-container > .current-time p {
+    margin: 0;
+    font-size: 0.8rem;
+  }

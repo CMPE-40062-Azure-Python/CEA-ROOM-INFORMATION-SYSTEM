@@ -88,32 +88,77 @@
             </div>
         </div>
     </div>
-    <div class="Side-bar">
-        <div class="Rooms">
-            <div class="Room-img-Container">
-                <img 
-                class="Rooms-img"
-                src="{{ url_for('static', filename='images/student-rep-rooms.png') }}"
-                alt="Rooms Image"
-                />
-        </div>
-        <div class="Rooms-bttn">
-            <button onclick="handleRoomsButtonClick()">
-                Rooms
-            </button>
-        </div>
-        <div class="Reservations">
-            <div class="Reservation-img-Container">
-                <img 
-                class="Reserve-img"
-                src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
-                alt="My Reservation Image"
-                />
+    <div class="side-bar-and-content">
+        <div class="Side-bar">
+            <div class="Rooms">
+                <div class="Room-img-Container">
+                    <img 
+                    class="Rooms-img"
+                    src="{{ url_for('static', filename='images/student-rep-rooms.png') }}"
+                    alt="Rooms Image"
+                    />
             </div>
-            <div class="Reserve-bttn">
-                <button onclick="handleReservationsButtonClick()">
-                    My Reservation
+            <div class="Rooms-bttn">
+                <button onclick="handleRoomsButtonClick()">
+                    Rooms
                 </button>
+            </div>
+            <div class="Reservations">
+                <div class="Reservation-img-Container">
+                    <img 
+                    class="Reserve-img"
+                    src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
+                    alt="My Reservation Image"
+                    />
+                </div>
+                <div class="Reserve-bttn">
+                    <button onclick="handleReservationsButtonClick()">
+                        My Reservation
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="Updates-Container">
+            <div class="date-container">
+                <div class="month-year">
+                    <p>November</p>
+                    <p>2023</p>
+                </div>
+                <div class="day-container">
+                    <h1>12</h1>
+                </div>
+                <div class="current-time">
+                    <p>14</p>
+                    <p>:</p>
+                    <p>16</p>
+                    <p>:</p>
+                    <p>25</p>
+                </div>
+            </div>
+            <div class="room-availability-container">
+                <div class="no-of-available">
+                    <h1>21</h1>
+                </div>
+                <div class="availability-text">
+                    <p>ROOMS AVAILABLE</p>                
+                </div>
+            </div>
+            <div class="room-inuse-container">
+                <div class="no-of-inuse">
+                    <h1>17</h1>
+                </div>
+                <div class="inuse-text">
+                    <p>ROOMS IN USE</p>
+                </div>
+            </div>
+            <div class="room-maintenance-container">
+                <div class="no-of-maintenance">
+                    <h1>3</h1>
+                </div>
+                <div class="maintenance-text">
+                    <p>ROOMS UNDER MAINTENANCE</p>
+                </div>
             </div>
         </div>
     </div>
