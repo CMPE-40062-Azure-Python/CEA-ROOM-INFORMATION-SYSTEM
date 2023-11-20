@@ -84,6 +84,16 @@ body {
   margin: 5px;
 }
 
+.student-number-input :focus {
+  border-color: #DBA729;
+  box-shadow: 0 0 8px 0 #DBA729;
+}
+
+.password-input :focus {
+  border-color: #DBA729;
+  box-shadow: 0 0 8px 0 #DBA729;
+}
+
 .student-number-input input {
   width: 400px;
 }
@@ -133,6 +143,10 @@ body {
   text-decoration: underline;
 }
 
+.forgot-pass a:active {
+  color: #DBA729;
+}
+
 .register-login-page {
   text-align: center;
   margin-top: 10px; 
@@ -151,6 +165,10 @@ body {
 
 .register-login-page a:hover {
   text-decoration: underline;
+}
+
+.register-login-page a:active {
+  color: #DBA729;
 }
 
 /* TRY LANG MUNA SA TOOLTIP */
