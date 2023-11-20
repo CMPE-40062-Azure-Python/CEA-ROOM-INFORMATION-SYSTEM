@@ -128,6 +128,7 @@
     font-size: 15px;
     font-weight: 400;
     cursor: pointer;
+    display: flex;
 }
 .Side-bar {
     display: flex;
@@ -207,24 +208,37 @@
     color: #810403;
     cursor: pointer;
   }
-  .side-bar-and-content > .Updates-Container {
-    height: 200px;
-    width: calc(100% - 290px); /* Calculate the remaining width */
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-  }
+
   .side-bar-and-content {
     height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
+  }
+
+  .side-bar-and-content > .Updates-Schedule-Container {
+    width: calc(100% - 290px);
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .side-bar-and-content > .Updates-Schedule-Container > .Updates-Container {
+    height: 200px;
+    width: 100%; /* Calculate the remaining width */
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-radius: 10px;
   }
 
   .Updates-Container > .date-container {
@@ -261,7 +275,7 @@
   }
 
   .Updates-Container > .date-container > .day-container h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: #810403;
   }
 
@@ -301,7 +315,7 @@
   }
 
   .Updates-Container > .room-availability-container > .no-of-available h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 0;
     color: #ffffff;
   }
@@ -366,7 +380,7 @@
     border-radius: 7px;
     display: flex;
     flex-direction: row;
-    background: linear-gradient(90deg, #337656, #314b4b);
+    background: linear-gradient(90deg, #810403, #492b37);
   }
   .Updates-Container > .room-maintenance-container > .no-of-maintenance {
     height: 150px;
@@ -395,3 +409,29 @@
     margin: 0;
     color: #ffffff;
   }
+  .Schedule-Container {
+    height: 600px;
+    width: 90%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Schedule-Container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFA;
+    filter: blur(10px); /* Adjust the blur amount as needed */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+  
