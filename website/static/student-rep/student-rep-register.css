@@ -78,26 +78,10 @@ body {
   margin-top: 30px;
 }
 
-.student-name-input,
-.confirm-password-input,
-.password-input,
-.student-number-input,
-.button-container {
-  margin: 5px;
-  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
-  border-radius: 4px;
-}
-
-.student-last-name-input,
-.student-first-name-input {
-  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
-  border-radius: 4px;
-  width: 50%;
-}
-
 .student-name-input-row {
   width: 400px;
   display: flex;
+  margin: 5px;
 }
 
 .student-last-name-input,
@@ -105,22 +89,50 @@ body {
   border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
   border-radius: 4px;
   width: 50%;
-}
-
-.birthdate-input {
-  width: 400px; /* Adjust the width to your desired size */
+  margin-right: 5px; /* Adjust the value as needed */
 }
 
 .student-number-input input {
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
   width: 400px; /* Adjust the width to your desired size */
+  margin: 10px;
+}
+
+.birthdate-input-row {
+  width: 400px; /* Adjust the width to your desired size */
+  display: flex;
+  margin: 10px;
+}
+
+.selectMonth-input,
+.selectDay-input,
+.selectYear-input {
+  border: 2px solid #000;
+  border-radius: 4px;
+  width: 33%;
+  margin-right: 10px; /* Adjust the value as needed */
+}
+
+.email-input input {
+  width: 400px; /* Adjust the width to your desired size */
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
+  margin: 10px;
 }
 
 .password-input input {
   width: 400px; /* Adjust the width to your desired size */
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
+  margin: 10px;
 }
 
 .confirm-password-input input {
   width: 400px; /* Adjust the width to your desired size */
+  border: 2px solid #000; /* Add a 2px solid black border (you can adjust the color as needed) */
+  border-radius: 4px;
+  margin: 10px;
 }
 
 .button-container {
