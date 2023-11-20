@@ -208,25 +208,23 @@
     cursor: pointer;
   }
   .side-bar-and-content > .Updates-Container {
+    height: 200px;
     width: calc(100% - 290px); /* Calculate the remaining width */
-    background-color: #E8E8E8;
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
   }
   .side-bar-and-content {
     height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
-  }
-  
-  .Updates-Container {
-    background-color: #ffffff;
-    margin-top: 10px;
-    height: 200px;
-
   }
 
   .Updates-Container > .date-container {
@@ -341,7 +339,7 @@
     justify-content: center;
   }
   .Updates-Container > .room-inuse-container > .no-of-inuse h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin: 0;
     color: #ffffff;
   }
@@ -356,6 +354,43 @@
   }
   .Updates-Container > .room-inuse-container > .inuse-text p {
     font-size: 0.75rem;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  .Updates-Container > .room-maintenance-container {
+    width: 220px;
+    height: 150px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(90deg, #337656, #314b4b);
+  }
+  .Updates-Container > .room-maintenance-container > .no-of-maintenance {
+    height: 150px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Updates-Container > .room-maintenance-container > .no-of-maintenance h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+  }
+  .Updates-Container > .room-maintenance-container > .maintenance-text {
+    height: 150px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 3.5px solid white;
+  }
+  .Updates-Container > .room-maintenance-container > .maintenance-text p {
+    font-size: 0.6rem;
     text-align: center;
     margin: 0;
     color: #ffffff;
