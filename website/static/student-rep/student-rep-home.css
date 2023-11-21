@@ -3,8 +3,8 @@
 }
 
 @font-face {
-  font-family: "Cardo-Regular";
-  src: url("../static/fonts/Cardo-Regular.ttf") format("truetype");
+  font-family: 'Cardo-Regular';
+  src: url('../static/fonts/Cardo-Regular.ttf') format('truetype');
 }
 html {
   font-size: 16px;
@@ -21,34 +21,81 @@ body {
   padding: 0;
   height: auto;
   overflow: auto;
-  font-family: "Cardo-Regular", sans-serif;
+  font-family: 'Cardo-Regular', sans-serif;
 }
 .Nav-upper {
   margin-top: 10px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  background-color: #ffffff;
+  justify-content: space-evenly;
+  background-color: #FFFFFF;
   height: 70px;
 }
-.Menu_icon {
-  height: 35px;
-  width: 35px;
+div.Menu-Container {
   margin-right: auto;
   margin-left: 20px;
+}
+.Menu_icon {
+  height: 37px;
+  width: 37px;
+  padding: 5px;
   cursor: pointer;
+}
+.Menu_icon:hover {
+  background-color: rgba(166, 166, 166, 0.2);
+  border-radius: 5px;
 }
 .Logo {
   height: 50px;
   width: 50px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+div.Acc_Setting-Container {
+  margin-left: auto;
+  margin-right: 20px;
 }
 .Acc_Settings {
   height: 45px;
   width: 45px;
-  margin-left: auto;
-  margin-right: 20px;
   cursor: pointer;
+}
+ul.Profile-Setting {
+  display: none;
+  list-style: none;
+  width: 200px;
+  height: 130px;
+  position: absolute;
+  background-color: whitesmoke;
+  color: #abb0b8;
+  z-index: 1;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-left: -150px;
+  margin-top: -5px;
+  border: 2px solid;
+  border-image: linear-gradient(180deg, #612d39, #531b2e, #3d1226, #31111e);
+  border-image-slice: 1;
+  border-radius: 7px;
+}
+ul.Profile-Setting li {
+  font-size: 1rem;
+  color: #810403;
+  margin-top: 12px;
+  padding: 0;
+  cursor: pointer;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
 }
 .Nav-bar {
   height: 80px;
@@ -71,7 +118,7 @@ body {
   align-items: center;
   margin-left: 10px;
 }
-.Nav-left_img img {
+.Nav-left_img img{
   height: 35px;
   width: 35px;
   cursor: pointer;
@@ -128,6 +175,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   cursor: pointer;
+  display: flex;
 }
 .Side-bar {
   display: flex;
@@ -141,10 +189,9 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border-top: 4px solid #dba729;
+  border-top: 4px solid #DBA729;
 }
-.Side-bar > .Rooms,
-.Reservations {
+.Side-bar > .Rooms, .Reservations {
   width: 220px;
   height: 270px;
   background-color: rgba(128, 128, 128, 0.5);
@@ -165,13 +212,13 @@ div.Reservations {
 .Side-bar > .Rooms > .Room-img-Container {
   width: 220px;
   height: 270px;
+  cursor: pointer;
 }
 div.Reservation-img-Container {
   width: 220px;
   height: 270px;
 }
-.Side-bar > .Rooms > .Room-img-Container img,
-.Reservations > .Reservation-img-Container img {
+.Side-bar > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
   height: 100px;
   width: 100px;
 }
@@ -185,17 +232,20 @@ div.Reservation-img-Container {
   justify-content: center;
   align-items: center;
 }
-div.Rooms > .Rooms-bttn button {
+ div.Rooms > .Rooms-bttn button {
   height: 50px;
   width: 220px;
   border: 1px solid #ffffff;
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: -10px;
-  font-family: "Cardo-Regular", sans-serif;
+  font-family: 'Cardo-Regular', sans-serif;
   font-size: 1.1rem;
   color: #810403;
   cursor: pointer;
+}
+div.Rooms > .Rooms-bttn button:hover {
+  color: #DBA729;
 }
 div.Reserve-bttn button {
   height: 50px;
@@ -204,8 +254,237 @@ div.Reserve-bttn button {
   border-radius: 10px;
   background-color: #ffffff;
   margin-top: -10px;
-  font-family: "Cardo-Regular", sans-serif;
+  font-family: 'Cardo-Regular', sans-serif;
   font-size: 1.1rem;
   color: #810403;
   cursor: pointer;
+}
+div.Reserve-bttn button:hover {
+  color: #DBA729;
+}
+
+.side-bar-and-content {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar-and-content > .Updates-Schedule-Container {
+  width: calc(100% - 290px);
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.side-bar-and-content > .Updates-Schedule-Container > .Updates-Container {
+  height: 200px;
+  width: 100%; /* Calculate the remaining width */
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.Updates-Container > .date-container {
+  width: 220px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.Updates-Container > .date-container > .month-year {
+  height: 25px;
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.Updates-Container > .date-container > .month-year p {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #810403;
+}
+
+.Updates-Container > .date-container > .day-container {
+  height: 100px;
+  width: 219px;
+  display: flex;
+  justify-content: center;
+  border-top: 4px solid #612D39;
+  align-items: center;
+}
+
+.Updates-Container > .date-container > .day-container h1 {
+  font-size: 4rem;
+  color: #810403;
+}
+
+.Updates-Container > .date-container > .current-time {
+  height: 25px;
+  width: 219px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 1px solid black;
+  border-radius: 7px;
+  align-items: center;
+}
+
+.Updates-Container > .date-container > .current-time p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #810403;
+}
+
+.Updates-Container > .room-availability-container {
+  width: 220px;
+  height: 150px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #337656, #314b4b);
+}
+
+.Updates-Container > .room-availability-container > .no-of-available {
+  height: 150px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Updates-Container > .room-availability-container > .no-of-available h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.Updates-Container > .room-availability-container > .availability-text {
+  height: 150px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3.5px solid white;
+}
+.Updates-Container > .room-availability-container > .availability-text p {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.Updates-Container > .room-inuse-container {
+  width: 220px;
+  height: 150px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #337656, #314b4b);
+}
+
+.Updates-Container > .room-inuse-container > .no-of-inuse {
+  height: 150px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Updates-Container > .room-inuse-container > .no-of-inuse h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.Updates-Container > .room-inuse-container > .inuse-text {
+  height: 150px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3.5px solid white;
+}
+.Updates-Container > .room-inuse-container > .inuse-text p {
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.Updates-Container > .room-maintenance-container {
+  width: 220px;
+  height: 150px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #810403, #492b37);
+}
+.Updates-Container > .room-maintenance-container > .no-of-maintenance {
+  height: 150px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Updates-Container > .room-maintenance-container > .no-of-maintenance h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #ffffff;
+}
+.Updates-Container > .room-maintenance-container > .maintenance-text {
+  height: 150px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 3.5px solid white;
+}
+.Updates-Container > .room-maintenance-container > .maintenance-text p {
+  font-size: 0.6rem;
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+}
+.Schedule-Container {
+  height: 600px;
+  width: 90%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Schedule-Container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFA;
+  filter: blur(10px); /* Adjust the blur amount as needed */
+  z-index: -1; /* Place the pseudo-element behind the content */
 }
