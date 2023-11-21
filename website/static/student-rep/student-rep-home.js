@@ -170,5 +170,5 @@ ReserveBttn.addEventListener("mouseout", function () {
 });
 
 function handleRoomsButtonClick() {
-    window.location.href = '/student-rep-home-rooms';
+    window.location.href = '/student-rep/home/rooms';
 }
