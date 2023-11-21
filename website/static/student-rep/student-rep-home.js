@@ -168,3 +168,7 @@ ReserveBttn.addEventListener("mouseout", function () {
     ReserveImg.src = "/static/images/student-rep-reserve.png";
     ReserveBttn.style.color = '#810403';
 });
+
+function handleRoomsButtonClick() {
+    window.location.href = '/student-rep/home/rooms';
+}
