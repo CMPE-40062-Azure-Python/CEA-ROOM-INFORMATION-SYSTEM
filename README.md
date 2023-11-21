@@ -56,15 +56,15 @@ The CEA Room Information System is a versatile web-based application designed to
 
 - Access MySQL Database, download XAMPP version 8.1.17 / PHP 8.1.17:
 
-https://www.apachefriends.org/download.html
+  https://www.apachefriends.org/download.html
 
 - Copy the following files inside this gdrive link to C:\xampp\mysql\data (replace the files inside):
 
-https://drive.google.com/drive/folders/19906weiZ3z_ZrKzd4uAfQ5OnGncCyZKZ
+  https://drive.google.com/drive/folders/19906weiZ3z_ZrKzd4uAfQ5OnGncCyZKZ
 
 - Open XAMPP Control Panel and start Apache and MySQL Module then click MSQL Admin or follow this link:
 
-http://localhost/phpmyadmin
+  http://localhost/phpmyadmin
 
 - On the root directory of the project, run the following command to start the project.
 
