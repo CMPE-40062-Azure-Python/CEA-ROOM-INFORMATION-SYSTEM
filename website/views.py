@@ -75,6 +75,10 @@ def student_rep_register():
 def student_rep_home():
     return render_template("student-rep/student-rep-home.html")
 
+@views.route('/student-rep/home/rooms')
+def student_rep_home_rooms():
+    return render_template("student-rep-home-rooms.html")
+
 @views.route('/admin', methods=['GET', 'POST'])
 def admin_login():
     if request.method == 'POST':
