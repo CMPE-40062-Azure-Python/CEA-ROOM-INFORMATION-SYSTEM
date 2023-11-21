@@ -14,6 +14,10 @@ def student_rep():
 def student_rep_home():
     return render_template("student-rep-home.html")
 
+@views.route('/student-rep-home-rooms')
+def student_rep_home_rooms():
+    return render_template("student-rep-home-rooms.html")
+
 @views.route('/admin')
 def admin():
     return render_template("admin-login.html")
