@@ -172,3 +172,26 @@ ReserveBttn.addEventListener("mouseout", function () {
 function handleRoomsButtonClick() {
     window.location.href = '/student-rep/home/rooms';
 }
+
+// Date and Time Container
+const currentDate = new Date();
+
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+document.getElementById('CurrentMonth').textContent = monthNames[currentDate.getMonth()];
+document.getElementById('CurrentYear').textContent = currentDate.getFullYear();
+
+document.getElementById('CurrentDay').textContent = currentDate.getDate();
+
+// Set time
+const formatTimeUnit = unit => unit < 10 ? '0' + unit : unit;
+document.getElementById('CurrentHour').textContent = formatTimeUnit(currentDate.getHours());
+document.getElementById('CurrentMinute').textContent = formatTimeUnit(currentDate.getMinutes());
+document.getElementById('CurrentSecond').textContent = formatTimeUnit(currentDate.getSeconds());
+
+setInterval(() => {
+    const currentTime = new Date();
+    document.getElementById('CurrentHour').textContent = formatTimeUnit(currentTime.getHours());
+    document.getElementById('CurrentMinute').textContent = formatTimeUnit(currentTime.getMinutes());
+    document.getElementById('CurrentSecond').textContent = formatTimeUnit(currentTime.getSeconds());
+}, 1000);
