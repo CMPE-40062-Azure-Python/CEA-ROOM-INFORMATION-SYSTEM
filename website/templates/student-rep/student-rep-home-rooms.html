@@ -150,37 +150,147 @@
                             <div class="Left-content">
                                 <div class="Long-empty-left"></div>
                                 <div class="smallEmpty-left"></div>
-                                <div class="RM307"><p>RM 307</p></div>
-                                <div class="RM308"><p>RM 308</p></div>
+                                <div class="RM307">        
+                                    <p>
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 12 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM308">
+                                    <p>
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 13 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                </div>
                                 <div class="mediumEmpty-left"></div>
                                 <div class="rectangle-left"></div>
                             </div>
                         </div>
                         <div class="Rooms-column">
                             <div class="Room302-306">
-                                <div class="306b">RM 306b</div>
-                                <div class="306a">RM 306a</div>
-                                <div class="305b">RM 305b</div>
-                                <div class="305a">RM 305a</div>
-                                <div class="304b">RM 304b</div>
-                                <div class="304a">RM 304a</div>
-                                <div class="303b">RM 303b</div>
-                                <div class="303a">RM 303a</div>
-                                <div class="302">RM 302</div>
+                                <div class="306b">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 11 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="306a">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 10 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="305b">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 9 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="305a">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 8 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="304b">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 7 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="304a">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 6 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="303b">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 5 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="303a">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 4 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="302">
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 3 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
                             </div>
                             <div class="Room-middle">
                                 <div class="Rooms-left">
                                     <div class="RM319-320">
-                                        <div class="RM319"><p>RM 319</p></div>
-                                        <div class="RM320"><p>RM 320</p></div>
+                                        <div class="RM319">
+                                            <p>
+                                            {% for room_number in room_numbers %}
+                                                {% if loop.index == 22 %}
+                                                    {{ room_number[0] }}
+                                                {% endif %}
+                                            {% endfor %}
+                                            </p>
+                                        </div>
+                                        <div class="RM320">
+                                            <p>
+                                            {% for room_number in room_numbers %}
+                                                {% if loop.index == 23 %}
+                                                    {{ room_number[0] }}
+                                                {% endif %}
+                                            {% endfor %}
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="RM-empty">
                                         <div class="EmptyRM"></div>
                                     </div>
                                     <div class="RM321-323">
-                                        <div class="RM321"><p>RM 321</p></div>
-                                        <div class="RM322"><p>RM 322</p></div>
-                                        <div class="RM323"><p>RM 323</p></div>
+                                        <div class="RM321">
+                                            <p>
+                                            {% for room_number in room_numbers %}
+                                                {% if loop.index == 24 %}
+                                                    {{ room_number[0] }}
+                                                {% endif %}
+                                            {% endfor %}
+                                            </p>
+                                        </div>
+                                        <div class="RM322">
+                                            <p>
+                                            {% for room_number in room_numbers %}
+                                                {% if loop.index == 25 %}
+                                                    {{ room_number[0] }}
+                                                {% endif %}
+                                            {% endfor %}
+                                            </p>
+                                        </div>
+                                        <div class="RM323">
+                                            <p>
+                                            {% for room_number in room_numbers %}
+                                                {% if loop.index == 26 %}
+                                                    {{ room_number[0] }}
+                                                {% endif %}
+                                            {% endfor %}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="Rooms-right">
@@ -195,26 +305,106 @@
                                         <div class="big-empty1"></div>
                                     </div>
                                     <div class="RM18">
-                                        <div class="RM321"><p>RM 318</p></div>
+                                        <div class="RM318">
+                                            <p>
+                                                {% for room_number in room_numbers %}
+                                                    {% if loop.index == 21 %}
+                                                        {{ room_number[0] }}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="Room310-316">
-                                <div class="RM310"><p>RM 310</p></div>
-                                <div class="RM311"><p>RM 311</p></div>
-                                <div class="RM312"><p>RM 312</p></div>
-                                <div class="RM313"><p>RM 313</p></div>
-                                <div class="RM314"><p>RM 314</p></div>
-                                <div class="RM315"><p>RM 315</p></div>
-                                <div class="RM316"><p>RM 316</p></div>
+                                <div class="RM310">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 14 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM311">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 15 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM312">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 16 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM313">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 17 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM314">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 18 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM315">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 19 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM316">
+                                    <p>
+                                        {% for room_number in room_numbers %}
+                                            {% if loop.index == 20 %}
+                                                {{ room_number[0] }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="Right">
                             <div class="Right-content">
                                 <div class="Long-empty-right"></div>
                                 <div class="smallEmpty-right"></div>
-                                <div class="RM301"><p>RM 301</p></div>
-                                <div class="RM300"><p>RM 300</p></div>
+                                <div class="RM301">
+                                    <p>
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 2 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                </div>
+                                <div class="RM300">
+                                    <p>
+                                    {% for room_number in room_numbers %}
+                                        {% if loop.index == 1 %}
+                                            {{ room_number[0] }}
+                                        {% endif %}
+                                    {% endfor %}
+                                    </p>
+                                </div>
                                 <div class="mediumEmpty-right"></div>
                                 <div class="rectangle-right"></div>
                             </div>
