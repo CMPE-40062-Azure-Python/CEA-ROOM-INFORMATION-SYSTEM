@@ -81,9 +81,9 @@ ul.Profile-Setting {
   border-radius: 7px;
 }
 ul.Profile-Setting li {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #810403;
-  margin-top: 12px;
+  margin-top: 8px;
   padding: 0;
   cursor: pointer;
   width: 160px;
@@ -91,6 +91,15 @@ ul.Profile-Setting li {
   margin-right: auto;
   display: flex;
   align-items: center;
+  padding: 2px;
+  border: 1px solid transparent;
+}
+ul.Profile-Setting li:hover {
+  background-color: rgba(169, 169, 169, 0.5);
+  padding: 2px;
+  border: 1px solid rgba(169, 169, 169, 0.5);
+  border-radius: 5px;
+  
 }
 img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
   height: 25px;
@@ -111,6 +120,11 @@ img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
   margin-right: 0;
   background-color: #ffffff;
   margin-top: 5px;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+.Nav-left.hidden {
+  transform: translateX(-100%);
 }
 .Nav-left_Content {
   display: flex;
@@ -157,10 +171,12 @@ img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
 }
 .Nav-Right > .Nav-Right-Content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
 }
 .Nav-Right-Content > div {
+  margin-right: 50px;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -190,8 +206,14 @@ img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
   justify-content: start;
   align-items: center;
   border-top: 4px solid #DBA729;
+  transition: transform 0.3s ease, margin-right 0.3s ease;
+  transform: translateX(0);
 }
-.Side-bar > .Rooms, .Reservations {
+.Side-bar.hidden {
+  transform: translateX(-100%);
+  margin-right: -270px;
+}
+.Side-bar > .Side-bar-Contents > .Rooms, .Reservations {
   width: 220px;
   height: 270px;
   background-color: rgba(128, 128, 128, 0.5);
@@ -201,15 +223,17 @@ img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
   margin-top: 50px;
 }
 div.Reservations {
-  margin-top: 30px;
+  margin-top: 70px;
+  height: 300px;
   display: flex;
   flex-direction: column;
 }
-.Side-bar > .Reservations > .Reservation-img-Container {
+.Side-bar > .Side-bar-Contents > .Reservations > .Reservation-img-Container {
   width: 220px;
   height: 270px;
+  cursor: pointer;
 }
-.Side-bar > .Rooms > .Room-img-Container {
+.Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container {
   width: 220px;
   height: 270px;
   cursor: pointer;
@@ -218,7 +242,7 @@ div.Reservation-img-Container {
   width: 220px;
   height: 270px;
 }
-.Side-bar > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
+.Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
   height: 100px;
   width: 100px;
 }
@@ -244,9 +268,7 @@ div.Reservation-img-Container {
   color: #810403;
   cursor: pointer;
 }
-div.Rooms > .Rooms-bttn button:hover {
-  color: #DBA729;
-}
+
 div.Reserve-bttn button {
   height: 50px;
   width: 220px;
@@ -485,6 +507,6 @@ div.Reserve-bttn button:hover {
   bottom: 0;
   left: 0;
   background-color: #FFFFFA;
-  filter: blur(10px); /* Adjust the blur amount as needed */
-  z-index: -1; /* Place the pseudo-element behind the content */
+  filter: blur(10px); 
+  z-index: -1;
 }

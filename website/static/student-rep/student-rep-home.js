@@ -5,35 +5,52 @@ homelink.style.color = '#DBA729';
 //Policies - Hover
 
 const policies = document.querySelector('.Policies-Icon');
-const policiesIcon = document.querySelector('.Policies-bttn')
+const policiesIcon = document.querySelector('.Policies-bttn');
+
+policies.style.color = '#810403';
+// Preload images
+const yellowIconPolicies = new Image();
+yellowIconPolicies.src = "/static/images/student-rep-policies-yellow-icon.png";
+
+const normalIconPolicies = new Image();
+normalIconPolicies.src = "/static/images/student-rep-policies-icon.png";
 
 policies.addEventListener("mouseover", function () {
+    policiesIcon.src = yellowIconPolicies.src;
     policies.style.borderBottom = '2px solid #DBA729';
     policies.style.color = '#DBA729';
-    policiesIcon.src = "/static/images/student-rep-policies-yellow-icon.png";
 });
 
 policies.addEventListener("mouseout", function () {
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
-    policiesIcon.src = "/static/images/student-rep-policies-icon.png";
-})
+    policiesIcon.src = normalIconPolicies.src;
+});
 
 //FAQs - Hover
 
 const Faqs = document.querySelector('.Faqs-Icon');
 const FaqsIcon = document.querySelector('.Faqs-bttn');
 
+// Preload images
+const yellowIconFaqs = new Image();
+yellowIconFaqs.src = "/static/images/student-rep-faqs-yellow-icon.png";
+
+const normalIconFaqs = new Image();
+normalIconFaqs.src = "/static/images/student-rep-faqs-icon.png";
+
+Faqs.style.color = '#810403';
+
 Faqs.addEventListener("mouseover", function () {
     Faqs.style.borderBottom = '2px solid #DBA729';
     Faqs.style.color = '#DBA729';
-    FaqsIcon.src = "/static/images/student-rep-faqs-yellow-icon.png";
+    FaqsIcon.src = yellowIconFaqs.src;
 });
 
 Faqs.addEventListener("mouseout", function () {
     Faqs.style.borderBottom = '2px solid transparent';
     Faqs.style.color = '#810403';
-    FaqsIcon.src = "/static/images/student-rep-faqs-icon.png";
+    FaqsIcon.src = normalIconFaqs.src;
 });
 
 //About Us - Hover
@@ -41,16 +58,25 @@ Faqs.addEventListener("mouseout", function () {
 const AboutUs = document.querySelector('.AboutUs-Icon');
 const AboutUsIcon = document.querySelector('.AboutUs-bttn');
 
+// Preload images
+const yellowIconAboutUs = new Image();
+yellowIconAboutUs.src = "/static/images/student-rep-us-yellow-icon.png";
+
+const normalIconAboutUs = new Image();
+normalIconAboutUs.src = "/static/images/student-rep-us-icon.png";
+
+AboutUs.style.color = '#810403';
+
 AboutUs.addEventListener("mouseover", function () {
     AboutUs.style.borderBottom = '2px solid #DBA729';
     AboutUs.style.color = '#DBA729';
-    AboutUsIcon.src = "/static/images/student-rep-us-yellow-icon.png";
+    AboutUsIcon.src = yellowIconAboutUs.src;
 });
 
 AboutUs.addEventListener("mouseout", function () {
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
-    AboutUsIcon.src = "/static/images/student-rep-us-icon.png";
+    AboutUsIcon.src = normalIconAboutUs.src;
 });
 
 
@@ -59,17 +85,27 @@ AboutUs.addEventListener("mouseout", function () {
 const ContactUs = document.querySelector('.Contact-Icon');
 const ContactUsIcon = document.querySelector('.Contact-bttn');
 
+// Preload images
+const yellowIconContactUs = new Image();
+yellowIconContactUs.src = "/static/images/student-rep-contact-yellow-icon.png";
+
+const normalIconContactUs = new Image();
+normalIconContactUs.src = "/static/images/student-rep-contact-icon.png";
+
+ContactUs.style.color = '#810403';
+
 ContactUs.addEventListener("mouseover", function () {
     ContactUs.style.borderBottom = '2px solid #DBA729';
     ContactUs.style.color = '#DBA729';
-    ContactUsIcon.src = "/static/images/student-rep-contact-yellow-icon.png";
+    ContactUsIcon.src = yellowIconContactUs.src;
 });
 
 ContactUs.addEventListener("mouseout", function () {
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
-    ContactUsIcon.src = "/static/images/student-rep-contact-icon.png";
+    ContactUsIcon.src = normalIconContactUs.src;
 });
+
 
 //Menu - hover
 
@@ -85,28 +121,38 @@ MenuIcon.addEventListener("mouseout", function () {
 
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
+let isMouseOverIcon = false;
+let isClicked = false; 
 
-Account_Icon.addEventListener("mouseover", function () {
-    Account_Icon.src = "/static/images/student-rep-account-yellow.png";
+Account_Icon.addEventListener("mouseenter", function () {
+    if (!isOpen && !isClicked) {
+        isMouseOverIcon = true;
+        Account_Icon.src = "/static/images/student-rep-account-yellow.png";
+    }
 });
 
-Account_Icon.addEventListener("mouseout", function () {
-    Account_Icon.src = "/static/images/student-rep-account.png";
+Account_Icon.addEventListener("mouseleave", function () {
+    isMouseOverIcon = false;
+    
+    if (!isOpen && !isClicked) {
+        Account_Icon.src = "/static/images/student-rep-account.png";
+    }
 });
 
 // Account Setting - Clicked
 
 const AccSettings = document.querySelector('.Profile-Setting');
-let isOpen = false; // Display State to None
+let isOpen = false; 
 
 Account_Icon.addEventListener("click", function (event) {
     if (!isOpen) {
         AccSettings.style.display = "block";
-        isOpen = true; // Show Container
+        isOpen = true; 
+        isClicked = true; 
         Account_Icon.src = "/static/images/student-rep-account-yellow.png";
     } else {
         AccSettings.style.display = "none";
-        Account_Icon.src = "/static/images/student-rep-account.png";
+        Account_Icon.src = "/static/images/student-rep-account.png"; 
         isOpen = false;
     }
     event.stopPropagation();
@@ -116,17 +162,23 @@ Account_Icon.addEventListener("click", function (event) {
 document.addEventListener("click", function () {
     AccSettings.style.display = "none";
     Account_Icon.src = "/static/images/student-rep-account.png";
+
+    // Check if the mouse is not over the icon and not clicked before changing the icon
+    if (!isMouseOverIcon && !isClicked) {
+        Account_Icon.src = "/static/images/student-rep-account.png";
+    }
     isOpen = false;
+    isClicked = false; // Reset the click state
 });
 
 // Rooms - Hover
 const RoomContainer = document.querySelector('.Room-img-Container');
 const RoomsImg = document.querySelector('.Rooms-img');
-const RoomsBttn = document.querySelector('.Rooms-bttn');
+const RoomsBttn = document.getElementById('RoomsId');
 
 RoomContainer.addEventListener("mouseover", function () {
-    RoomsImg.src = "/static/images/student-rep-rooms-yellow.png";
     RoomsBttn.style.color = '#DBA729';
+    RoomsImg.src = "/static/images/student-rep-rooms-yellow.png";
 });
 
 RoomContainer.addEventListener("mouseout", function () {
@@ -147,7 +199,7 @@ RoomsBttn.addEventListener("mouseout", function () {
 //Reservations - Hover
 const ReservationContainer = document.querySelector('.Reservation-img-Container');
 const ReserveImg = document.querySelector('.Reserve-img');
-const ReserveBttn = document.querySelector('.Reserve-bttn')
+const ReserveBttn = document.getElementById('ReserveId')
 
 ReservationContainer.addEventListener("mouseover", function () {
     ReserveImg.src = "/static/images/student-rep-reserve-yellow.png";
@@ -195,3 +247,66 @@ setInterval(() => {
     document.getElementById('CurrentMinute').textContent = formatTimeUnit(currentTime.getMinutes());
     document.getElementById('CurrentSecond').textContent = formatTimeUnit(currentTime.getSeconds());
 }, 1000);
+
+// Menu Icon Toggle
+
+function MenuIconClick() {
+    const SideBar = document.querySelector('.Side-bar');
+    const SidebarContent = document.querySelector('.Side-bar-Contents');
+    
+    const navLeft = document.querySelector('.Nav-left');
+    const navLeftContent = document.querySelector('.Nav-left_Content');
+
+    const navRightContent = document.querySelector('.Nav-Right-Content');
+    const navRight = document.querySelector('.Nav-Right');
+
+    const updatesContainer = document.querySelector('.Updates-Container');
+
+    const scheduleContainer = document.querySelector('.Schedule-Container');
+    
+
+    SideBar.classList.toggle('hidden');
+    navLeft.classList.toggle('hidden');
+
+    if (SideBar.classList.contains('hidden')) {
+        navRight.style.width = '100%';
+        navLeft.style.width = '0' 
+        navLeftContent.style.display = 'none';
+
+        navRightContent.style.justifyContent = 'space-between';
+        navRightContent.style.marginRight = '20px';
+        navRightContent.style.marginLeft = '20px';
+
+        SideBar.style.width = '0';
+        SidebarContent.style.display = 'none';
+
+        updatesContainer.style.width = 'calc(100% + 230px)';
+        updatesContainer.style.marginRight = '20px';
+        updatesContainer.style.marginLeft = '20px';
+        updatesContainer.style.justifyContent = 'space-between';
+        updatesContainer.style.paddingRight = '30px';
+        updatesContainer.style.paddingLeft = '30px';
+
+
+        scheduleContainer.style.width = 'calc(100% + 230px)'; 
+        scheduleContainer.style.marginRight = '20px';
+        scheduleContainer.style.marginLeft = '20px';
+    } else {
+        navRight.style.width = 'calc(100% - 270px)';
+        navLeft.style.width = '270px' 
+        navLeftContent.style.display = 'flex';
+
+        SideBar.style.width = '270px'
+        SidebarContent.style.display = 'block'
+
+        updatesContainer.style.width = '100%';
+        updatesContainer.style.marginRight = '3px';
+        updatesContainer.style.marginLeft = '0';
+
+        scheduleContainer.style.width = '90%'; 
+        scheduleContainer.style.marginRight = 'auto';
+        scheduleContainer.style.marginLeft = 'auto';
+    }
+}
+
+document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
