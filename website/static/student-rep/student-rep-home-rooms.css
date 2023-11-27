@@ -309,3 +309,428 @@
     padding: 0;
     border-radius: 10px;
   }
+  .side-bar-and-content > .Rooms-Container {
+    display: flex;
+    flex-direction: column;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Floor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Floor h1 {
+    width: 230px;
+    font-family: 'Cardo-Regular', sans-serif;
+    font-size: 1.7rem;
+    color: #810403;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px #810403;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container {
+    width: 95%;
+    height: 70%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Back-bttn img{
+    height: 30px;
+    width: 30px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Next-bttn img{
+    height: 30px;
+    width: 30px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan {
+    height: calc(85% - 1.5px);
+    width: 80%;
+    background: linear-gradient(135deg, #545454, #b0b0b0);
+    display: flex;
+  }
+
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1.5px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column> .Room302-306 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room302-306 div {
+    height: 90px;
+    width: 60px;
+    background-color: #3d1226;
+    box-shadow: 0 0 2px white;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left {
+    display: flex;
+    flex-direction: row;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM319-320 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM319-320 div {
+    height: 60px;
+    width: 80px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+    font-size: 1rem;
+    color: black;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 5px;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column> .Room-middle > .Rooms-left > .RM319-320 div p {
+    width: 40px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM-empty div {
+    height: 150px;
+    width: 80px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+    font-size: 1rem;
+    color: black;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM321-323 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM321-323 div {
+    height: 50px;
+    width: 80px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+    font-size: 1rem;
+    color: black;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-left > .RM321-323 div p {
+    width: 40px;
+  }
+  
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right {
+    display: flex;
+    flex-direction: row;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .small-Empty {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .small-Empty div {
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .medium-Empty div {
+    height: 60px;
+    width: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .big-Empty div {
+    height: 150px;
+    width: 110px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .RM18 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    height: auto;
+    width: auto;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .RM18 div {
+    height: 110px;
+    width: 50px;
+    background-color: #3d1226;
+    box-shadow: 0 0 2px white;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 5px;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room-middle > .Rooms-right > .RM18 div p {
+    width: 30px;
+  }
+
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column> .Room310-316 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room310-316 div {
+    height: 90px;
+    width: 77px;
+    background-color: #3d1226;
+    box-shadow: 0 0 2px white;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column > .Room310-316 div p {
+    width: 40px;
+  }
+
+  div.left {
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  div.Left-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  div.Long-empty-left {
+    margin-top: auto;
+    height: 85px;
+    width: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.smallEmpty-left {
+    height: 20px;
+    width: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.RM307, div.RM308 {
+    height: 90px;
+    width: 90px;
+    background-color: #3d1226;
+    box-shadow: 0 0 2px white;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  div.RM307 p, div.RM308 p {
+    width: 40px;
+    margin: 0;
+  }
+  div.mediumEmpty-left {
+    height: 40px;
+    width: 55px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.rectangle-left {
+    height: 50px;
+    width: 95px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+
+  div.Right {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 2px;
+  }
+  div.Right-content {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  div.Long-empty-right {
+    margin-top: auto;
+    height: 85px;
+    width: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.smallEmpty-right {
+    height: 20px;
+    width: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.RM301, div.RM300 {
+    height: 90px;
+    width: 90px;
+    background-color: #3d1226;
+    box-shadow: 0 0 2px white;
+    font-size: 1rem;
+    color: white;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    padding-right: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  div.RM301 p, div.RM300 p {
+    width: 40px;
+    margin: 0;
+  }
+  div.mediumEmpty-right {
+    height: 40px;
+    width: 55px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+  div.rectangle-right {
+    height: 50px;
+    width: 95px;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px black;
+  }
+
+  div.Rooms-Status {
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.Available {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  div.Available-box {
+    height: 15px;
+    width: 15px;
+    background: linear-gradient(135deg, #337656, #314b4b);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+  }
+  div.Available div {
+    font-size: 1rem;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.Occupied {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  div.Occupied-box {
+    height: 15px;
+    width: 15px;
+    background: linear-gradient(135deg, #810403, #492b37);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+  }
+  div.Occupied div {
+    font-size: 1rem;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.Not-Available {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  div.Not-Available-box {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+  }
+  div.Not-Available div {
+    font-size: 1rem;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
