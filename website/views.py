@@ -75,9 +75,19 @@ def student_rep_register():
 def student_rep_home():
     return render_template("student-rep/student-rep-home.html")
 
-@views.route('/student-rep/home/rooms')
+@views.route('/student-rep/home/rooms', methods=['GET', 'POST'])
 def student_rep_home_rooms():
-    return render_template("student-rep/student-rep-home-rooms.html")
+    mycursor.execute("SELECT roomNumber FROM cpe_dept_rooms")
+    
+    # Fetch all the results from the query
+    room_numbers = mycursor.fetchall()
+
+    # Print the room numbers for debugging purposes
+    for room_number in room_numbers:
+        print(room_number[0])
+
+    # Pass the room numbers to the template
+    return render_template("student-rep/student-rep-home-rooms.html", room_numbers=room_numbers)
 
 @views.route('/admin', methods=['GET', 'POST'])
 def admin_login():
