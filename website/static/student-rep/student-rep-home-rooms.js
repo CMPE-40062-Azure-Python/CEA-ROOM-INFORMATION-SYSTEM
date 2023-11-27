@@ -27,7 +27,7 @@ back.addEventListener("mouseout", function () {
 
 //Back Click
 back.addEventListener("click", function () {
-    window.location.href = '/student-rep-home';
+    window.location.href = '/student-rep/home';
 });
 
 //Search Hover

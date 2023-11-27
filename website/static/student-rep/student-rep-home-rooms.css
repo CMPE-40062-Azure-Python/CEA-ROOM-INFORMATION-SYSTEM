@@ -157,17 +157,19 @@
   }
   .Nav-Right > .Nav-Right-Content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
   }
-  .Nav-Right-Content > div.Back-Icon {
-    margin-right: 500px; 
-    
-}
-
-.Nav-Right-Content > div.Search-Icon {
-    margin-left: 500px; 
-}
+  .Nav-Right > .Nav-Right-Content > .Search-Icon {
+    padding: 5px;
+  }
+  .Nav-Right > .Nav-Right-Content > .Search-Icon:hover {
+    background-color: rgba(166, 166, 166, 0.2);
+    border-radius: 7px;
+    cursor: pointer;
+  }
   .Nav-Right-Content > div {
     display: flex;
     flex-direction: row;
@@ -182,7 +184,7 @@
 .Nav-Right-Content > div h2 {
     font-size: 15px;
     font-weight: 400;
-  color: #810403;
+    color: #810403;
     cursor: pointer;
     display: flex;
 }
