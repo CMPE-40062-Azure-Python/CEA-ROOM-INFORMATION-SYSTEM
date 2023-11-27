@@ -203,7 +203,7 @@
     align-items: center;
     border-top: 4px solid #DBA729;
   }
-  .Side-bar > .Rooms, .Reservations {
+  .Side-bar > .Side-bar-Contents > .Rooms, .Reservations {
     width: 220px;
     height: 270px;
     background-color: rgba(128, 128, 128, 0.5);
@@ -217,11 +217,11 @@
     display: flex;
     flex-direction: column;
   }
-  .Side-bar > .Reservations > .Reservation-img-Container {
+  .Side-bar > .Side-bar-Contents > .Reservations > .Reservation-img-Container {
     width: 220px;
     height: 270px;
   }
-  .Side-bar > .Rooms > .Room-img-Container {
+  .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container {
     width: 220px;
     height: 270px;
     cursor: pointer;
@@ -230,7 +230,7 @@
     width: 220px;
     height: 270px;
   }
-  .Side-bar > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
+  .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
     height: 100px;
     width: 100px;
   }
@@ -353,9 +353,15 @@
     height: 30px;
     width: 30px;
   }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Back-bttn img:hover{
+    cursor: pointer;
+  }
   .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Next-bttn img{
     height: 30px;
     width: 30px;
+  }
+  .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Next-bttn img:hover {
+    cursor: pointer;
   }
   .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan {
     height: 85%;

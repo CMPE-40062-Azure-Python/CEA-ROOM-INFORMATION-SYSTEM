@@ -101,34 +101,36 @@
     </div>
     <div class="side-bar-and-content">
         <div class="Side-bar">
-            <div class="Rooms">
-                <div class="Room-img-Container">
-                    <img 
-                    class="Rooms-img"
-                    src="{{ url_for('static', filename='images/student-rep-rooms-yellow.png') }}"
-                    alt="Rooms Image"
-                    />
-            </div>
-            <div class="Rooms-bttn">
-                <button onclick="handleRoomsButtonClick()">
-                    Rooms
-                </button>
-            </div>
-            <div class="Reservations">
-                <div class="Reservation-img-Container">
-                    <img 
-                    class="Reserve-img"
-                    src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
-                    alt="My Reservation Image"
-                    />
+            <div class="Side-bar-Contents">
+                <div class="Rooms">
+                    <div class="Room-img-Container">
+                        <img 
+                        class="Rooms-img"
+                        src="{{ url_for('static', filename='images/student-rep-rooms-yellow.png') }}"
+                        alt="Rooms Image"
+                        />
                 </div>
-                <div class="Reserve-bttn">
-                    <button onclick="handleReservationsButtonClick()">
-                        My Reservation
+                <div class="Rooms-bttn">
+                    <button onclick="handleRoomsButtonClick()">
+                        Rooms
                     </button>
                 </div>
+                <div class="Reservations">
+                    <div class="Reservation-img-Container">
+                        <img 
+                        class="Reserve-img"
+                        src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
+                        alt="My Reservation Image"
+                        />
+                    </div>
+                    <div class="Reserve-bttn">
+                        <button onclick="handleReservationsButtonClick()">
+                            My Reservation
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
+            </div>
         </div>
         <div class="Rooms-Container">
             <div class="Rooms-List-Container">
