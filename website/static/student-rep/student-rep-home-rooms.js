@@ -45,6 +45,26 @@ search.addEventListener("mouseout", function () {
     searchIcon.src = "/static/images/student-rep-search.png";
 });
 
+// Search Clicked
+
+
+const SearchContainer = document.querySelector('.Search-Icon');
+const SearchContent = document.querySelector('.Search');
+
+SearchContent.style.display = "none";
+
+
+SearchContainer.addEventListener('click', function (event) {
+    event.stopPropagation(); 
+    SearchContent.style.display = (SearchContent.style.display === 'none' || SearchContent.style.display === '') ? 'block' : 'none';
+});
+
+// Hide the search content when anything else on the document is clicked
+document.addEventListener('click', function () {
+    SearchContent.style.display = 'none';
+});
+    
+
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
 

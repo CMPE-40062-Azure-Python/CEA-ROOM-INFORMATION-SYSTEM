@@ -358,10 +358,11 @@
     width: 30px;
   }
   .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan {
-    height: calc(85% - 1.5px);
+    height: 85%;
     width: 80%;
     background: linear-gradient(135deg, #545454, #b0b0b0);
     display: flex;
+
   }
 
   .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column {
@@ -370,7 +371,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 1.5px;
+    margin-left: auto;
   }
   .side-bar-and-content > .Rooms-Container > .Rooms-List-Container > .Rooms-Floor-Plan-Container > .Rooms-Floor-Plan > .Rooms-column> .Room302-306 {
     display: flex;
@@ -600,7 +601,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-left: 2px;
+    margin-left: auto;
   }
   div.Right-content {
     width: auto;
@@ -734,3 +735,96 @@
     justify-content: center;
     align-items: center;
   }
+
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search {
+    height: 400px;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border: 1.5px solid black;
+    z-index: 1;
+    margin-top: 80px; 
+    margin-right: 20px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option div {
+    height: auto;
+    width: 174px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8E8E8;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option div:hover {
+    border-bottom: 2px solid #DBA729;
+    cursor: pointer;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option > .Room-name{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option > .Room-name:hover {
+    color: #DBA729;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option > .Time {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .search-option > .Time:hover {
+    color: #DBA729;
+  }
+
+
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .Search-bar input {
+    height: auto;
+    width: 300px;
+    background-color: white;
+    border: 2px solid #810403;
+    border-radius: 44px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-size: 0.85rem;
+    color: black;
+    margin-top: 5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .Search-bar input:hover {
+    border: 2px solid #DBA729;
+  }
+  .Nav-bar > .Nav-Right > .Nav-Right-Content > .Search > .recent-Searches {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #810403;
+    font-family: 'Cardo-Regular', sans-serif;
+  }
+
