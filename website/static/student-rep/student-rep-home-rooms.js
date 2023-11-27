@@ -27,7 +27,7 @@ back.addEventListener("mouseout", function () {
 
 //Back Click
 back.addEventListener("click", function () {
-    window.location.href = '/student-rep-home';
+    window.location.href = '/student-rep/home';
 });
 
 //Search Hover
@@ -44,6 +44,26 @@ search.addEventListener("mouseout", function () {
     searchTxt.style.color = '#810403';
     searchIcon.src = "/static/images/student-rep-search.png";
 });
+
+// Search Clicked
+
+
+const SearchContainer = document.querySelector('.Search-Icon');
+const SearchContent = document.querySelector('.Search');
+
+SearchContent.style.display = "none";
+
+
+SearchContainer.addEventListener('click', function (event) {
+    event.stopPropagation(); 
+    SearchContent.style.display = (SearchContent.style.display === 'none' || SearchContent.style.display === '') ? 'block' : 'none';
+});
+
+// Hide the search content when anything else on the document is clicked
+document.addEventListener('click', function () {
+    SearchContent.style.display = 'none';
+});
+    
 
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
@@ -106,3 +126,55 @@ ReserveBttn.addEventListener("mouseout", function () {
     ReserveBttn.style.color = '#810403';
 });
 
+
+// Menu Toggle
+
+function MenuIconClick() {
+    const SideBar = document.querySelector('.Side-bar');
+    const SidebarContent = document.querySelector('.Side-bar-Contents');
+    
+    const navLeft = document.querySelector('.Nav-left');
+    const navLeftContent = document.querySelector('.Nav-left_Content');
+
+    const navRightContent = document.querySelector('.Nav-Right-Content');
+    const navRight = document.querySelector('.Nav-Right');
+
+    const RoomsContainer = document.querySelector('.Rooms-Container')
+
+
+    SideBar.classList.toggle('hidden');
+    navLeft.classList.toggle('hidden');
+
+    if (SideBar.classList.contains('hidden')) {
+        navRight.style.width = '100%';
+        navLeft.style.width = '0' 
+        navLeftContent.style.display = 'none';
+
+        navRightContent.style.justifyContent = 'space-between';
+        navRightContent.style.marginRight = '40px';
+        navRightContent.style.marginLeft = '40px';
+
+        SideBar.style.width = '0';
+        SidebarContent.style.display = 'none';
+
+        RoomsContainer.style.width = 'calc(100% + 230px)';
+        RoomsContainer.style.marginRight = '20px';
+        RoomsContainer.style.marginLeft = '20px';
+
+
+        
+    } else {
+        navRight.style.width = 'calc(100% - 270px)';
+        navLeft.style.width = '270px' 
+        navLeftContent.style.display = 'flex';
+
+        SideBar.style.width = '270px'
+        SidebarContent.style.display = 'block'
+
+        RoomsContainer.style.width = 'calc(100% - 290px)';
+        RoomsContainer.style.marginRight = 'auto';
+        RoomsContainer.style.marginLeft = 'auto';
+    }
+}
+
+document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);

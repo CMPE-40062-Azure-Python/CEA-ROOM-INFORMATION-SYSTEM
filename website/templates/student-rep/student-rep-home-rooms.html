@@ -66,7 +66,7 @@
         </div>
         <div class="Nav-Right">
             <div class="Nav-Right-Content">
-                <div class="Back-Icon">
+                <div class="Back-Icon" id="BackId">
                     <img 
                 class="Back-bttn"
                 src="{{ url_for('static', filename='images/student-rep-back.png') }}"
@@ -82,43 +82,166 @@
                 />
                 <h2 class="Search-txt">Search</h2>
                 </div>
+                <div class="Search">
+                    <div class="search-option">
+                        <div class="Room-name">Room Name</div>
+                        <div class="Time">Time-in - Time-out</div>
+                    </div>
+                    <div class="Search-bar">
+                        <input 
+                        type="text"
+                        class="Search-Input"
+                        placeholder="Search Room Name">
+                        </div>
+                    <div class="recent-Searches">Recent Searches</div>
+                </div>
 
             </div>
         </div>
     </div>
     <div class="side-bar-and-content">
         <div class="Side-bar">
-            <div class="Rooms">
-                <div class="Room-img-Container">
-                    <img 
-                    class="Rooms-img"
-                    src="{{ url_for('static', filename='images/student-rep-rooms-yellow.png') }}"
-                    alt="Rooms Image"
-                    />
-            </div>
-            <div class="Rooms-bttn">
-                <button onclick="handleRoomsButtonClick()">
-                    Rooms
-                </button>
-            </div>
-            <div class="Reservations">
-                <div class="Reservation-img-Container">
-                    <img 
-                    class="Reserve-img"
-                    src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
-                    alt="My Reservation Image"
-                    />
+            <div class="Side-bar-Contents">
+                <div class="Rooms">
+                    <div class="Room-img-Container">
+                        <img 
+                        class="Rooms-img"
+                        src="{{ url_for('static', filename='images/student-rep-rooms-yellow.png') }}"
+                        alt="Rooms Image"
+                        />
                 </div>
-                <div class="Reserve-bttn">
-                    <button onclick="handleReservationsButtonClick()">
-                        My Reservation
+                <div class="Rooms-bttn">
+                    <button onclick="handleRoomsButtonClick()">
+                        Rooms
                     </button>
                 </div>
+                <div class="Reservations">
+                    <div class="Reservation-img-Container">
+                        <img 
+                        class="Reserve-img"
+                        src="{{ url_for('static', filename='images/student-rep-reserve.png') }}"
+                        alt="My Reservation Image"
+                        />
+                    </div>
+                    <div class="Reserve-bttn">
+                        <button onclick="handleReservationsButtonClick()">
+                            My Reservation
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
+            </div>
         </div>
         <div class="Rooms-Container">
             <div class="Rooms-List-Container">
+                <div class="Floor">
+                    <h1>THIRD FLOOR</h1>
+                </div>
+                <div class="Rooms-Floor-Plan-Container">
+                    <div class="Back-bttn">
+                        <img 
+                    class="Backbttn-img"
+                    src="{{ url_for('static', filename='images/student-rep-rooms-back.png') }}"
+                    alt="Back Button"
+                    />
+                    </div>
+                    <div class="Rooms-Floor-Plan">
+                        <div class="Left">
+                            <div class="Left-content">
+                                <div class="Long-empty-left"></div>
+                                <div class="smallEmpty-left"></div>
+                                <div class="RM307"><p>RM 307</p></div>
+                                <div class="RM308"><p>RM 308</p></div>
+                                <div class="mediumEmpty-left"></div>
+                                <div class="rectangle-left"></div>
+                            </div>
+                        </div>
+                        <div class="Rooms-column">
+                            <div class="Room302-306">
+                                <div class="306b">RM 306b</div>
+                                <div class="306a">RM 306a</div>
+                                <div class="305b">RM 305b</div>
+                                <div class="305a">RM 305a</div>
+                                <div class="304b">RM 304b</div>
+                                <div class="304a">RM 304a</div>
+                                <div class="303b">RM 303b</div>
+                                <div class="303a">RM 303a</div>
+                                <div class="302">RM 302</div>
+                            </div>
+                            <div class="Room-middle">
+                                <div class="Rooms-left">
+                                    <div class="RM319-320">
+                                        <div class="RM319"><p>RM 319</p></div>
+                                        <div class="RM320"><p>RM 320</p></div>
+                                    </div>
+                                    <div class="RM-empty">
+                                        <div class="EmptyRM"></div>
+                                    </div>
+                                    <div class="RM321-323">
+                                        <div class="RM321"><p>RM 321</p></div>
+                                        <div class="RM322"><p>RM 322</p></div>
+                                        <div class="RM323"><p>RM 323</p></div>
+                                    </div>
+                                </div>
+                                <div class="Rooms-right">
+                                    <div class="small-Empty">
+                                        <div class="small-empty1"></div>
+                                        <div class="small-empty2"></div>
+                                    </div>
+                                    <div class="medium-Empty">
+                                        <div class="medium-empty1"></div>
+                                    </div>
+                                    <div class="big-Empty">
+                                        <div class="big-empty1"></div>
+                                    </div>
+                                    <div class="RM18">
+                                        <div class="RM321"><p>RM 318</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Room310-316">
+                                <div class="RM310"><p>RM 310</p></div>
+                                <div class="RM311"><p>RM 311</p></div>
+                                <div class="RM312"><p>RM 312</p></div>
+                                <div class="RM313"><p>RM 313</p></div>
+                                <div class="RM314"><p>RM 314</p></div>
+                                <div class="RM315"><p>RM 315</p></div>
+                                <div class="RM316"><p>RM 316</p></div>
+                            </div>
+                        </div>
+                        <div class="Right">
+                            <div class="Right-content">
+                                <div class="Long-empty-right"></div>
+                                <div class="smallEmpty-right"></div>
+                                <div class="RM301"><p>RM 301</p></div>
+                                <div class="RM300"><p>RM 300</p></div>
+                                <div class="mediumEmpty-right"></div>
+                                <div class="rectangle-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Next-bttn">
+                        <img 
+                    class="Nextbttn-img"
+                    src="{{ url_for('static', filename='images/student-rep-rooms-next.png') }}"
+                    alt="Next Button"
+                    />
+                    </div>
+                </div>
+                <div class="Rooms-Status">
+                    <div class="Available">
+                        <div class="Available-box"></div>
+                        <div>Available</div>
+                    </div>
+                    <div class="Occupied">
+                        <div class="Occupied-box"></div>
+                        <div>Occupied</div>
+                    </div>
+                    <div class="Not-Available">
+                        <div class="Not-Available-box"></div>
+                        <div>Not Available</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
