@@ -6,7 +6,7 @@ MenuIcon.addEventListener("mouseover", function () {
     MenuIcon.src = "/static/images/student-rep-menu-yellow.png";
 });
 
-MenuIcon.addEventListener("mouseout", function (){
+MenuIcon.addEventListener("mouseout", function () {
     MenuIcon.src = "/static/images/student-rep-menu.png";
 });
 
@@ -55,24 +55,24 @@ SearchContent.style.display = "none";
 
 
 SearchContainer.addEventListener('click', function (event) {
-    event.stopPropagation(); 
+    event.stopPropagation();
     SearchContent.style.display = (SearchContent.style.display === 'none' || SearchContent.style.display === '') ? 'block' : 'none';
 });
 
-// Hide the search content when anything else on the document is clicked
-document.addEventListener('click', function () {
-    SearchContent.style.display = 'none';
-});
-    
+// // Hide the search content when anything else on the document is clicked
+// document.addEventListener('click', function () {
+//     SearchContent.style.display = 'none';
+// });
+
 
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
 
-Account_Icon.addEventListener("mouseover", function (){
+Account_Icon.addEventListener("mouseover", function () {
     Account_Icon.src = "/static/images/student-rep-account-yellow.png";
 });
 
-Account_Icon.addEventListener("mouseout", function (){
+Account_Icon.addEventListener("mouseout", function () {
     Account_Icon.src = "/static/images/student-rep-account.png";
 });
 
@@ -82,23 +82,23 @@ const AccSettings = document.querySelector('.Profile-Setting');
 let isOpen = false; // Display State to None
 
 Account_Icon.addEventListener("click", function (event) {
-  if (!isOpen) {
-    AccSettings.style.display = "block";
-    isOpen = true; // Show Container
-    Account_Icon.src = "/static/images/student-rep-account-yellow.png";
-  } else {
-    AccSettings.style.display = "none";
-    Account_Icon.src = "/static/images/student-rep-account.png";
-    isOpen = false;
-  }
-  event.stopPropagation();
+    if (!isOpen) {
+        AccSettings.style.display = "block";
+        isOpen = true; // Show Container
+        Account_Icon.src = "/static/images/student-rep-account-yellow.png";
+    } else {
+        AccSettings.style.display = "none";
+        Account_Icon.src = "/static/images/student-rep-account.png";
+        isOpen = false;
+    }
+    event.stopPropagation();
 });
 
 // Account Settings Hide When Anything in the Screen is Clicked
 document.addEventListener("click", function () {
-  AccSettings.style.display = "none";
-  Account_Icon.src = "/static/images/student-rep-account.png";
-  isOpen = false;
+    AccSettings.style.display = "none";
+    Account_Icon.src = "/static/images/student-rep-account.png";
+    isOpen = false;
 });
 
 //Reservations - Hover
@@ -132,7 +132,7 @@ ReserveBttn.addEventListener("mouseout", function () {
 function MenuIconClick() {
     const SideBar = document.querySelector('.Side-bar');
     const SidebarContent = document.querySelector('.Side-bar-Contents');
-    
+
     const navLeft = document.querySelector('.Nav-left');
     const navLeftContent = document.querySelector('.Nav-left_Content');
 
@@ -147,7 +147,7 @@ function MenuIconClick() {
 
     if (SideBar.classList.contains('hidden')) {
         navRight.style.width = '100%';
-        navLeft.style.width = '0' 
+        navLeft.style.width = '0'
         navLeftContent.style.display = 'none';
 
         navRightContent.style.justifyContent = 'space-between';
@@ -162,10 +162,10 @@ function MenuIconClick() {
         RoomsContainer.style.marginLeft = '20px';
 
 
-        
+
     } else {
         navRight.style.width = 'calc(100% - 270px)';
-        navLeft.style.width = '270px' 
+        navLeft.style.width = '270px'
         navLeftContent.style.display = 'flex';
 
         SideBar.style.width = '270px'
@@ -178,3 +178,29 @@ function MenuIconClick() {
 }
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
+
+// Show roomNumber based on searchInput
+$(document).ready(function () {
+    $('#searchInput').on('input', function () {
+        var searchText = $(this).val().toLowerCase(); // Convert to lowercase for case-insensitive matching
+        console.log("Search Text:", searchText);
+
+        if (searchText === "") {
+            // If search input is empty, hide all room numbers
+            $('.roomNumber').hide();
+        } else {
+            // If search input is not empty, filter and display matching room numbers
+            $('.roomNumber').each(function () {
+                var roomNumber = $(this).text().toLowerCase(); // Convert to lowercase for case-insensitive matching
+                console.log("Room Number:", roomNumber);
+
+                if (roomNumber.includes(searchText)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+    });
+});
+

@@ -89,19 +89,22 @@ def student_rep_home():
                            occupied_count=occupied_count,
                            maintenance_count=maintenance_count)
 
-@views.route('/student-rep/home/rooms', methods=['GET', 'POST'])
+@views.route('/student-rep/home/rooms')
 def student_rep_home_rooms():
     mycursor.execute("SELECT roomNumber FROM cpe_dept_rooms")
     
     # Fetch all the results from the query
     room_numbers = mycursor.fetchall()
+    
+     # You can set a default value for searchInput or get it from somewhere
+    search_input = request.args.get('searchInput', '')
 
     # Print the room numbers for debugging purposes
     for room_number in room_numbers:
         print(room_number[0])
 
     # Pass the room numbers to the template
-    return render_template("student-rep/student-rep-home-rooms.html", room_numbers=room_numbers)
+    return render_template("student-rep/student-rep-home-rooms.html", room_numbers=room_numbers, searchInput=search_input)
 
 @views.route('/admin', methods=['GET', 'POST'])
 def admin_login():
