@@ -166,15 +166,15 @@
                 </div>
                 <div class="room-availability-container">
                     <div class="no-of-available">
-                        <h1>21</h1>
+                        <h1>{{ available_count }}</h1>
                     </div>
                     <div class="availability-text">
                         <p>ROOMS AVAILABLE</p>                
                     </div>
                 </div>
                 <div class="room-inuse-container">
-                    <div class="no-of-inuse">
-                        <h1>17</h1>
+                    <div class="no-of-inuse">   
+                        <h1>{{ occupied_count }}</h1>
                     </div>
                     <div class="inuse-text">
                         <p>ROOMS IN USE</p>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="room-maintenance-container">
                     <div class="no-of-maintenance">
-                        <h1>03</h1>
+                        <h1>{{ maintenance_count }}</h1>
                     </div>
                     <div class="maintenance-text">
                         <p>ROOMS</p>

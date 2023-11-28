@@ -71,9 +71,23 @@ def student_rep_register():
 
     return render_template("student-rep/student-rep-register.html")
 
+from flask import render_template
+
 @views.route('/student-rep/home')
 def student_rep_home():
-    return render_template("student-rep/student-rep-home.html")
+    mycursor.execute("SELECT COUNT(*) FROM cpe_dept_rooms WHERE status = 'available'")
+    available_count = mycursor.fetchone()[0]
+
+    mycursor.execute("SELECT COUNT(*) FROM cpe_dept_rooms WHERE status = 'occupied'")
+    occupied_count = mycursor.fetchone()[0]
+
+    mycursor.execute("SELECT COUNT(*) FROM cpe_dept_rooms WHERE status = 'under maintenance'")
+    maintenance_count = mycursor.fetchone()[0]
+
+    return render_template("student-rep/student-rep-home.html",
+                           available_count=available_count,
+                           occupied_count=occupied_count,
+                           maintenance_count=maintenance_count)
 
 @views.route('/student-rep/home/rooms', methods=['GET', 'POST'])
 def student_rep_home_rooms():
