@@ -67,7 +67,7 @@ def student_rep_register():
         mycursor.execute(sql, val)
         db.commit()
 
-        return redirect(url_for('views.student_rep'))
+        return redirect(url_for('views.student_rep_login'))
 
     return render_template("student-rep/student-rep-register.html")
 
