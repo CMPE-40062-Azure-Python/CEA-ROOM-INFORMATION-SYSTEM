@@ -60,7 +60,7 @@ The CEA Room Information System is a versatile web-based application designed to
 
 - Copy the following files inside this gdrive link to C:\xampp\mysql\data (replace the files inside):
 
-  https://drive.google.com/drive/folders/19906weiZ3z_ZrKzd4uAfQ5OnGncCyZKZ
+  https://drive.google.com/drive/folders/1DWg_-vY-Tk_SxbKAE9iR3bebjIcfeiDy?usp=sharing
 
 - Open XAMPP Control Panel and start Apache and MySQL Module then click MSQL Admin or follow this link:
 
