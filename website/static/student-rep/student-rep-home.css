@@ -301,6 +301,7 @@ div.Reserve-bttn button:hover {
   margin-right: auto;
   justify-content: center;
   margin-top: 25px;
+  padding-bottom: 20px;
 }
 
 .side-bar-and-content > .Updates-Schedule-Container > .Updates-Container {
@@ -497,16 +498,138 @@ div.Reserve-bttn button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  border: 2px solid black;
 }
 
-.Schedule-Container::before {
-  content: "";
+div.calendar-container {
+  height: 90%;
+  width: 90%;
+}
+
+.calendar {
+  display: grid;
+  grid-template-areas: 
+  "empty    planes"
+  "time contents";
+  grid-template-columns: 120px;
+  grid-template-rows: 60px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.20);
+  border: none; /* Add this line to remove the border */
+}
+
+.empty {
+  display: grid;
+  grid-area: empty;
+  border: none;
+}
+
+.planes {
+  grid-area: planes;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: white;
+  border: none;
+}
+
+.planes > div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Add this to remove the borders around each cell in .planes */
+.planes > div {
+  font-family: 'Cardo-Regular', sans-serif;
+  font-size: larger;
+  color: #810403;
+  font-weight: 600;
+  border: none;
+}
+
+.times {
+  grid-area: time;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr); 
+  font-size: 14px;
+  background-color: white;
+  border: none;
+}
+
+.times > div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: 'Cardo-Regular', sans-serif;
+  font-size: larger;
+  color: #810403;
+  font-weight: 600;
+}
+
+.content {
+  position: relative;
+  grid-area: contents;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr); 
+  grid-template-columns: repeat(7, 1fr);
+  border: none;
+  grid-auto-flow: column;
+}
+
+.content > div {
+  border: none;
+}
+
+.event {
+  padding-top: 8px;
+  font-size: 14px;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  background-color: yellow;
+  height: 100%;
+}
+
+.content > div:nth-child(even) {
+  background-color: white;
+}
+
+.modal-container {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
-  background-color: #FFFFFA;
-  filter: blur(10px); 
-  z-index: -1;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal {
+  background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+.modal-container--close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold
+}
+
+.modal-container--close:hover,
+.modal-container--close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
 }

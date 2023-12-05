@@ -310,3 +310,93 @@ function MenuIconClick() {
 }
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
+
+
+
+
+// Class Schedule
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector(".planes").addEventListener('click', function (e) {
+        let column = Array.from(e.target.parentNode.children).indexOf(e.target) + 1;
+
+        document.querySelector('.modal-container').style.display = 'block';
+
+        document.querySelector('.modal-container--close').addEventListener('click', function () {
+            document.querySelector('.modal-container').style.display = 'none';
+        });
+
+        document.querySelector('.modal-container--form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let startValue = document.querySelector("#start-select").value;
+            let endValue = document.querySelector("#end-select").value;
+
+            // Convert selected times to 24-hour format
+            let startTime = startValue.split(' ')[0];
+            let endTime = endValue.split(' ')[0];
+
+            let startRow = calculateGridRow(startTime);
+            let endRow = calculateGridRow(endTime);
+
+            let startArea = `a${startRow}-${column}`;
+            let endArea = `a${endRow}-${column}`;
+
+            let eventDiv = document.createElement('div');
+            eventDiv.className = 'event';
+            eventDiv.style.backgroundColor = 'yellow';
+            eventDiv.textContent = 'Class';
+
+            // Use grid areas to position the event
+            eventDiv.style.gridArea = `${startArea} / ${column} / ${endArea} / ${column + 1}`;
+
+            document.querySelector('.content').appendChild(eventDiv);
+
+            document.querySelector('.modal-container--form').reset();
+            document.querySelector('.modal-container--form').removeEventListener('submit', arguments.callee);
+            document.querySelector('.modal-container').style.display = 'none';
+        });
+    });
+});
+
+function calculateGridRow(time) {
+    let timeObj = {
+        "7:00 AM": 1,
+        "7:30 AM": 2,
+        "8:00 AM": 3,
+        "8:30": 4,
+        "9:00": 5,
+        "9:30": 6,
+        "10:00": 7,
+        "10:30": 8,
+        "11:00": 9,
+        "11:30": 10,
+        "12:00": 11,
+        "12:30": 12,
+        "1:00": 13,
+        "1:30": 14,
+        "2:00": 15,
+        "2:30": 16,
+        "3:00": 17,
+        "3:30": 18,
+        "4:00": 19,
+        "4:30": 20,
+        "5:00": 21,
+        "5:30": 22,
+        "6:00": 23,
+        "6:30": 24,
+        "7:00 PM": 25,
+        "7:30 PM": 26,
+        "8:00 PM": 27,
+        "8:30 PM": 28,
+        "9:00 PM": 29,
+    };
+
+    return timeObj[time];
+}
+
+
+
+
+
+
+  
