@@ -218,11 +218,11 @@
                       {% for room_number in room_numbers %} {% if loop.index == 16 %} {{ room_number[0] }} {% endif %} {% endfor %}
                     </p>
                   </div>
-                  <div class="RM313">
+                  <div id="room313" class="RM313">
                     <p>
                       {% for room_number in room_numbers %} {% if loop.index == 17 %} {{ room_number[0] }} {% endif %} {% endfor %}
                     </p>
-                  </div>
+                  </div>                  
                   <div class="RM314">
                     <p>
                       {% for room_number in room_numbers %} {% if loop.index == 18 %} {{ room_number[0] }} {% endif %} {% endfor %}
@@ -280,6 +280,40 @@
         </div>
       </div>
     </div>
+    <div id="room313Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- Your modal content goes here -->
+        <h2 class="first-heading">ROOM 313</h2>
+        <h2 class="second-heading">COM ENG ROOM</h2>
+        <div class="paragraph-container">
+          <p class="first-paragraph">STATUS</p>
+          <p class="second-paragraph">LOCATION: THIRD FLOOR</p>
+        </div>
+        <!-- New div structure for the layout -->
+        <div class="columns-container">
+          <div class="left-column">
+            <div class="left-top">Left Top Content</div>
+            <div class="left-bottom">Left Bottom Content</div>
+          </div>
+          <div class="right-column">Right Column Content</div>
+        </div>
+    
+        <!-- New container for reservations with the same padding as columns-container -->
+        <div class="reservation-container">
+          <span>RESERVE NOW</span>
+        </div>
+        <div class="reservation-details-container">
+          <span>RESERVATION TIME</span>
+          <span>RESERVATION PURPOSE</span>
+        </div>
+        <!-- New div with background color below all other divs -->
+        <div class="bgcolor-div"></div>
+      </div>
+    </div>    
+    </div>
+    
+  
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='student-rep/student-rep-home-rooms.js') }}"></script>
   </body>

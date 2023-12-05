@@ -204,3 +204,18 @@ $(document).ready(function () {
     });
 });
 
+// Function to open the modal
+function openModal() {
+    document.getElementById('room313Modal').style.display = 'block';
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    document.getElementById('room313Modal').style.display = 'none';
+  }
+  
+// Event listener for clicking Room 313
+document.getElementById('room313').addEventListener('click', openModal);
+
+
+  
