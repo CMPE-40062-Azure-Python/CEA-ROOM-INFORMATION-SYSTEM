@@ -122,7 +122,7 @@ MenuIcon.addEventListener("mouseout", function () {
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
 let isMouseOverIcon = false;
-let isClicked = false; 
+let isClicked = false;
 
 Account_Icon.addEventListener("mouseenter", function () {
     if (!isOpen && !isClicked) {
@@ -133,7 +133,7 @@ Account_Icon.addEventListener("mouseenter", function () {
 
 Account_Icon.addEventListener("mouseleave", function () {
     isMouseOverIcon = false;
-    
+
     if (!isOpen && !isClicked) {
         Account_Icon.src = "/static/images/student-rep-account.png";
     }
@@ -142,17 +142,17 @@ Account_Icon.addEventListener("mouseleave", function () {
 // Account Setting - Clicked
 
 const AccSettings = document.querySelector('.Profile-Setting');
-let isOpen = false; 
+let isOpen = false;
 
 Account_Icon.addEventListener("click", function (event) {
     if (!isOpen) {
         AccSettings.style.display = "block";
-        isOpen = true; 
-        isClicked = true; 
+        isOpen = true;
+        isClicked = true;
         Account_Icon.src = "/static/images/student-rep-account-yellow.png";
     } else {
         AccSettings.style.display = "none";
-        Account_Icon.src = "/static/images/student-rep-account.png"; 
+        Account_Icon.src = "/static/images/student-rep-account.png";
         isOpen = false;
     }
     event.stopPropagation();
@@ -253,7 +253,7 @@ setInterval(() => {
 function MenuIconClick() {
     const SideBar = document.querySelector('.Side-bar');
     const SidebarContent = document.querySelector('.Side-bar-Contents');
-    
+
     const navLeft = document.querySelector('.Nav-left');
     const navLeftContent = document.querySelector('.Nav-left_Content');
 
@@ -263,14 +263,14 @@ function MenuIconClick() {
     const updatesContainer = document.querySelector('.Updates-Container');
 
     const scheduleContainer = document.querySelector('.Schedule-Container');
-    
+
 
     SideBar.classList.toggle('hidden');
     navLeft.classList.toggle('hidden');
 
     if (SideBar.classList.contains('hidden')) {
         navRight.style.width = '100%';
-        navLeft.style.width = '0' 
+        navLeft.style.width = '0'
         navLeftContent.style.display = 'none';
 
         navRightContent.style.justifyContent = 'space-between';
@@ -288,12 +288,12 @@ function MenuIconClick() {
         updatesContainer.style.paddingLeft = '30px';
 
 
-        scheduleContainer.style.width = 'calc(100% + 230px)'; 
+        scheduleContainer.style.width = 'calc(100% + 230px)';
         scheduleContainer.style.marginRight = '20px';
         scheduleContainer.style.marginLeft = '20px';
     } else {
         navRight.style.width = 'calc(100% - 270px)';
-        navLeft.style.width = '270px' 
+        navLeft.style.width = '270px'
         navLeftContent.style.display = 'flex';
 
         SideBar.style.width = '270px'
@@ -303,7 +303,7 @@ function MenuIconClick() {
         updatesContainer.style.marginRight = '3px';
         updatesContainer.style.marginLeft = '0';
 
-        scheduleContainer.style.width = '90%'; 
+        scheduleContainer.style.width = '90%';
         scheduleContainer.style.marginRight = 'auto';
         scheduleContainer.style.marginLeft = 'auto';
     }
@@ -311,8 +311,52 @@ function MenuIconClick() {
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
 
+function calculateGridRow(time) {
+    let timeObj = {
+        "7:00 AM": 1,
+        "7:30 AM": 2,
+        "8:00 AM": 3,
+        "8:30 AM": 4,
+        "9:00 AM": 5,
+        "9:30 AM": 6,
+        "10:00 AM": 7,
+        "10:30 AM": 8,
+        "11:00 AM": 9,
+        "11:30 AM": 10,
+        "12:00 PM": 11,
+        "12:30 PM": 12,
+        "1:00 PM": 13,
+        "1:30 PM": 14,
+        "2:00 PM": 15,
+        "2:30 PM": 16,
+        "3:00 PM": 17,
+        "3:30 PM": 18,
+        "4:00 PM": 19,
+        "4:30 PM": 20,
+        "5:00 PM": 21,
+        "5:30 PM": 22,
+        "6:00 PM": 23,
+        "6:30 PM": 24,
+        "7:00 PM": 25,
+        "7:30 PM": 26,
+        "8:00 PM": 27,
+        "8:30 PM": 28,
+        "9:00 PM": 29,
+    };
 
+    // Debugging: Log the input time
+    console.log('Input time:', time);
 
+    let [timeValue, period] = time.split(' ');
+
+    // Check if the time is in AM or PM and adjust accordingly
+    let row = timeObj[`${timeValue} ${period === 'PM' && timeValue !== '12:00' ? 'PM' : 'AM'}`];
+
+    // Debugging: Log the calculated row
+    console.log('Calculated row:', row);
+
+    return row;
+}
 
 // Class Schedule
 document.addEventListener('DOMContentLoaded', function () {
@@ -331,23 +375,28 @@ document.addEventListener('DOMContentLoaded', function () {
             let startValue = document.querySelector("#start-select").value;
             let endValue = document.querySelector("#end-select").value;
 
-            // Convert selected times to 24-hour format
-            let startTime = startValue.split(' ')[0];
-            let endTime = endValue.split(' ')[0];
+            // Debugging: Log the input start and end times
+            console.log('Start time:', startValue, 'End time:', endValue);
 
-            let startRow = calculateGridRow(startTime);
-            let endRow = calculateGridRow(endTime);
+            let startRow = calculateGridRow(startValue);
+            let endRow = calculateGridRow(endValue);
+
+            // Debugging: Log the calculated startRow and endRow
+            console.log('Start row:', startRow, 'End row:', endRow);
 
             let startArea = `a${startRow}-${column}`;
             let endArea = `a${endRow}-${column}`;
+
+            // Debugging: Log the calculated startArea and endArea
+            console.log('Start area:', startArea, 'End area:', endArea);
 
             let eventDiv = document.createElement('div');
             eventDiv.className = 'event';
             eventDiv.style.backgroundColor = 'yellow';
             eventDiv.textContent = 'Class';
 
-            // Use grid areas to position the event
-            eventDiv.style.gridArea = `${startArea} / ${column} / ${endArea} / ${column + 1}`;
+            // Use grid areas to position the event only for the selected time
+            eventDiv.style.gridArea = `${startArea} / ${column} / ${endArea} / ${column}`;
 
             document.querySelector('.content').appendChild(eventDiv);
 
@@ -358,45 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function calculateGridRow(time) {
-    let timeObj = {
-        "7:00 AM": 1,
-        "7:30 AM": 2,
-        "8:00 AM": 3,
-        "8:30": 4,
-        "9:00": 5,
-        "9:30": 6,
-        "10:00": 7,
-        "10:30": 8,
-        "11:00": 9,
-        "11:30": 10,
-        "12:00": 11,
-        "12:30": 12,
-        "1:00": 13,
-        "1:30": 14,
-        "2:00": 15,
-        "2:30": 16,
-        "3:00": 17,
-        "3:30": 18,
-        "4:00": 19,
-        "4:30": 20,
-        "5:00": 21,
-        "5:30": 22,
-        "6:00": 23,
-        "6:30": 24,
-        "7:00 PM": 25,
-        "7:30 PM": 26,
-        "8:00 PM": 27,
-        "8:30 PM": 28,
-        "9:00 PM": 29,
-    };
-
-    return timeObj[time];
-}
 
 
 
 
-
-
-  
