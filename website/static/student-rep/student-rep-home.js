@@ -311,54 +311,7 @@ function MenuIconClick() {
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
 
-function calculateGridRow(time) {
-    let timeObj = {
-        "7:00 AM": 1,
-        "7:30 AM": 2,
-        "8:00 AM": 3,
-        "8:30 AM": 4,
-        "9:00 AM": 5,
-        "9:30 AM": 6,
-        "10:00 AM": 7,
-        "10:30 AM": 8,
-        "11:00 AM": 9,
-        "11:30 AM": 10,
-        "12:00 PM": 11,
-        "12:30 PM": 12,
-        "1:00 PM": 13,
-        "1:30 PM": 14,
-        "2:00 PM": 15,
-        "2:30 PM": 16,
-        "3:00 PM": 17,
-        "3:30 PM": 18,
-        "4:00 PM": 19,
-        "4:30 PM": 20,
-        "5:00 PM": 21,
-        "5:30 PM": 22,
-        "6:00 PM": 23,
-        "6:30 PM": 24,
-        "7:00 PM": 25,
-        "7:30 PM": 26,
-        "8:00 PM": 27,
-        "8:30 PM": 28,
-        "9:00 PM": 29,
-    };
 
-    // Debugging: Log the input time
-    console.log('Input time:', time);
-
-    let [timeValue, period] = time.split(' ');
-
-    // Check if the time is in AM or PM and adjust accordingly
-    let row = timeObj[`${timeValue} ${period === 'PM' && timeValue !== '12:00' ? 'PM' : 'AM'}`];
-
-    // Debugging: Log the calculated row
-    console.log('Calculated row:', row);
-
-    return row;
-}
-
-// Class Schedule
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector(".planes").addEventListener('click', function (e) {
         let column = Array.from(e.target.parentNode.children).indexOf(e.target) + 1;
@@ -368,46 +321,96 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.modal-container--close').addEventListener('click', function () {
             document.querySelector('.modal-container').style.display = 'none';
         });
-
         document.querySelector('.modal-container--form').addEventListener('submit', function (e) {
             e.preventDefault();
 
             let startValue = document.querySelector("#start-select").value;
             let endValue = document.querySelector("#end-select").value;
 
-            // Debugging: Log the input start and end times
-            console.log('Start time:', startValue, 'End time:', endValue);
+            let startRow, endRow;
 
-            let startRow = calculateGridRow(startValue);
-            let endRow = calculateGridRow(endValue);
+            // Check the start time and assign the corresponding startRow
+            if (startValue === "7:00 AM") {
+                startRow = 1;
+            } else if (startValue === "8:00 AM") {
+                startRow = 2;
+            } else if (startValue === "9:00 AM") {
+                startRow = 3;
+            } else if (startValue === "10:00 AM") {
+                startRow = 4;
+            } else if (startValue === "11:00 AM") {
+                startRow = 5;
+            } else if (startValue === "12:00 PM") {
+                startRow = 6;
+            } else if (startValue === "1:00 PM") {
+                startRow = 7;
+            } else if (startValue === "2:00 PM") {
+                startRow = 8;
+            } else if (startValue === "3:00 PM") {
+                startRow = 9;
+            } else if (startValue === "4:00 PM") {
+                startRow = 10;
+            } else if (startValue === "5:00 PM") {
+                startRow = 11;
+            } else if (startValue === "6:00 PM") {
+                startRow = 12;
+            } else if (startValue === "7:00 PM") {
+                startRow = 13;
+            } else if (startValue === "8:00 PM") {
+                startRow = 14;
+            } else if (startValue === "9:00 PM") {
+                startRow = 15;
+            }
+            // Add more conditions for other start times
 
-            // Debugging: Log the calculated startRow and endRow
-            console.log('Start row:', startRow, 'End row:', endRow);
+            // Check the end time and assign the corresponding endRow
+            if (endValue === "8:00 AM") {
+                endRow = 2;
+            } else if (endValue === "9:00 AM") {
+                endRow = 3;
+            } else if (endValue === "10:00 AM") {
+                endRow = 4;
+            } else if (endValue === "11:00 AM") {
+                endRow = 5;
+            } else if (endValue === "12:00 PM") {
+                endRow = 6;
+            } else if (endValue === "1:00 PM") {
+                endRow = 7;
+            } else if (endValue === "2:00 PM") {
+                endRow = 8;
+            } else if (endValue === "3:00 PM") {
+                endRow = 9;
+            } else if (endValue === "4:00 PM") {
+                endRow = 10;
+            } else if (endValue === "5:00 PM") {
+                endRow = 11;
+            } else if (endValue === "6:00 PM") {
+                endRow = 12;
+            } else if (endValue === "7:00 PM") {
+                endRow = 13;
+            } else if (endValue === "8:00 PM") {
+                endRow = 14;
+            } else if (endValue === "9:00 PM") {
+                endRow = 15;
+            }
+            // Add more conditions for other end times
 
-            let startArea = `a${startRow}-${column}`;
-            let endArea = `a${endRow}-${column}`;
+            // Check if startRow and endRow are defined
+            if (startRow !== undefined && endRow !== undefined) {
+                // Loop through the rows and update the corresponding divs
+                for (let i = startRow; i <= endRow; i++) {
+                    let eventId = document.getElementById(i);
+                    if (eventId) {
+                        eventId.textContent = `SUN - ${i + 6}:00 AM-${i + 7}:00 AM`; // Adjust the text as needed
+                        eventId.style.backgroundColor = 'yellow';
+                    }
+                }
 
-            // Debugging: Log the calculated startArea and endArea
-            console.log('Start area:', startArea, 'End area:', endArea);
-
-            let eventDiv = document.createElement('div');
-            eventDiv.className = 'event';
-            eventDiv.style.backgroundColor = 'yellow';
-            eventDiv.textContent = 'Class';
-
-            // Use grid areas to position the event only for the selected time
-            eventDiv.style.gridArea = `${startArea} / ${column} / ${endArea} / ${column}`;
-
-            document.querySelector('.content').appendChild(eventDiv);
-
-            document.querySelector('.modal-container--form').reset();
-            document.querySelector('.modal-container--form').removeEventListener('submit', arguments.callee);
-            document.querySelector('.modal-container').style.display = 'none';
+                // Reset the form and hide the modal
+                document.querySelector('.modal-container--form').reset();
+                document.querySelector('.modal-container--form').removeEventListener('submit', arguments.callee);
+                document.querySelector('.modal-container').style.display = 'none';
+            }
         });
     });
 });
-
-
-
-
-
