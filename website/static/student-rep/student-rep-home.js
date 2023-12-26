@@ -122,7 +122,7 @@ MenuIcon.addEventListener("mouseout", function () {
 //Account Setting - Hover 
 const Account_Icon = document.querySelector('.Acc_Settings');
 let isMouseOverIcon = false;
-let isClicked = false; 
+let isClicked = false;
 
 Account_Icon.addEventListener("mouseenter", function () {
     if (!isOpen && !isClicked) {
@@ -133,7 +133,7 @@ Account_Icon.addEventListener("mouseenter", function () {
 
 Account_Icon.addEventListener("mouseleave", function () {
     isMouseOverIcon = false;
-    
+
     if (!isOpen && !isClicked) {
         Account_Icon.src = "/static/images/student-rep-account.png";
     }
@@ -142,17 +142,17 @@ Account_Icon.addEventListener("mouseleave", function () {
 // Account Setting - Clicked
 
 const AccSettings = document.querySelector('.Profile-Setting');
-let isOpen = false; 
+let isOpen = false;
 
 Account_Icon.addEventListener("click", function (event) {
     if (!isOpen) {
         AccSettings.style.display = "block";
-        isOpen = true; 
-        isClicked = true; 
+        isOpen = true;
+        isClicked = true;
         Account_Icon.src = "/static/images/student-rep-account-yellow.png";
     } else {
         AccSettings.style.display = "none";
-        Account_Icon.src = "/static/images/student-rep-account.png"; 
+        Account_Icon.src = "/static/images/student-rep-account.png";
         isOpen = false;
     }
     event.stopPropagation();
@@ -253,7 +253,7 @@ setInterval(() => {
 function MenuIconClick() {
     const SideBar = document.querySelector('.Side-bar');
     const SidebarContent = document.querySelector('.Side-bar-Contents');
-    
+
     const navLeft = document.querySelector('.Nav-left');
     const navLeftContent = document.querySelector('.Nav-left_Content');
 
@@ -263,14 +263,14 @@ function MenuIconClick() {
     const updatesContainer = document.querySelector('.Updates-Container');
 
     const scheduleContainer = document.querySelector('.Schedule-Container');
-    
+
 
     SideBar.classList.toggle('hidden');
     navLeft.classList.toggle('hidden');
 
     if (SideBar.classList.contains('hidden')) {
         navRight.style.width = '100%';
-        navLeft.style.width = '0' 
+        navLeft.style.width = '0'
         navLeftContent.style.display = 'none';
 
         navRightContent.style.justifyContent = 'space-between';
@@ -288,12 +288,12 @@ function MenuIconClick() {
         updatesContainer.style.paddingLeft = '30px';
 
 
-        scheduleContainer.style.width = 'calc(100% + 230px)'; 
+        scheduleContainer.style.width = 'calc(100% + 230px)';
         scheduleContainer.style.marginRight = '20px';
         scheduleContainer.style.marginLeft = '20px';
     } else {
         navRight.style.width = 'calc(100% - 270px)';
-        navLeft.style.width = '270px' 
+        navLeft.style.width = '270px'
         navLeftContent.style.display = 'flex';
 
         SideBar.style.width = '270px'
@@ -303,10 +303,114 @@ function MenuIconClick() {
         updatesContainer.style.marginRight = '3px';
         updatesContainer.style.marginLeft = '0';
 
-        scheduleContainer.style.width = '90%'; 
+        scheduleContainer.style.width = '90%';
         scheduleContainer.style.marginRight = 'auto';
         scheduleContainer.style.marginLeft = 'auto';
     }
 }
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector(".planes").addEventListener('click', function (e) {
+        let column = Array.from(e.target.parentNode.children).indexOf(e.target) + 1;
+
+        document.querySelector('.modal-container').style.display = 'block';
+
+        document.querySelector('.modal-container--close').addEventListener('click', function () {
+            document.querySelector('.modal-container').style.display = 'none';
+        });
+        document.querySelector('.modal-container--form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let startValue = document.querySelector("#start-select").value;
+            let endValue = document.querySelector("#end-select").value;
+
+            let startRow, endRow;
+
+            // Check the start time and assign the corresponding startRow
+            if (startValue === "7:00 AM") {
+                startRow = 1;
+            } else if (startValue === "8:00 AM") {
+                startRow = 2;
+            } else if (startValue === "9:00 AM") {
+                startRow = 3;
+            } else if (startValue === "10:00 AM") {
+                startRow = 4;
+            } else if (startValue === "11:00 AM") {
+                startRow = 5;
+            } else if (startValue === "12:00 PM") {
+                startRow = 6;
+            } else if (startValue === "1:00 PM") {
+                startRow = 7;
+            } else if (startValue === "2:00 PM") {
+                startRow = 8;
+            } else if (startValue === "3:00 PM") {
+                startRow = 9;
+            } else if (startValue === "4:00 PM") {
+                startRow = 10;
+            } else if (startValue === "5:00 PM") {
+                startRow = 11;
+            } else if (startValue === "6:00 PM") {
+                startRow = 12;
+            } else if (startValue === "7:00 PM") {
+                startRow = 13;
+            } else if (startValue === "8:00 PM") {
+                startRow = 14;
+            } else if (startValue === "9:00 PM") {
+                startRow = 15;
+            }
+            // Add more conditions for other start times
+
+            // Check the end time and assign the corresponding endRow
+            if (endValue === "8:00 AM") {
+                endRow = 2;
+            } else if (endValue === "9:00 AM") {
+                endRow = 3;
+            } else if (endValue === "10:00 AM") {
+                endRow = 4;
+            } else if (endValue === "11:00 AM") {
+                endRow = 5;
+            } else if (endValue === "12:00 PM") {
+                endRow = 6;
+            } else if (endValue === "1:00 PM") {
+                endRow = 7;
+            } else if (endValue === "2:00 PM") {
+                endRow = 8;
+            } else if (endValue === "3:00 PM") {
+                endRow = 9;
+            } else if (endValue === "4:00 PM") {
+                endRow = 10;
+            } else if (endValue === "5:00 PM") {
+                endRow = 11;
+            } else if (endValue === "6:00 PM") {
+                endRow = 12;
+            } else if (endValue === "7:00 PM") {
+                endRow = 13;
+            } else if (endValue === "8:00 PM") {
+                endRow = 14;
+            } else if (endValue === "9:00 PM") {
+                endRow = 15;
+            }
+            // Add more conditions for other end times
+
+            // Check if startRow and endRow are defined
+            if (startRow !== undefined && endRow !== undefined) {
+                // Loop through the rows and update the corresponding divs
+                for (let i = startRow; i <= endRow; i++) {
+                    let eventId = document.getElementById(i);
+                    if (eventId) {
+                        eventId.textContent = `SUN - ${i + 6}:00 AM-${i + 7}:00 AM`; // Adjust the text as needed
+                        eventId.style.backgroundColor = 'yellow';
+                    }
+                }
+
+                // Reset the form and hide the modal
+                document.querySelector('.modal-container--form').reset();
+                document.querySelector('.modal-container--form').removeEventListener('submit', arguments.callee);
+                document.querySelector('.modal-container').style.display = 'none';
+            }
+        });
+    });
+});
