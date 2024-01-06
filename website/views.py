@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify
 import mysql.connector
 
 views = Blueprint('views', __name__)
@@ -96,14 +96,35 @@ def student_rep_home_rooms():
     # Fetch all the results from the query
     room_numbers = mycursor.fetchall()
     
-     # You can set a default value for searchInput or get it from somewhere
+    # You can set a default value for searchInput or get it from somewhere
     search_input = request.args.get('searchInput', '')
 
-    # Print the room numbers for debugging purposes
+    room_data_list = []
+    
+    # Fetch data for each roomNumber
     for room_number in room_numbers:
-        print(room_number[0])
+        mycursor.execute("SELECT * FROM cpe_dept_rooms WHERE roomNumber = %s", (room_number[0],))
+        room_data = mycursor.fetchone()
 
-    # Pass the room numbers to the template
+        # You may want to check if room_data is None and handle accordingly
+
+        # Convert non-serializable elements to a JSON-serializable format
+        serializable_room_data = {
+            'room_number': room_data[0],
+            'room_name': room_data[1],
+            'status': str(room_data[2]),  # Convert to a serializable type (e.g., string)
+            'location': room_data[3],
+        }
+
+        room_data_list.append(serializable_room_data)
+
+    # Check if a room number was clicked (replace 'clicked_room' with the actual parameter name)
+    clicked_room = request.args.get('clicked_room')
+    if clicked_room:
+        # Return JSON response for the clicked room
+        return jsonify({'clicked_room': clicked_room, 'room_data': room_data_list})
+
+    # Pass the room numbers and searchInput to the template
     return render_template("student-rep/student-rep-home-rooms.html", room_numbers=room_numbers, searchInput=search_input)
 
 @views.route('/admin', methods=['GET', 'POST'])
