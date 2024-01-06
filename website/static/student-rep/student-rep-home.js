@@ -346,6 +346,7 @@ function MenuIconClick() {
 
     const scheduleContainer = document.querySelector('.Schedule-Container');
 
+    const ContactUsContent = document.querySelector('.ContactUS-content')
 
     SideBar.classList.toggle('hidden');
     navLeft.classList.toggle('hidden');
@@ -362,6 +363,7 @@ function MenuIconClick() {
         SideBar.style.width = '0';
         SidebarContent.style.display = 'none';
 
+        //Home
         updatesContainer.style.width = 'calc(100% + 230px)';
         updatesContainer.style.marginRight = '20px';
         updatesContainer.style.marginLeft = '20px';
@@ -392,6 +394,7 @@ function MenuIconClick() {
 }
 
 document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
+
 
 
 document.addEventListener('DOMContentLoaded', function () {

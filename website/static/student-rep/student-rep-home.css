@@ -689,13 +689,17 @@ div.Contact-upper-content h3 {
 }
 
 div.Contact-lower-content {
-  width: 80%;
+  width: 100%;
   height: 55%;
+  padding-left: 7%;
+  padding-right: 11%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
+
 }
 div.Contact-lower-content div {
   width: 190px;
