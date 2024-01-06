@@ -208,13 +208,14 @@ $(document).ready(function () {
 function openModal() {
     document.getElementById('room313Modal').style.display = 'block';
 
-  }
-  
-  function closeModal() {
+}
+
+// Function to close the modal
+function closeModal() {
     document.getElementById('room313Modal').style.display = 'none';
-  }
-  
-  const suffixes = ['a', 'b'];
+}
+
+const suffixes = ['a', 'b'];
 
 for (let i = 300; i <= 325; i++) {
     const roomIdWithoutSuffix = 'RM' + i;
