@@ -208,31 +208,14 @@ $(document).ready(function () {
 function openModal() {
     document.getElementById('room313Modal').style.display = 'block';
 
-}
-
-// Function to close the modal
-function closeModal() {
+    document.body.classList.add('modal-open');
+  }
+  
+  function closeModal() {
     document.getElementById('room313Modal').style.display = 'none';
-}
-
-const suffixes = ['a', 'b'];
-
-for (let i = 300; i <= 325; i++) {
-    const roomIdWithoutSuffix = 'RM' + i;
-    const elementWithoutSuffix = document.getElementById(roomIdWithoutSuffix);
-
-    // Add event listener for the room without suffix
-    if (elementWithoutSuffix) {
-        elementWithoutSuffix.addEventListener('click', openModal);
-    }
-
-    // Add event listeners for suffixed rooms
-    for (const suffix of suffixes) {
-        const roomIdWithSuffix = 'RM' + i + suffix;
-        const elementWithSuffix = document.getElementById(roomIdWithSuffix);
-
-        if (elementWithSuffix) {
-            elementWithSuffix.addEventListener('click', openModal);
-        }
-    }
-}
+    
+    document.body.classList.remove('modal-open');
+  }
+  
+  // Event listener for clicking Room 313
+  document.getElementById('room313').addEventListener('click', openModal);
