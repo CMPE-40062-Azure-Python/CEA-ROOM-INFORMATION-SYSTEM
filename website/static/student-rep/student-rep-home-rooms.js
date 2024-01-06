@@ -217,5 +217,3 @@ function openModal() {
 // Event listener for clicking Room 313
 document.getElementById('room313').addEventListener('click', openModal);
 
-
-  

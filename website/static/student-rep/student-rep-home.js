@@ -1,4 +1,15 @@
+// Home
+
+// Preload images
+
+const yellowIconHome = new Image();
+yellowIconHome.src = "/static/images/student-rep-home-icon_clicked.png";
+
+const normalIconHome = new Image();
+normalIconHome.src = "/static/images/student-rep-home-icon.png";
+
 const homelink = document.querySelector('.Home-Icon');
+const homeIcon = document.querySelector('.Home-bttn')
 homelink.style.borderBottom = '2px solid #DBA729';
 homelink.style.color = '#DBA729';
 
@@ -92,18 +103,89 @@ yellowIconContactUs.src = "/static/images/student-rep-contact-yellow-icon.png";
 const normalIconContactUs = new Image();
 normalIconContactUs.src = "/static/images/student-rep-contact-icon.png";
 
+let contactUsClicked = false;
+let homelinkClicked = false;
+
 ContactUs.style.color = '#810403';
 
 ContactUs.addEventListener("mouseover", function () {
-    ContactUs.style.borderBottom = '2px solid #DBA729';
-    ContactUs.style.color = '#DBA729';
-    ContactUsIcon.src = yellowIconContactUs.src;
+    if (!contactUsClicked || homelinkClicked) {
+        ContactUs.style.borderBottom = '2px solid #DBA729';
+        ContactUs.style.color = '#DBA729';
+        ContactUsIcon.src = yellowIconContactUs.src;
+    }
 });
 
 ContactUs.addEventListener("mouseout", function () {
+    if (!contactUsClicked || homelinkClicked) {
+        ContactUs.style.borderBottom = '2px solid transparent';
+        ContactUs.style.color = '#810403';
+        ContactUsIcon.src = contactUsClicked ? yellowIconContactUs.src : normalIconContactUs.src;
+    }
+});
+
+// Contact Us Toggle
+const ContactContent = document.querySelector('.ContactUS-content');
+const UpdatesContainer = document.querySelector('.Updates-Schedule-Container');
+
+ContactUs.addEventListener("click", function () {
+    const isContactContentVisible = window.getComputedStyle(ContactContent).display !== "none";
+
+    if (!isContactContentVisible) {
+        ContactContent.style.display = "block";
+        UpdatesContainer.style.display = "none";
+    }
+
+    contactUsClicked = true;
+    homelinkClicked = false;
+
+    ContactUs.style.borderBottom = '2px solid #DBA729';
+    ContactUs.style.color = '#DBA729';
+    ContactUsIcon.src = yellowIconContactUs.src;
+
+    homelink.style.borderBottom = '2px solid transparent';
+    homelink.style.color =  '#810403';
+    homeIcon.src = normalIconHome.src;
+});
+
+// Back To Home
+
+homelink.addEventListener("click", function () {
+    const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
+
+    if (!isHomeContentVisible) {
+        UpdatesContainer.style.display = "block";
+        ContactContent.style.display = "none";
+    }
+
+    
+    homelinkClicked = true;
+    contactUsClicked = false;
+
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
     ContactUsIcon.src = normalIconContactUs.src;
+
+    homelink.style.borderBottom = '2px solid #DBA729';
+    homelink.style.color =  '#DBA729';
+    homeIcon.src = yellowIconHome.src;
+
+});
+
+homelink.addEventListener("mouseover", function () {
+    if (contactUsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid #DBA729';
+        homelink.style.color = '#DBA729';
+        homeIcon.src = yellowIconHome.src;
+    }
+});
+
+homelink.addEventListener("mouseout", function () {
+    if (contactUsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid transparent';
+        homelink.style.color = '#810403';
+        homeIcon.src = normalIconHome.src;
+    }
 });
 
 
@@ -414,3 +496,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+
+
+
+
