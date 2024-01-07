@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+  }
+
+@font-face {
+    font-family: 'Cardo-Regular';
+    src: url('../static/fonts/Cardo-Regular.ttf') format('truetype');
+}
+  html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  div {
+    display: block;
+  }
+  body {
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #ffffff, #dfdfdf);
+    margin: auto;
+    padding: 0;
+    height: auto;
+    overflow: auto;
+    font-family: 'Cardo-Regular';
+  }
+  .Nav-upper {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    height: 70px;
+  }
+  div.Menu-Container {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .Menu_icon {
+    height: 37px;
+    width: 37px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .Menu_icon:hover {
+    background-color: rgba(166, 166, 166, 0.2);
+    border-radius: 5px;
+  }
+  .Logo {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  div.Acc_Setting-Container {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .Acc_Settings {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+  }
+  ul.Profile-Setting {
+    display: none;
+    list-style: none;
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    background-color: whitesmoke;
+    color: #abb0b8;
+    z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: -150px;
+    margin-top: -5px;
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #612d39, #531b2e, #3d1226, #31111e);
+    border-image-slice: 1;
+    border-radius: 7px;
+  }
+  ul.Profile-Setting li {
+    font-size: 1rem;
+    color: #810403;
+    margin-top: 12px;
+    padding: 0;
+    cursor: pointer;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+  img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+  .Nav-bar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .Nav-left {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 80px;
+    margin-right: 0;
+    background-color: #ffffff;
+    margin-top: 5px;
+  }
+  .Nav-left_Content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .Nav-left_img img{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .Nav-left_text h1 {
+    font-size: 16px;
+    color: #810403;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+  .Nav-left_text h2 {
+    font-size: 14px;
+    color: #810403;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .Nav-left_Content > .Nav-left_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .Nav-bar > .Nav-Right {
+    width: calc(100% - 270px);
+    height: 80px;
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .Nav-Right > .Nav-Right-Content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .Nav-Right-Content > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+.Nav-Right-Content > div img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.Nav-Right-Content > div h2 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #810403;
+    cursor: pointer;
+    display: flex;
+}
+.Side-bar {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 750px;
+    margin-right: 0;
+    background-color: #810403;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-top: 4px solid #DBA729;
+  }
+  .Side-bar > .Side-bar-Contents > .Rooms, .Reservations {
+    width: 220px;
+    height: 270px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    opacity: 4;
+    margin-top: 50px;
+  }
+  .Side-bar > .Side-bar-Contents > .Rooms, .Reservations{
+    height: 320px;
+  }
+
+  div.Reservations {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .Side-bar > .Side-bar-Contents > .Reservations > .Reservation-img-Container {
+    width: 220px;
+    height: 270px;
+  }
+  .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container {
+    width: 220px;
+    height: 270px;
+    cursor: pointer;
+  }
+  div.Reservation-img-Container {
+    width: 220px;
+    height: 270px;
+  }
+  .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
+    height: 130px;
+    width: 130px;
+  }
+  .Rooms > .Room-img-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Reservations > .Reservation-img-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+   div.Rooms > .Rooms-bttn button {
+    height: 50px;
+    width: 220px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    font-family: 'Cardo-Regular';
+    font-size: 1.2rem;
+    color: #810403;
+    cursor: pointer;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  div.Rooms > .Rooms-bttn button:hover {
+    color: #DBA729;
+  }
+  div.Reserve-bttn button {
+    height: 50px;
+    width: 220px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Cardo-Regular';
+    font-size: 1.2rem;
+    color: #DBA729;
+    border-bottom: 7px solid #DBA729;
+    cursor: pointer;
+  }
+  .side-bar-and-content {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .side-bar-and-content > .Reserve-Container {
+    width: calc(100% - 310px);
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    border-radius: 9px;
+    background-color: white;
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Reservation-status {
+    height: 12%;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 4%; 
+        width: 92%;
+        border-bottom: 1px solid #A6A6A6;
+    }
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Reservation-status > .Status {
+    height: 100%;
+    width: 31%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Reservation-status > .Status > #Upcoming {
+    height: 35px;
+    width: 100px;
+    border-radius: 43px;
+    color: #DBA729;
+    font-family: 'Cardo-Regular';
+    font-size: 0.9rem;
+    border: 2px solid #DBA729;
+    background-color: transparent;
+  }
+  .side-bar-and-content > .Reserve-Container > .Reservation-status > .Status button {
+    height: 35px;
+    width: 100px;
+    border-radius: 43px;
+    color: #810403;
+    font-family: 'Cardo-Regular';
+    font-size: 0.9rem;
+    border: 2px solid #810403;
+    background-color: transparent;
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Today {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.side-bar-and-content > .Reserve-Container > .Today::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 4%;
+    width: 92%; 
+    border-bottom: 1px solid #E8E8E8;
+}
+
+
+  .side-bar-and-content > .Reserve-Container > .Today > .TodayH3 {
+    display: flex;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Reserve-Container > .Today > .TodayH3 h3 {
+    display: inline-block;
+    color: #810403;
+    font-family: 'Cardo-Regular';
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 10px;
+    padding: 5px 4px;
+    border-bottom: 1px solid #810403;
+  }
+  
+  .side-bar-and-content > .Reserve-Container > .Today > .TodayP {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Reserve-Container > .Today > .TodayP p {
+    font-family: 'Cardo-Regular';
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Tomorrow {
+    height: 38%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-bar-and-content > .Reserve-Container > .Tomorrow > .TomorrowH3 {
+    display: flex;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Reserve-Container > .Tomorrow > .TomorrowH3 h3 {
+    display: inline-block;
+    color: #810403;
+    font-family: 'Cardo-Regular';
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 10px;
+    padding: 5px 4px;
+    border-bottom: 1px solid #810403;
+  }
+  
+  .side-bar-and-content > .Reserve-Container > .Tomorrow > .TomorrowP {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .side-bar-and-content > .Reserve-Container > .Tomorrow > .TomorrowP p {
+    font-family: 'Cardo-Regular';
+    font-size: 1rem;
+    margin: 0;
+  }
