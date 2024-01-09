@@ -146,6 +146,10 @@ def admin_login():
 
     return render_template("admin/admin-login.html", error="Invalid faculty number or password")
 
+@views.route('/student-rep/home/reservation')
+def student_rep_home_reservation():
+    return render_template("student-rep/student-rep-home-reservation.html")
+
 @views.route('/site-map')
 def site_map():
     return render_template("site-map.html")

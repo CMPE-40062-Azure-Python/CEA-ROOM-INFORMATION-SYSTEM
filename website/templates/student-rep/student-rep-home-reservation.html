@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='student-rep/student-rep-home-reservation.css') }}" />
+  </head>
+  <body>
+    <div class="Nav-upper">
+      <div class="Menu-Container">
+        <img class="Menu_icon" src="{{ url_for('static', filename='images/student-rep-menu.png') }}" alt="Menu Icon" />
+      </div>
+      <img class="Logo" src="{{ url_for('static', filename='images/cearis-logo.png') }}" alt="CEA RIS Logo" />
+      <div class="Acc_Setting-Container">
+        <img class="Acc_Settings" src="{{ url_for('static', filename='images/student-rep-account.png') }}" alt="Account Settings" />
+        <ul class="Profile-Setting">
+          <li><img class="Profile-Icon" src="{{ url_for('static', filename='images/student-rep-profile.png') }}" alt="Profile Icon" /> Profile</li>
+          <li><img class="Change_Password-Icon" src="{{ url_for('static', filename='images/student-rep-change-pass.png') }}" alt="Change Password Icon" /> Change Password</li>
+          <li><img class="Logout-Icon" src="{{ url_for('static', filename='images/student-rep-log-out.png') }}" alt="Log Out Icon" /> Log Out</li>
+        </ul>
+      </div>
+    </div>
+    <div class="Nav-bar">
+      <div class="Nav-left">
+        <div class="Nav-left_Content">
+          <div class="Nav-left_img">
+            <img class="Acc_Edit" src="{{ url_for('static', filename='images/student-rep-acc_edit.png') }}" alt="Account Edit" />
+          </div>
+          <div class="Nav-left_text">
+            <h1><b>CEA RIS</b></h1>
+            <h2>STUDENT REPRESENTATIVE MODULE</h2>
+          </div>
+        </div>
+      </div>
+      <div class="Nav-Right">
+        <div class="Nav-Right-Content">
+          <div class="Back-Icon" id="BackId">
+            <img class="Back-bttn" src="{{ url_for('static', filename='images/student-rep-back.png') }}" alt="Back Button" />
+            <h2 class="Back-txt">Back To Home</h2>
+          </div>
+          <div class="Drop-down">
+            <h2 class="Dropdown-txt">Any Time</h2>
+            <img class="Dropdown-toggle" src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" alt="Search Button" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Upcoming Time Option-->
+    <div class="Upcoming-Time-Option">
+      <div class="Upcoming-Time-Option-content">
+        <ul>
+          <li id="AnyTime">Any Time</li>
+          <li id="Today">Today</li>
+          <li id="Tom">Tomorrow</li>
+        </ul>
+      </div>
+    </div>
+    <!--Completed Time Option-->
+    <div class="Completed-Time-Option">
+      <div class="Completed-Time-Option-content">
+        <ul>
+          <li id="Any">Any Time</li>
+          <li id="PastHour">Past Hour</li>
+          <li id="Past24">Past 24 Hours</li>
+          <li id="PastWeek">Past Week</li>
+          <li id="PastMonth">Past Month</li>
+          <li id="CustomRange">Custom Range</li>
+        </ul>
+      </div>
+    </div>
+    <div class="side-bar-and-content">
+      <div class="Side-bar">
+        <div class="Side-bar-Contents">
+          <div class="Rooms">
+            <div class="Room-img-Container">
+              <img class="Rooms-img" src="{{ url_for('static', filename='images/student-rep-rooms.png') }}" alt="Rooms Image" />
+            </div>
+            <div class="Rooms-bttn">
+              <button onclick="handleRoomsButtonClick()">
+                Rooms
+              </button>
+            </div>
+            <div class="Reservations">
+              <div class="Reservation-img-Container">
+                <img class="Reserve-img" src="{{ url_for('static', filename='images/student-rep-reserve-yellow.png') }}" alt="My Reservation Image" />
+              </div>
+              <div class="Reserve-bttn">
+                <button onclick="handleReservationsButtonClick()">
+                  My Reservation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Reserve-Container">
+        <div class="Reservation-status">
+            <div class="Status">
+                <button id="Upcoming">
+                    Upcoming
+                </button>
+                <button id="Completed">
+                    Completed
+                </button>
+                <button id="Cancelled">
+                    Cancelled
+                </button>
+            </div>
+        </div>
+        <div class="Today">
+          <div class="TodayH3">
+              <h3>Today</h3>
+          </div>
+          <div class="TodayP">
+              <p class="Today-Initial-content">No Data To Show</p>
+          </div>
+      </div>
+      <div class="Tomorrow">
+          <div class="TomorrowH3">
+              <h3>Tomorrow</h3>
+          </div>
+          <div class="TomorrowP">
+              <p class="Tomorrow-Initial-content">No Data To Show</p>
+          </div>
+      </div>
+      </div>
+      <!--Completed Status Content-->
+      <div class="Completed-content">
+        <div class="Completed-Reservation-status">
+          <div class="Completed-Status">
+              <button id="Completed-Upcoming">
+                  Upcoming
+              </button>
+              <button id="Completed-Completed">
+                  Completed
+              </button>
+              <button id="Completed-Cancelled">
+                  Cancelled
+              </button>
+          </div>
+      </div>
+        <div class="Completed-Inside">
+          <p>No Data To Show</p>
+        </div>
+      </div>
+
+      <!--Cancelled Status Content-->
+      <div class="Cancelled-content">
+        <div class="Cancelled-Reservation-status">
+          <div class="Cancelled-Status">
+              <button id="Cancelled-Upcoming">
+                  Upcoming
+              </button>
+              <button id="Cancelled-Completed">
+                  Completed
+              </button>
+              <button id="Cancelled-Cancelled">
+                  Cancelled
+              </button>
+          </div>
+      </div>
+        <div class="Cancelled-Inside">
+          <p>No Data To Show</p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    
+  
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='student-rep/student-rep-home-reservation.js') }}"></script>
+  </body>
+</html>

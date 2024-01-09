@@ -104,7 +104,7 @@ document.addEventListener("click", function () {
 //Reservations - Hover
 const ReservationContainer = document.querySelector('.Reservation-img-Container');
 const ReserveImg = document.querySelector('.Reserve-img');
-const ReserveBttn = document.querySelector('.Reserve-bttn')
+const ReserveBttn = document.querySelector('.Reserve-bttn');
 
 ReservationContainer.addEventListener("mouseover", function () {
     ReserveImg.src = "/static/images/student-rep-reserve-yellow.png";
@@ -236,3 +236,7 @@ for (let i = 300; i <= 325; i++) {
     }
 }
 
+// Navigate to Reservations
+function handleReservationsButtonClick() {
+    window.location.href = '/student-rep/home/reservation';
+}

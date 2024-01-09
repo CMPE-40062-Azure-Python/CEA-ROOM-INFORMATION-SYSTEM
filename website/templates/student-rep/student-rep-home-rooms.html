@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Rooms</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='student-rep/student-rep-home-rooms.css') }}" />
   </head>
   <body>
@@ -80,8 +80,8 @@
               <div class="Reservation-img-Container">
                 <img class="Reserve-img" src="{{ url_for('static', filename='images/student-rep-reserve.png') }}" alt="My Reservation Image" />
               </div>
-              <div class="Reserve-bttn">
-                <button onclick="handleReservationsButtonClick()">
+              <div>
+                <button class="Reserve-bttn" onclick="handleReservationsButtonClick()">
                   My Reservation
                 </button>
               </div>

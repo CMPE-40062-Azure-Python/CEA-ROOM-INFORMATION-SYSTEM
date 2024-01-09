@@ -307,6 +307,10 @@ function handleRoomsButtonClick() {
     window.location.href = '/student-rep/home/rooms';
 }
 
+function handleReservationsButtonClick() {
+    window.location.href = '/student-rep/home/reservation';
+}
+
 // Date and Time Container
 const currentDate = new Date();
 

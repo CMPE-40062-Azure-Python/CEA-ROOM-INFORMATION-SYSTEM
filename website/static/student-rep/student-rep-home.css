@@ -222,16 +222,18 @@ img.Profile-Icon, img.Change_Password-Icon, img.Logout-Icon {
   opacity: 4;
   margin-top: 50px;
 }
+.Side-bar > .Side-bar-Contents > .Rooms, .Reservations{
+  height: 320px;
+}
+
 div.Reservations {
-  margin-top: 70px;
-  height: 300px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 .Side-bar > .Side-bar-Contents > .Reservations > .Reservation-img-Container {
   width: 220px;
   height: 270px;
-  cursor: pointer;
 }
 .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container {
   width: 220px;
@@ -243,18 +245,25 @@ div.Reservation-img-Container {
   height: 270px;
 }
 .Side-bar > .Side-bar-Contents > .Rooms > .Room-img-Container img, .Reservations > .Reservation-img-Container img {
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
 }
 .Rooms > .Room-img-Container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.Rooms > .Room-img-Container:hover {
+  cursor: pointer;
+}
 .Reservations > .Reservation-img-Container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+.Reservations > .Reservation-img-Container:hover {
+  cursor: pointer;
 }
  div.Rooms > .Rooms-bttn button {
   height: 50px;
@@ -262,27 +271,28 @@ div.Reservation-img-Container {
   border: 1px solid #ffffff;
   border-radius: 10px;
   background-color: #ffffff;
-  margin-top: -10px;
-  font-family: 'Cardo-Regular', sans-serif;
-  font-size: 1.1rem;
+  margin-top: 10px;
+  font-family: 'Cardo-Regular';
+  font-size: 1.2rem;
   color: #810403;
   cursor: pointer;
+  padding: 12px;
+  box-sizing: border-box;
 }
-
-div.Reserve-bttn button {
+div.Rooms > .Rooms-bttn button:hover {
+  color: #DBA729;
+}
+button.Reserve-bttn{
   height: 50px;
   width: 220px;
   border: 1px solid #ffffff;
   border-radius: 10px;
   background-color: #ffffff;
-  margin-top: -10px;
-  font-family: 'Cardo-Regular', sans-serif;
-  font-size: 1.1rem;
+  margin-top: 20px;
+  font-family: 'Cardo-Regular';
+  font-size: 1.2rem;
   color: #810403;
   cursor: pointer;
-}
-div.Reserve-bttn button:hover {
-  color: #DBA729;
 }
 
 .side-bar-and-content {
