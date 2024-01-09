@@ -139,3 +139,19 @@ document.querySelector('.Menu_icon').addEventListener('click', MenuIconClick);
 function handleRoomsButtonClick() {
     window.location.href = '/student-rep/home/rooms';
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide Completed-content initially
+    document.querySelector('.Completed-content').style.display = 'none';
+
+    // Handle click event for Completed button
+    document.getElementById('Completed').addEventListener('click', function() {
+        // Hide Reserve-Container
+        document.querySelector('.Reserve-Container').style.display = 'none';
+
+        // Show Completed-content
+        document.querySelector('.Completed-content').style.display = 'block';
+    });
+});
+
+
