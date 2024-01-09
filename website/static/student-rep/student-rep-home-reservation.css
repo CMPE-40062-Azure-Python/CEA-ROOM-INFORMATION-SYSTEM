@@ -509,4 +509,97 @@
     position: relative;
     overflow: hidden;
 }
+
+/* Cancelled Status*/
+.side-bar-and-content > .Cancelled-content {
+  width: calc(100% - 310px);
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status {
+  height: 12%;
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 4%; 
+      width: 92%;
+      border-bottom: 1px solid #A6A6A6;
+  }
+}
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status {
+  height: 100%;
+  width: 31%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+}
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status > #Cancelled-Cancelled {
+  height: 35px;
+  width: 100px;
+  border-radius: 43px;
+  color: #DBA729;
+  font-family: 'Cardo-Regular';
+  font-size: 0.9rem;
+  border: 2px solid #DBA729;
+  background-color: transparent;
+}
+
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status > #Cancelled-Upcoming {
+  height: 35px;
+  width: 100px;
+  border-radius: 43px;
+  color: #810403;
+  font-family: 'Cardo-Regular';
+  font-size: 0.9rem;
+  border: 2px solid #810403;
+  background-color: transparent;
+}
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status > #Cancelled-Upcoming:hover {
+  color: #DBA729;
+  border: 2px solid #DBA729;
+  cursor: pointer;
+}
+
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status > #Cancelled-Completed{
+  height: 35px;
+  width: 100px;
+  border-radius: 43px;
+  color: #810403;
+  font-family: 'Cardo-Regular';
+  font-size: 0.9rem;
+  border: 2px solid #810403;
+  background-color: transparent;
+}
+.side-bar-and-content > .Cancelled-content > .Cancelled-Reservation-status > .Cancelled-Status > #Cancelled-Completed:hover {
+  color: #DBA729;
+  border: 2px solid #DBA729;
+  cursor: pointer;
+}
+
+.side-bar-and-content > .Cancelled-content > .Cancelled-Inside {
+  height: calc(100% - 12%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.side-bar-and-content > .Cancelled-content > .Cancelled-Inside p {
+  color: #DBA729;
+}
   
