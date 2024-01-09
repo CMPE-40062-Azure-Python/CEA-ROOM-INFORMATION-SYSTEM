@@ -615,9 +615,7 @@ div.Upcoming-Time-Option {
   right: 0;
   margin-right: 50px;
   border-radius: 5px;
-
-}
-div.Upcoming-Time-Option > .Upcoming-Time-Option-content {
+  z-index: 1;
 
 }
 div.Upcoming-Time-Option > .Upcoming-Time-Option-content ul {
@@ -639,19 +637,43 @@ div.Upcoming-Time-Option > .Upcoming-Time-Option-content ul > li:hover {
 li#AnyTime {
   color: #DBA729;
 }
-li#Today {
+
+/* Completed Time Option*/
+
+div.Completed-Time-Option {
+  height: 170px;
+  width: 140px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: -20px;
+  right: 0;
+  margin-right: 50px;
+  border-radius: 5px;
+  z-index: 1;
+
+}
+div.Completed-Time-Option > .Completed-Time-Option-content ul {
+list-style: none;
+font-size: 0.9rem;
+margin-top: 10px;
+margin-bottom: 0;
+padding-left: 7px;
+padding-right: 0;
+}
+div.Completed-Time-Option > .Completed-Time-Option-content ul > li {
+  padding-bottom: 9px;
   color: #810403;
 }
-li#Today:hover {
-  color: #DBA729;
-}
-li#Tom {
-  color: #810403;
-}
-li#Tom:hover {
+div.Completed-Time-Option > .Completed-Time-Option-content ul > li:hover {
   color: #DBA729;
   cursor: pointer;
 }
+li#Any {
+  color: #DBA729;
+}
+
+
 
 
   

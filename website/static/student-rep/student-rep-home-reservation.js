@@ -190,10 +190,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    const DropdownText = document.querySelector('.Dropdown-txt');
+    const DropdownImage = document.querySelector('.Dropdown-toggle');
+
     document.querySelector('.Upcoming-Time-Option').style.display = 'none';
-    
+
     document.querySelector('.Drop-down').addEventListener('click', function() {
         var upcomingTimeOption = document.querySelector('.Upcoming-Time-Option');
         upcomingTimeOption.style.display = (upcomingTimeOption.style.display === 'none' || upcomingTimeOption.style.display === '') ? 'block' : 'none';
+        
+        DropdownText.style.color = '#DBA729';
+        DropdownImage.src = '/static/images/student-rep-dropdown-yellow.png';
     });
 });
+
+
+// Completed Content - Completed Time Option 
+document.addEventListener('DOMContentLoaded', function() {
+    const completedTimeOption = document.querySelector('.Completed-Time-Option');
+    const upcomingTimeOption = document.querySelector('.Upcoming-Time-Option');
+    completedTimeOption.style.display = 'none';
+
+
+    document.getElementById('Completed').addEventListener('click', function() {
+        document.querySelector('.Reserve-Container').style.display = 'none';
+        document.querySelector('.Completed-content').style.display = 'block';
+        completedTimeOption.style.display = 'none';
+    });
+
+    document.querySelector('.Drop-down').addEventListener('click', function() {
+        const completedContentVisible = document.querySelector('.Completed-content').style.display === 'block';
+
+        if (completedContentVisible) {
+            upcomingTimeOption.style.display = 'none';
+            completedTimeOption.style.display = (completedTimeOption.style.display === 'none' || completedTimeOption.style.display === '') ? 'block' : 'none';
+        }
+    });
+});
+
+
