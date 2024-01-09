@@ -602,4 +602,56 @@
 .side-bar-and-content > .Cancelled-content > .Cancelled-Inside p {
   color: #DBA729;
 }
+
+/* Upcoming Time Option*/
+
+div.Upcoming-Time-Option {
+  height: 90px;
+  width: 120px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  margin-top: -20px;
+  right: 0;
+  margin-right: 50px;
+  border-radius: 5px;
+
+}
+div.Upcoming-Time-Option > .Upcoming-Time-Option-content {
+
+}
+div.Upcoming-Time-Option > .Upcoming-Time-Option-content ul {
+list-style: none;
+font-size: 0.9rem;
+margin-top: 10px;
+margin-bottom: 0;
+padding-left: 7px;
+padding-right: 0;
+}
+div.Upcoming-Time-Option > .Upcoming-Time-Option-content ul > li {
+  padding-bottom: 7px;
+}
+div.Upcoming-Time-Option > .Upcoming-Time-Option-content ul > li:hover {
+  color: #DBA729;
+  cursor: pointer;
+}
+
+li#AnyTime {
+  color: #DBA729;
+}
+li#Today {
+  color: #810403;
+}
+li#Today:hover {
+  color: #DBA729;
+}
+li#Tom {
+  color: #810403;
+}
+li#Tom:hover {
+  color: #DBA729;
+  cursor: pointer;
+}
+
+
   

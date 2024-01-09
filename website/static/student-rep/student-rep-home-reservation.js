@@ -141,43 +141,44 @@ function handleRoomsButtonClick() {
 }
 
 
+// Click Event For Reservation
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initial display settings
     document.querySelector('.Completed-content').style.display = 'none';
     document.querySelector('.Cancelled-content').style.display = 'none';
 
-    // Handle click event for Completed button
+    // Navigate To Completed button
     document.getElementById('Completed').addEventListener('click', function() {
         document.querySelector('.Reserve-Container').style.display = 'none';
         document.querySelector('.Completed-content').style.display = 'block';
     });
 
-    // Handle click event for Cancelled button
+    // Navigate To Cancelled button
     document.getElementById('Cancelled').addEventListener('click', function() {
         document.querySelector('.Reserve-Container').style.display = 'none';
         document.querySelector('.Cancelled-content').style.display = 'block';
     });
 
-    // Handle click event for BackToUpcoming button in Completed content
+    // Navigate To Upcoming button in Completed content
     document.getElementById('Completed-Upcoming').addEventListener('click', function() {
         document.querySelector('.Reserve-Container').style.display = 'block';
         document.querySelector('.Completed-content').style.display = 'none';
     });
 
-    // Handle click event for BackToUpcoming button in Cancelled content
+    // Navigate To Upcoming button in Cancelled content
     document.getElementById('Cancelled-Upcoming').addEventListener('click', function() {
         document.querySelector('.Reserve-Container').style.display = 'block';
         document.querySelector('.Cancelled-content').style.display = 'none';
     });
 
-    // Handle click event for Navigate To Cancelled button in Completed content
+    // Navigate To Cancelled button in Completed content
     document.getElementById('Completed-Cancelled').addEventListener('click', function() {
         document.querySelector('.Cancelled-content').style.display = 'block';
         document.querySelector('.Completed-content').style.display = 'none';
     });
 
-    // Handle click event for Navigate To Cancelled button in Cancelled content
+    // Navigate To Cancelled button in Cancelled content
     document.getElementById('Cancelled-Completed').addEventListener('click', function() {
         document.querySelector('.Completed-content').style.display = 'block';
         document.querySelector('.Cancelled-content').style.display = 'none';
@@ -185,4 +186,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Upcoming - Time Option
 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    document.querySelector('.Upcoming-Time-Option').style.display = 'none';
+    
+    document.querySelector('.Drop-down').addEventListener('click', function() {
+        var upcomingTimeOption = document.querySelector('.Upcoming-Time-Option');
+        upcomingTimeOption.style.display = (upcomingTimeOption.style.display === 'none' || upcomingTimeOption.style.display === '') ? 'block' : 'none';
+    });
+});
