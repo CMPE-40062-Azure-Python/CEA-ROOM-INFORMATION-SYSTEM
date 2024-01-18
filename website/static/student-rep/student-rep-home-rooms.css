@@ -408,55 +408,55 @@
   }
   /* Room 302 - 306 Hover*/
 
-  div.RM302:hover {
+  #RM302:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM303a:hover {
+  #RM303a:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM303b:hover {
+ #RM303b:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM304a:hover {
+  #RM304a:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM304b:hover {
+  #RM304b:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM305a:hover {
+  #RM305a:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM305b:hover {
+  #RM305b:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM306a:hover {
+  #RM306a:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
     box-shadow: 0 0 2px #DBA729!important;
   }
-  div.RM306b:hover {
+  #RM306b:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
     color: #DBA729!important;
@@ -1068,6 +1068,112 @@
   border-radius: 20px;
   
   border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-bottom > .leftBottom-content {
+  width: 94%;
+  height: 90%;
+  background-color: transparent;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.left-bottom > .leftBottom-content > .left-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 49%;
+  margin-top: 8px;
+}
+.left-bottom > .leftBottom-content > .left-upper > .computers {
+  height: 90%;
+  width: 48%;
+  border: 1px solid #3D1226;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.left-bottom > .leftBottom-content > .left-upper > .computers img {
+  height: 50px;
+  width: 50px;
+}
+.left-bottom > .leftBottom-content > .left-upper > .computers p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  margin-right: 15px;
+}
+
+.left-bottom > .leftBottom-content > .left-upper > .air-con {
+  height: 90%;
+  width: 48%;
+  border: 1px solid #3D1226;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.left-bottom > .leftBottom-content > .left-upper > .air-con img {
+  height: 50px;
+  width: 50px;
+}
+.left-bottom > .leftBottom-content > .left-upper > .air-con p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  margin-right: 15px;
+}
+
+.left-bottom > .leftBottom-content > .left-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 49%;
+  margin-top: 10px;
+}
+.left-bottom > .leftBottom-content > .left-lower > .arm-chairs {
+  height: 90%;
+  width: 48%;
+  border: 1px solid #3D1226;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.left-bottom > .leftBottom-content > .left-lower > .arm-chairs img {
+  height: 50px;
+  width: 50px;
+}
+.left-bottom > .leftBottom-content > .left-lower > .arm-chairs p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  margin-right: 15px;
+}
+
+.left-bottom > .leftBottom-content > .left-lower > .tables {
+  height: 90%;
+  width: 48%;
+  border: 1px solid #3D1226;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.left-bottom > .leftBottom-content > .left-lower > .tables img {
+  height: 50px;
+  width: 50px;
+}
+.left-bottom > .leftBottom-content > .left-lower > .tables p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  margin-right: 15px;
 }
 
 .right-column {

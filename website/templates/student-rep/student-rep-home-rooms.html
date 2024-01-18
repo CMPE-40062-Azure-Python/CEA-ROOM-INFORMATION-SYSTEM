@@ -294,6 +294,77 @@
         <div class="columns-container">
           <div class="left-column">
             <div class="left-top">Left Top Content</div>
+            <div class="left-bottom">
+              <div class="leftBottom-content">
+                <div class="left-upper">
+                  <div class="computers">
+                    <img 
+                    class="Computer-img" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-computer.png') }}" 
+                    alt="Computer" 
+                    />
+                    <p>25 Computers Available</p>
+                  </div>
+                  <div class="air-con">
+                    <img 
+                    class="AirCon-img" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-aircon.png') }}" 
+                    alt="Air Conditioner" 
+                    />
+                    <p>Air-condition room</p>
+                  </div>
+                </div>
+                <div class="left-lower">
+                  <div class="arm-chairs">
+                    <img 
+                    class="Chairs-img" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-chairs.png') }}" 
+                    alt="Chairs" 
+                    />
+                    <p>35 Armchairs Available</p>
+                  </div>
+                <div class="tables">
+                  <img 
+                    class="Tables-img" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-tables.png') }}" 
+                    alt="Tables" 
+                    />
+                    <p>Air-condition room</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-column">Right Column Content</div>
+        </div>
+    
+        <!-- New container for reservations with the same padding as columns-container -->
+        <div class="reservation-container">
+          <span>RESERVE NOW</span>
+        </div>
+        <div class="reservation-details-container">
+          <span>RESERVATION TIME</span>
+          <span>RESERVATION PURPOSE</span>
+        </div>
+        <!-- New div with background color below all other divs -->
+        <div class="bgcolor-div"></div>
+      </div>
+    </div> 
+    
+    <div id="room312Modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- Your modal content goes here -->
+        <h2 class="first-heading">RM 312</h2>
+        <h2 class="second-heading">COM ENG ROOM</h2>
+        <div class="paragraph-container">
+          <p class="first-paragraph">STATUS: </p>
+          <p class="second-paragraph">LOCATION: THIRD FLOOR</p>
+        </div>
+        <!-- New div structure for the layout -->
+        <div class="columns-container">
+          <div class="left-column">
+            <div class="left-top">Left Top Content</div>
             <div class="left-bottom">Left Bottom Content</div>
           </div>
           <div class="right-column">Right Column Content</div>
@@ -310,7 +381,8 @@
         <!-- New div with background color below all other divs -->
         <div class="bgcolor-div"></div>
       </div>
-    </div>    
+    </div> 
+
     </div>
     
   

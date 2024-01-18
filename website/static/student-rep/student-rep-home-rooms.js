@@ -207,11 +207,13 @@ $(document).ready(function () {
 // Function to open the modal
 function openModal() {
     document.getElementById('room313Modal').style.display = 'block';
+    document.body.classList.add('modal-open');
 }
 
 // Function to close the modal
 function closeModal() {
     document.getElementById('room313Modal').style.display = 'none';
+    document.body.classList.remove('modal-open');
 }
 
 const suffixes = ['a', 'b'];
