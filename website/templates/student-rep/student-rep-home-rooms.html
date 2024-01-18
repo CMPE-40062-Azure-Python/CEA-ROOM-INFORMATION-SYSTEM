@@ -343,8 +343,104 @@
           <span>RESERVE NOW</span>
         </div>
         <div class="reservation-details-container">
-          <span>RESERVATION TIME</span>
-          <span>RESERVATION PURPOSE</span>
+          <div class="Reserve-time">
+            <span id="Reservation-txt">RESERVATION TIME</span>
+            <div class="Reservation-Time-content">
+              <div class="Reservation-Time-Date">
+                <span>Date of Reservation:</span>
+                <div class="Reservation-Time-Date-Set">
+                  <div class="Date-Set">
+                    <p>10</p>
+                    <p>January</p>
+                    <P>2024</P>
+                  </div>
+                  <div class="Date-Set-Up-Down">
+                    <img 
+                    class="Date-Up" 
+                    src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                    alt="Up" 
+                    />
+                    <img 
+                    class="Date-Down" 
+                    src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                    alt="Down" 
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="Reservation-Time-Time">
+                <div class="Time-in">
+                  <span>Time - in:</span>
+                  <div class="Time-in-set">
+                    <div class="TimeIn-Set">
+                      <p>12:30 pm</p>
+                    </div>
+                    <div class="TimeIn-Set-Up-Down">
+                      <img 
+                      class="TimeIn-Up" 
+                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                      alt="Up" 
+                      />
+                      <img 
+                      class="TimeIn-Down" 
+                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                      alt="Down" 
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="dash">
+                  <span>-</span>
+                </div>
+                <div class="Time-out">
+                  <span>Time - out:</span>
+                  <div class="Time-out-set">
+                    <div class="TimeOut-Set">
+                      <p>01:30 pm</p>
+                    </div>
+                    <div class="TimeOut-Set-Up-Down">
+                      <img 
+                      class="TimeOut-Up" 
+                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                      alt="Up" 
+                      />
+                      <img 
+                      class="TimeOut-Down" 
+                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                      alt="Down" 
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Reserve-purpose">
+            <span id="Reserve-PurposeId">RESERVATION PURPOSE</span>
+            <div class="Reservation-purpose-content">
+              <div class="Course">
+                <span>Course:</span>
+                <div class="Enter-Course">
+                  <input type="text" class="Course-Input" id="CourseInput" placeholder="Enter the Course">
+                  <img 
+                      class="Course-Up" 
+                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                      alt="Up" 
+                      />
+                </div>
+              </div>
+              <div class="Course-Instructor">
+                <span>Course Instructor:</span>
+                <div class="Enter-Course-Intsructor">
+                  <input type="text" class="Course-Intsructor-Input" id="CourseInstructorInput" placeholder="Enter the Course Instructor">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="check-reset">
+            <p>Reset</p>
+            <button class="Check-reservation-detail">Check Reservation Details</button>
+          </div>
         </div>
         <!-- New div with background color below all other divs -->
         <div class="bgcolor-div"></div>
