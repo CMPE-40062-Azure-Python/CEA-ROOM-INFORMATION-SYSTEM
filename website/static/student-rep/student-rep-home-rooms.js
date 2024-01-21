@@ -242,3 +242,10 @@ for (let i = 300; i <= 325; i++) {
 function handleReservationsButtonClick() {
     window.location.href = '/student-rep/home/reservation';
 }
+
+document.querySelectorAll('.capturedRM').forEach(function (element) {
+    element.addEventListener('click', function () {
+        var roomNumber = this.getAttribute('data-room-number');
+        document.getElementById('displayedRM').innerText = 'RM ' + roomNumber;
+    });
+});
