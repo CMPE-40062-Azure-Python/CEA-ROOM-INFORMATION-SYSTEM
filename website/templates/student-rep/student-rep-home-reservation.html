@@ -17,9 +17,15 @@
       <div class="Acc_Setting-Container">
         <img class="Acc_Settings" src="{{ url_for('static', filename='images/student-rep-account.png') }}" alt="Account Settings" />
         <ul class="Profile-Setting">
-          <li><img class="Profile-Icon" src="{{ url_for('static', filename='images/student-rep-profile.png') }}" alt="Profile Icon" /> Profile</li>
-          <li><img class="Change_Password-Icon" src="{{ url_for('static', filename='images/student-rep-change-pass.png') }}" alt="Change Password Icon" /> Change Password</li>
-          <li><img class="Logout-Icon" src="{{ url_for('static', filename='images/student-rep-log-out.png') }}" alt="Log Out Icon" /> Log Out</li>
+          <li>
+            <img class="Profile-Icon" src="{{ url_for('static', filename='images/student-rep-profile.png') }}" alt="Profile Icon" /> Profile
+          </li>
+          <li>
+            <img class="Change_Password-Icon" src="{{ url_for('static', filename='images/student-rep-change-pass.png') }}" alt="Change Password Icon" /> Change Password
+          </li>
+          <li>
+            <img class="Logout-Icon" src="{{ url_for('static', filename='images/student-rep-log-out.png') }}" alt="Log Out Icon" /> Log Out
+          </li>
         </ul>
       </div>
     </div>
@@ -30,7 +36,9 @@
             <img class="Acc_Edit" src="{{ url_for('static', filename='images/student-rep-acc_edit.png') }}" alt="Account Edit" />
           </div>
           <div class="Nav-left_text">
-            <h1><b>CEA RIS</b></h1>
+            <h1>
+              <b>CEA RIS</b>
+            </h1>
             <h2>STUDENT REPRESENTATIVE MODULE</h2>
           </div>
         </div>
@@ -79,18 +87,14 @@
               <img class="Rooms-img" src="{{ url_for('static', filename='images/student-rep-rooms.png') }}" alt="Rooms Image" />
             </div>
             <div class="Rooms-bttn">
-              <button onclick="handleRoomsButtonClick()">
-                Rooms
-              </button>
+              <button onclick="handleRoomsButtonClick()"> Rooms </button>
             </div>
             <div class="Reservations">
               <div class="Reservation-img-Container">
                 <img class="Reserve-img" src="{{ url_for('static', filename='images/student-rep-reserve-yellow.png') }}" alt="My Reservation Image" />
               </div>
               <div class="Reserve-bttn">
-                <button onclick="handleReservationsButtonClick()">
-                  My Reservation
-                </button>
+                <button onclick="handleReservationsButtonClick()"> My Reservation </button>
               </div>
             </div>
           </div>
@@ -98,79 +102,388 @@
       </div>
       <div class="Reserve-Container">
         <div class="Reservation-status">
-            <div class="Status">
-                <button id="Upcoming">
-                    Upcoming
-                </button>
-                <button id="Completed">
-                    Completed
-                </button>
-                <button id="Cancelled">
-                    Cancelled
-                </button>
-            </div>
+          <div class="Status">
+            <button id="Upcoming"> Upcoming </button>
+            <button id="Completed"> Completed </button>
+            <button id="Cancelled"> Cancelled </button>
+          </div>
         </div>
         <div class="Today">
           <div class="TodayH3">
-              <h3>Today</h3>
+            <h3>Today</h3>
           </div>
           <div class="TodayP">
-              <p class="Today-Initial-content">No Data To Show</p>
+            <p class="Today-Initial-content"></p>
           </div>
-      </div>
-      <div class="Tomorrow">
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 313</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Time - in - Time - out: 12:00 pm - 1:30 pm</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic.png') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic1.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Cancel</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 315</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Time - in - Time - out: 2:00 pm - 5:00 pm</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="Tomorrow">
           <div class="TomorrowH3">
-              <h3>Tomorrow</h3>
+            <h3>Tomorrow</h3>
           </div>
           <div class="TomorrowP">
-              <p class="Tomorrow-Initial-content">No Data To Show</p>
+            <p class="Tomorrow-Initial-content"></p>
           </div>
-      </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 314</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Time - in - Time - out: 2:30 pm - 5:30 pm</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
       <!--Completed Status Content-->
       <div class="Completed-content">
         <div class="Completed-Reservation-status">
           <div class="Completed-Status">
-              <button id="Completed-Upcoming">
-                  Upcoming
-              </button>
-              <button id="Completed-Completed">
-                  Completed
-              </button>
-              <button id="Completed-Cancelled">
-                  Cancelled
-              </button>
+            <button id="Completed-Upcoming"> Upcoming </button>
+            <button id="Completed-Completed"> Completed </button>
+            <button id="Completed-Cancelled"> Cancelled </button>
           </div>
-      </div>
+        </div>
         <div class="Completed-Inside">
-          <p>No Data To Show</p>
+          <p class="CompletedReserveDate">October 12, 2023</p>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 313</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Completed</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic.png') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic1.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 315</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Completed</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <p class="CompletedReserveDate">October 13, 2023</p>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 311</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Completed</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic.png') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic1.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 316</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Completed</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
         </div>
       </div>
-
       <!--Cancelled Status Content-->
       <div class="Cancelled-content">
         <div class="Cancelled-Reservation-status">
           <div class="Cancelled-Status">
-              <button id="Cancelled-Upcoming">
-                  Upcoming
-              </button>
-              <button id="Cancelled-Completed">
-                  Completed
-              </button>
-              <button id="Cancelled-Cancelled">
-                  Cancelled
-              </button>
+            <button id="Cancelled-Upcoming"> Upcoming </button>
+            <button id="Cancelled-Completed"> Completed </button>
+            <button id="Cancelled-Cancelled"> Cancelled </button>
           </div>
-      </div>
+        </div>
         <div class="Cancelled-Inside">
-          <p>No Data To Show</p>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 313</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Cancelled</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic.png') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic1.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 315</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Cancelled</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 313</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Cancelled</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic.png') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic1.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+          <div class="reservation-container">
+            <div class="room-details">
+              <div class="room-name">
+                <p>ROOM 314</p>
+              </div>
+              <div class="room-description">
+                <p>COM ENG ROOM</p>
+              </div>
+              <div class="time-details">
+                <p>Cancelled</p>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="containers-wrapper">
+              <div class="image-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic3.jpg') }}" alt="Room Image">
+                </div>
+              </div>
+              <div class="new-container">
+                <div class="room-image">
+                  <img src="{{ url_for('static', filename='images/ComputerRoompic2.jpg') }}" alt="Room Image 2">
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="details-button">More Details</button>
+              <button class="cancel-button">Reserve Again</button>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
-
     </div>
-    
-  
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='student-rep/student-rep-home-reservation.js') }}"></script>
   </body>
