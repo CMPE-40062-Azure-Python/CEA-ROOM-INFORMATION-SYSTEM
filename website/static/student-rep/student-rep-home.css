@@ -800,4 +800,154 @@ div.AboutUs-left-content > .AboutUs-Info p {
 }
 
 
+div.Policies-content {
+  width: calc(100% - 300px);
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 25px;
+  display: none;
+}
 
+div.Policies-upper-content {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 25px;
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.Policies-upper-content h1 {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-upper-content p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-division-upper-1 {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  justify-content: center;
+  border-top: 7px solid #612D39;
+}
+
+div.Policies-first-content {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 25px;
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.Policies-first-content h2 {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-first-content p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-division-1 {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  justify-content: center;
+  border-top: 3px solid #612D39;
+}
+
+div.Policies-second-content {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 25px;
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.Policies-second-content h2 {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-second-content p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-division-2 {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  justify-content: center;
+  border-top: 3px solid #612D39;
+}
+
+div.Policies-third-content {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 25px;
+  background-color: #FFFFFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.Policies-third-content h2 {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-third-content p {
+  font-family: 'Cardo-Regular';
+  color: #612D39;
+  letter-spacing: 1px;
+}
+
+div.Policies-division-3 {
+  width: 100%;
+ height: max-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  justify-content: center;
+  border-top: 3px solid #612D39;
+}
