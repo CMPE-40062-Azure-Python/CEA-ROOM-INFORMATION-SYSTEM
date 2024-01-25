@@ -205,7 +205,8 @@ $(document).ready(function () {
 });
 
 // Function to open the modal
-function openModal() {
+function openModal(roomNumber) {
+    document.getElementById('displayedRM').innerText = 'RM ' + roomNumber;
     document.getElementById('roomModal').style.display = 'block';
     document.body.classList.add('modal-open');
 }
@@ -218,26 +219,38 @@ function closeModal() {
     document.body.classList.remove('modal-open');
 }
 
+function handleRoomClick(roomNumber) {
+    openModal(roomNumber);
+}
+
+// Add event listeners for all rooms and their suffixes
 const suffixes = ['a', 'b'];
 
 for (let i = 300; i <= 325; i++) {
-    const roomIdWithoutSuffix = 'RM' + i;
+    const roomIdWithoutSuffix = i;
     const elementWithoutSuffix = document.getElementById(roomIdWithoutSuffix);
 
     // Add event listener for the room without suffix
     if (elementWithoutSuffix) {
-        elementWithoutSuffix.addEventListener('click', openModal);
+        elementWithoutSuffix.addEventListener('click', createClickHandler(roomIdWithoutSuffix));
     }
 
     // Add event listeners for suffixed rooms
     for (const suffix of suffixes) {
-        const roomIdWithSuffix = 'RM' + i + suffix;
+        const roomIdWithSuffix = i + suffix;
         const elementWithSuffix = document.getElementById(roomIdWithSuffix);
 
         if (elementWithSuffix) {
-            elementWithSuffix.addEventListener('click', openModal);
+            elementWithSuffix.addEventListener('click', createClickHandler(roomIdWithSuffix));
         }
     }
+}
+
+// Function to create a click handler with the correct room number
+function createClickHandler(roomNumber) {
+    return function () {
+        handleRoomClick(roomNumber);
+    };
 }
 
 // Navigate to Reservations
@@ -245,9 +258,10 @@ function handleReservationsButtonClick() {
     window.location.href = '/student-rep/home/reservation';
 }
 
+// Add event listeners for captured rooms
 document.querySelectorAll('.capturedRM').forEach(function (element) {
     element.addEventListener('click', function () {
         var roomNumber = this.getAttribute('data-room-number');
-        document.getElementById('displayedRM').innerText = 'RM ' + roomNumber;
+        handleRoomClick(roomNumber);
     });
 });

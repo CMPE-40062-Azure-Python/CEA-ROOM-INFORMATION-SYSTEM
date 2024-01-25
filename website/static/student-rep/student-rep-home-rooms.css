@@ -406,6 +406,12 @@
     padding-left: 6px;
     align-items: center;
   }
+  span.capturedRM {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
   /* Room 302 - 306 Hover*/
 
   #RM302:hover {
@@ -584,6 +590,15 @@
     padding-right: 5px;
     align-items: center;
   }
+
+  div#RM318.RM318 span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   div.RM318:hover {
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
@@ -614,6 +629,15 @@
     justify-content: center;
     align-items: center;
   }
+
+  div#RM310.RM310 span, div#RM311.RM311 span, div#RM312.RM312 span, div#RM313.RM313 span, div#RM314.RM314 span, div#RM315.RM315 span, div#RM316.RM316 span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   div.RM310:hover{
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
@@ -701,6 +725,15 @@
     justify-content: center;
     align-items: center;
   }
+
+  div#RM307.RM307 span, div#RM308.RM308 span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   div.RM307:hover{
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;
@@ -776,6 +809,22 @@
     justify-content: center;
     align-items: center;
   }
+
+  div#RM301.RM301 span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#RM300.RM300 span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   div.RM301:hover{
     cursor: pointer;
     background: linear-gradient(135deg, #337656, #314b4b)!important;

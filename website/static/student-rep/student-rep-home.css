@@ -727,3 +727,77 @@ div.Contact-lower-content h4 {
   font-family: 'Cardo-Regular';
   color: black;
 }
+
+div.AboutUS-content {
+  width: calc(100% - 300px);
+  height: 750px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 25px;
+  padding-bottom: 20px;
+  display: none;
+  background-color: #F3F1F0;
+  border-radius: 8px;
+}
+
+div.AboutUs-Inside {
+  height: 750px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+}
+div.AboutUs-Img {
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  z-index: 3;
+  margin-top: 31%;
+  margin-left: -30px;
+}
+
+div.AboutUs-Img img{
+  height: 100%;
+  width: 100%;
+}
+div.AboutUs-left-content {
+  height: 100%;
+  width: 60%;
+  background-color: #ffffff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 2;
+  margin-left: auto;
+}
+
+div.AboutUs-left-content h1 {
+  font-family: "Cardo";
+  color: #612D39;
+  font-size: 5rem;
+  margin-left: 10%;
+}
+
+div.AboutUs-left-content > .AboutUs-Info {
+  width: 90%;
+  height: 72%;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
+div.AboutUs-left-content > .AboutUs-Info div {
+  height: 100%;
+  width: 48%;
+}
+div.AboutUs-left-content > .AboutUs-Info p {
+  font-family: "Cardo";
+  
+}
+
+
+
