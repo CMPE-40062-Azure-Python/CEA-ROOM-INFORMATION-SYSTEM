@@ -951,3 +951,35 @@ div.Policies-division-3 {
   justify-content: center;
   border-top: 3px solid #612D39;
 }
+
+div.FAQS-content {
+  width: calc(100% - 300px);
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 25px;
+  display: none;
+}
+
+div.FAQS-upper-content {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 30px;
+  background-color: #431517;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.FAQS-upper-content h1 {
+  font-family: 'Cardo-Regular';
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}

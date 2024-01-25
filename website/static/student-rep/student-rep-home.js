@@ -58,15 +58,19 @@ normalIconFaqs.src = "/static/images/student-rep-faqs-icon.png";
 Faqs.style.color = '#810403';
 
 Faqs.addEventListener("mouseover", function () {
-    Faqs.style.borderBottom = '2px solid #DBA729';
-    Faqs.style.color = '#DBA729';
-    FaqsIcon.src = yellowIconFaqs.src;
+    if (!faqsClicked || homelinkClicked) {
+        Faqs.style.borderBottom = '2px solid #DBA729';
+        Faqs.style.color = '#DBA729';
+        FaqsIcon.src = yellowIconFaqs.src;
+    }
 });
 
 Faqs.addEventListener("mouseout", function () {
-    Faqs.style.borderBottom = '2px solid transparent';
-    Faqs.style.color = '#810403';
-    FaqsIcon.src = normalIconFaqs.src;
+    if (!faqsClicked || homelinkClicked) {
+        Faqs.style.borderBottom = '2px solid transparent';
+        Faqs.style.color = '#810403';
+        FaqsIcon.src = faqsClicked ? yellowIconFaqs.src : normalIconFaqs.src;
+    }
 });
 
 //About Us - Hover
@@ -110,7 +114,7 @@ yellowIconContactUs.src = "/static/images/student-rep-contact-yellow-icon.png";
 const normalIconContactUs = new Image();
 normalIconContactUs.src = "/static/images/student-rep-contact-icon.png";
 
-
+let faqsClicked = false;
 let contactUsClicked = false;
 let homelinkClicked = false;
 let aboutUsClicked = false;
@@ -146,12 +150,14 @@ ContactUs.addEventListener("click", function () {
         UpdatesContainer.style.display = "none";
         AboutusContent.style.display = "none";
         PoliciesContent.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     contactUsClicked = true;
     homelinkClicked = false;
     aboutUsClicked = false;
     policiesClicked = false;
+    faqsClicked = false;
 
     ContactUs.style.borderBottom = '2px solid #DBA729';
     ContactUs.style.color = '#DBA729';
@@ -168,6 +174,10 @@ ContactUs.addEventListener("click", function () {
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
     policiesIcon.src = normalIconPolicies.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
 });
 
 // Back To Home
@@ -180,6 +190,7 @@ homelink.addEventListener("click", function () {
         ContactContent.style.display = "none";
         AboutusContent.style.display = "none";
         PoliciesContent.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     
@@ -187,6 +198,7 @@ homelink.addEventListener("click", function () {
     contactUsClicked = false;
     aboutUsClicked = false;
     policiesClicked = false;
+    faqsClicked = false;
 
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
@@ -203,6 +215,10 @@ homelink.addEventListener("click", function () {
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
     policies.src = normalIconPolicies.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
 
 });
 
@@ -234,12 +250,14 @@ AboutUs.addEventListener("click", function () {
         UpdatesContainer.style.display = "none";
         ContactContent.style.display = "none";
         PoliciesContent.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     aboutUsClicked = true;
     homelinkClicked = false;
     contactUsClicked = false;
     policiesClicked = false;
+    faqsClicked = false;
 
     AboutUs.style.borderBottom = '2px solid #DBA729'
     AboutUs.style.color = '#DBA729';
@@ -256,6 +274,10 @@ AboutUs.addEventListener("click", function () {
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
     policiesIcon.src = normalIconPolicies.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
 });
 
 // Back To Home about us
@@ -268,6 +290,7 @@ homelink.addEventListener("click", function () {
         AboutusContent.style.display = "none";
         ContactUs.style.display = "none";
         PoliciesContent.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     
@@ -275,6 +298,7 @@ homelink.addEventListener("click", function () {
     aboutUsClicked = false;
     contactUsClicked = false;
     policiesClicked = false;
+    faqsClicked = false;
 
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
@@ -291,6 +315,10 @@ homelink.addEventListener("click", function () {
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
     policies.src = normalIconPolicies.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
 
 });
 
@@ -325,12 +353,14 @@ policies.addEventListener("click", function () {
         UpdatesContainer.style.display = "none";
         ContactContent.style.display = "none";
         AboutusContent.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     policiesClicked = true;
     aboutUsClicked = false;
     homelinkClicked = false;
     contactUsClicked = false;
+    faqsClicked = false;
 
     policies.style.borderBottom = '2px solid #DBA729'
     policies.style.color = '#DBA729';
@@ -347,6 +377,10 @@ policies.addEventListener("click", function () {
     AboutUs.style.borderBottom = '2px solid transparent'
     AboutUs.style.color = '#810403';
     AboutUsIcon.src = normalIconAboutUs.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
 });
 
 // Back To Home policies
@@ -359,6 +393,7 @@ homelink.addEventListener("click", function () {
         PoliciesContent.style.display = "none";
         AboutusContent.style.display = "none";
         ContactUs.style.display = "none";
+        FaqsContent.style.display = "none";
     }
 
     
@@ -366,6 +401,7 @@ homelink.addEventListener("click", function () {
     aboutUsClicked = false;
     contactUsClicked = false;
     policiesClicked = false;
+    faqsClicked = false;
 
     policies.style.borderBottom = '2px solid transparent';
     policies.style.color = '#810403';
@@ -382,6 +418,8 @@ homelink.addEventListener("click", function () {
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
     AboutUsIcon.src = normalIconAboutUs.src;
+    
+
 
 });
 
@@ -402,6 +440,109 @@ homelink.addEventListener("mouseout", function () {
 });
 
 //back to home end policies
+
+// FAQs Toggle
+
+const FaqsContent = document.querySelector('.FAQS-content');
+
+
+Faqs.addEventListener("click", function () {
+    const isFaqsContentVisible = window.getComputedStyle(FaqsContent).display !== "none";
+
+    if (!isFaqsContentVisible) {
+        FaqsContent.style.display = "block";
+        PoliciesContent.style.display = "none";
+        UpdatesContainer.style.display = "none";
+        ContactContent.style.display = "none";
+        AboutusContent.style.display = "none";
+    }
+
+    faqsClicked = true;
+    policiesClicked = false;
+    aboutUsClicked = false;
+    homelinkClicked = false;
+    contactUsClicked = false;
+
+    Faqs.style.borderBottom = '2px solid #DBA729'
+    Faqs.style.color = '#DBA729';
+    FaqsIcon.src = yellowIconFaqs.src;
+
+    homelink.style.borderBottom = '2px solid transparent';
+    homelink.style.color =  '#810403';
+    homeIcon.src = normalIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent'
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policiesIcon.src = normalIconPolicies.src;
+});
+
+// Back To Home faqs
+
+homelink.addEventListener("click", function () {
+    const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
+
+    if (!isHomeContentVisible) {
+        UpdatesContainer.style.display = "block";
+        PoliciesContent.style.display = "none";
+        AboutusContent.style.display = "none";
+        ContactUs.style.display = "none";
+        FaqsContent.style.display = "none";
+    }
+
+    
+    homelinkClicked = true;
+    aboutUsClicked = false;
+    contactUsClicked = false;
+    policiesClicked = false;
+    faqsClicked = false;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policiesIcon.src = normalIconPolicies.src;
+
+    homelink.style.borderBottom = '2px solid #DBA729';
+    homelink.style.color =  '#DBA729';
+    homeIcon.src = yellowIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+
+    Faqs.style.borderBottom = '2px solid transparent'
+    Faqs.style.color = '#810403';
+    FaqsIcon.src = normalIconFaqs.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent';
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
+
+});
+
+homelink.addEventListener("mouseover", function () {
+    if (faqsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid #DBA729';
+        homelink.style.color = '#DBA729';
+        homeIcon.src = yellowIconHome.src;
+    }
+});
+
+homelink.addEventListener("mouseout", function () {
+    if (faqsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid transparent';
+        homelink.style.color = '#810403';
+        homeIcon.src = normalIconHome.src;
+    }
+});
+
+//back to home end faqs
 
 //Menu - hover
 
