@@ -76,20 +76,6 @@ yellowIconAboutUs.src = "/static/images/student-rep-us-yellow-icon.png";
 const normalIconAboutUs = new Image();
 normalIconAboutUs.src = "/static/images/student-rep-us-icon.png";
 
-AboutUs.style.color = '#810403';
-
-AboutUs.addEventListener("mouseover", function () {
-    AboutUs.style.borderBottom = '2px solid #DBA729';
-    AboutUs.style.color = '#DBA729';
-    AboutUsIcon.src = yellowIconAboutUs.src;
-});
-
-AboutUs.addEventListener("mouseout", function () {
-    AboutUs.style.borderBottom = '2px solid transparent';
-    AboutUs.style.color = '#810403';
-    AboutUsIcon.src = normalIconAboutUs.src;
-});
-
 
 //Contact Us - Hover
 
@@ -103,8 +89,10 @@ yellowIconContactUs.src = "/static/images/student-rep-contact-yellow-icon.png";
 const normalIconContactUs = new Image();
 normalIconContactUs.src = "/static/images/student-rep-contact-icon.png";
 
+
 let contactUsClicked = false;
 let homelinkClicked = false;
+let aboutUsClicked = false;
 
 ContactUs.style.color = '#810403';
 
@@ -134,10 +122,12 @@ ContactUs.addEventListener("click", function () {
     if (!isContactContentVisible) {
         ContactContent.style.display = "block";
         UpdatesContainer.style.display = "none";
+        AboutusContent.style.display = "none";
     }
 
     contactUsClicked = true;
     homelinkClicked = false;
+    aboutUsClicked = false;
 
     ContactUs.style.borderBottom = '2px solid #DBA729';
     ContactUs.style.color = '#DBA729';
@@ -146,6 +136,10 @@ ContactUs.addEventListener("click", function () {
     homelink.style.borderBottom = '2px solid transparent';
     homelink.style.color =  '#810403';
     homeIcon.src = normalIconHome.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent';
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
 });
 
 // Back To Home
@@ -156,11 +150,13 @@ homelink.addEventListener("click", function () {
     if (!isHomeContentVisible) {
         UpdatesContainer.style.display = "block";
         ContactContent.style.display = "none";
+        AboutusContent.style.display = "none";
     }
 
     
     homelinkClicked = true;
     contactUsClicked = false;
+    aboutUsClicked = false;
 
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
@@ -169,6 +165,10 @@ homelink.addEventListener("click", function () {
     homelink.style.borderBottom = '2px solid #DBA729';
     homelink.style.color =  '#DBA729';
     homeIcon.src = yellowIconHome.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent';
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
 
 });
 
@@ -188,6 +188,83 @@ homelink.addEventListener("mouseout", function () {
     }
 });
 
+// About Us Toggle
+
+const AboutusContent = document.querySelector('.AboutUS-content'); 
+
+AboutUs.addEventListener("click", function () {
+    const isAboutusContentVisible = window.getComputedStyle(AboutusContent).display !== "none";
+
+    if (!isAboutusContentVisible) {
+        AboutusContent.style.display = "block";
+        UpdatesContainer.style.display = "none";
+        ContactContent.style.display = "none";
+    }
+
+    aboutUsClicked = true;
+    homelinkClicked = false;
+    contactUsClicked = false;
+
+    AboutUs.style.borderBottom = '2px solid #DBA729'
+    AboutUs.style.color = '#DBA729';
+    AboutUsIcon.src = yellowIconAboutUs.src;
+
+    homelink.style.borderBottom = '2px solid transparent';
+    homelink.style.color =  '#810403';
+    homeIcon.src = normalIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+});
+
+// Back To Home about us
+
+homelink.addEventListener("click", function () {
+    const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
+
+    if (!isHomeContentVisible) {
+        UpdatesContainer.style.display = "block";
+        AboutusContent.style.display = "none";
+        ContactUs.style.display = "none";
+    }
+
+    
+    homelinkClicked = true;
+    aboutUsClicked = false;
+    contactUsClicked = false;
+
+    AboutUs.style.borderBottom = '2px solid transparent';
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
+
+    homelink.style.borderBottom = '2px solid #DBA729';
+    homelink.style.color =  '#DBA729';
+    homeIcon.src = yellowIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+
+});
+
+homelink.addEventListener("mouseover", function () {
+    if (aboutUsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid #DBA729';
+        homelink.style.color = '#DBA729';
+        homeIcon.src = yellowIconHome.src;
+    }
+});
+
+homelink.addEventListener("mouseout", function () {
+    if (aboutUsClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid transparent';
+        homelink.style.color = '#810403';
+        homeIcon.src = normalIconHome.src;
+    }
+});
+
+//back to home end about us
 
 //Menu - hover
 
