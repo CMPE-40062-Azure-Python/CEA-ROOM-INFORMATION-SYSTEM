@@ -27,16 +27,21 @@ const normalIconPolicies = new Image();
 normalIconPolicies.src = "/static/images/student-rep-policies-icon.png";
 
 policies.addEventListener("mouseover", function () {
-    policiesIcon.src = yellowIconPolicies.src;
-    policies.style.borderBottom = '2px solid #DBA729';
-    policies.style.color = '#DBA729';
+    if (!policiesClicked || homelinkClicked) {
+        policies.style.borderBottom = '2px solid #DBA729';
+        policies.style.color = '#DBA729';
+        policiesIcon.src = yellowIconPolicies.src;
+    }
 });
 
 policies.addEventListener("mouseout", function () {
-    policies.style.borderBottom = '2px solid transparent';
-    policies.style.color = '#810403';
-    policiesIcon.src = normalIconPolicies.src;
+    if (!policiesClicked || homelinkClicked) {
+        policies.style.borderBottom = '2px solid transparent';
+        policies.style.color = '#810403';
+        policiesIcon.src = policiesClicked ? yellowIconPolicies.src : normalIconPolicies.src;
+    }
 });
+
 
 //FAQs - Hover
 
@@ -76,6 +81,22 @@ yellowIconAboutUs.src = "/static/images/student-rep-us-yellow-icon.png";
 const normalIconAboutUs = new Image();
 normalIconAboutUs.src = "/static/images/student-rep-us-icon.png";
 
+AboutUs.addEventListener("mouseover", function () {
+    if (!aboutUsClicked || homelinkClicked) {
+        AboutUs.style.borderBottom = '2px solid #DBA729';
+        AboutUs.style.color = '#DBA729';
+        AboutUsIcon.src = yellowIconAboutUs.src;
+    }
+});
+
+AboutUs.addEventListener("mouseout", function () {
+    if (!aboutUsClicked || homelinkClicked) {
+        AboutUs.style.borderBottom = '2px solid transparent';
+        AboutUs.style.color = '#810403';
+        AboutUsIcon.src = aboutUsClicked ? yellowIconAboutUs.src : normalIconAboutUs.src;
+    }
+});
+
 
 //Contact Us - Hover
 
@@ -93,6 +114,7 @@ normalIconContactUs.src = "/static/images/student-rep-contact-icon.png";
 let contactUsClicked = false;
 let homelinkClicked = false;
 let aboutUsClicked = false;
+let policiesClicked = false;
 
 ContactUs.style.color = '#810403';
 
@@ -123,11 +145,13 @@ ContactUs.addEventListener("click", function () {
         ContactContent.style.display = "block";
         UpdatesContainer.style.display = "none";
         AboutusContent.style.display = "none";
+        PoliciesContent.style.display = "none";
     }
 
     contactUsClicked = true;
     homelinkClicked = false;
     aboutUsClicked = false;
+    policiesClicked = false;
 
     ContactUs.style.borderBottom = '2px solid #DBA729';
     ContactUs.style.color = '#DBA729';
@@ -140,6 +164,10 @@ ContactUs.addEventListener("click", function () {
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
     AboutUsIcon.src = normalIconAboutUs.src;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policiesIcon.src = normalIconPolicies.src;
 });
 
 // Back To Home
@@ -151,12 +179,14 @@ homelink.addEventListener("click", function () {
         UpdatesContainer.style.display = "block";
         ContactContent.style.display = "none";
         AboutusContent.style.display = "none";
+        PoliciesContent.style.display = "none";
     }
 
     
     homelinkClicked = true;
     contactUsClicked = false;
     aboutUsClicked = false;
+    policiesClicked = false;
 
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
@@ -169,6 +199,10 @@ homelink.addEventListener("click", function () {
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
     AboutUsIcon.src = normalIconAboutUs.src;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policies.src = normalIconPolicies.src;
 
 });
 
@@ -199,11 +233,13 @@ AboutUs.addEventListener("click", function () {
         AboutusContent.style.display = "block";
         UpdatesContainer.style.display = "none";
         ContactContent.style.display = "none";
+        PoliciesContent.style.display = "none";
     }
 
     aboutUsClicked = true;
     homelinkClicked = false;
     contactUsClicked = false;
+    policiesClicked = false;
 
     AboutUs.style.borderBottom = '2px solid #DBA729'
     AboutUs.style.color = '#DBA729';
@@ -216,6 +252,10 @@ AboutUs.addEventListener("click", function () {
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
     ContactUsIcon.src = normalIconContactUs.src;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policiesIcon.src = normalIconPolicies.src;
 });
 
 // Back To Home about us
@@ -227,12 +267,14 @@ homelink.addEventListener("click", function () {
         UpdatesContainer.style.display = "block";
         AboutusContent.style.display = "none";
         ContactUs.style.display = "none";
+        PoliciesContent.style.display = "none";
     }
 
     
     homelinkClicked = true;
     aboutUsClicked = false;
     contactUsClicked = false;
+    policiesClicked = false;
 
     AboutUs.style.borderBottom = '2px solid transparent';
     AboutUs.style.color = '#810403';
@@ -245,6 +287,10 @@ homelink.addEventListener("click", function () {
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
     ContactUsIcon.src = normalIconContactUs.src;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policies.src = normalIconPolicies.src;
 
 });
 
@@ -265,6 +311,97 @@ homelink.addEventListener("mouseout", function () {
 });
 
 //back to home end about us
+
+// Policies Toggle
+
+const PoliciesContent = document.querySelector('.Policies-content');
+
+
+policies.addEventListener("click", function () {
+    const isPoliciesContentVisible = window.getComputedStyle(PoliciesContent).display !== "none";
+
+    if (!isPoliciesContentVisible) {
+        PoliciesContent.style.display = "block";
+        UpdatesContainer.style.display = "none";
+        ContactContent.style.display = "none";
+        AboutusContent.style.display = "none";
+    }
+
+    policiesClicked = true;
+    aboutUsClicked = false;
+    homelinkClicked = false;
+    contactUsClicked = false;
+
+    policies.style.borderBottom = '2px solid #DBA729'
+    policies.style.color = '#DBA729';
+    policiesIcon.src = yellowIconPolicies.src;
+
+    homelink.style.borderBottom = '2px solid transparent';
+    homelink.style.color =  '#810403';
+    homeIcon.src = normalIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent'
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
+});
+
+// Back To Home policies
+
+homelink.addEventListener("click", function () {
+    const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
+
+    if (!isHomeContentVisible) {
+        UpdatesContainer.style.display = "block";
+        PoliciesContent.style.display = "none";
+        AboutusContent.style.display = "none";
+        ContactUs.style.display = "none";
+    }
+
+    
+    homelinkClicked = true;
+    aboutUsClicked = false;
+    contactUsClicked = false;
+    policiesClicked = false;
+
+    policies.style.borderBottom = '2px solid transparent';
+    policies.style.color = '#810403';
+    policiesIcon.src = normalIconPolicies.src;
+
+    homelink.style.borderBottom = '2px solid #DBA729';
+    homelink.style.color =  '#DBA729';
+    homeIcon.src = yellowIconHome.src;
+
+    ContactUs.style.borderBottom = '2px solid transparent';
+    ContactUs.style.color = '#810403';
+    ContactUsIcon.src = normalIconContactUs.src;
+
+    AboutUs.style.borderBottom = '2px solid transparent';
+    AboutUs.style.color = '#810403';
+    AboutUsIcon.src = normalIconAboutUs.src;
+
+});
+
+homelink.addEventListener("mouseover", function () {
+    if (policiesClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid #DBA729';
+        homelink.style.color = '#DBA729';
+        homeIcon.src = yellowIconHome.src;
+    }
+});
+
+homelink.addEventListener("mouseout", function () {
+    if (policiesClicked && !homelink.classList.contains('clicked')) {
+        homelink.style.borderBottom = '2px solid transparent';
+        homelink.style.color = '#810403';
+        homeIcon.src = normalIconHome.src;
+    }
+});
+
+//back to home end policies
 
 //Menu - hover
 
