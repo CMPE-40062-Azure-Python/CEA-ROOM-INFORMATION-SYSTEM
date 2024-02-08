@@ -30,11 +30,13 @@
         alt="Account Settings"
         />
         <ul class="Profile-Setting">
+            <div class="profile-container" onclick="handleProfileButtonClick()">
             <li><img 
                 class="Profile-Icon"
                 src="{{ url_for('static', filename='images/student-rep-profile.png') }}"
                 alt="Profile Icon">
             Profile</li>
+            </div>
             <li><img 
                 class="Change_Password-Icon"
                 src="{{ url_for('static', filename='images/student-rep-change-pass.png') }}"
@@ -183,6 +185,11 @@
                 </div>
             </div>
         </div>
+
+        <!--Profile Content-->
+        <!-- <div class="Profile-content">
+           
+        </div> -->
 
         <div class="Updates-Schedule-Container">
             <div class="Updates-Container">

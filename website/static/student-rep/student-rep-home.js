@@ -17,8 +17,8 @@ homelink.style.color = '#DBA729';
 
 const policies = document.querySelector('.Policies-Icon');
 const policiesIcon = document.querySelector('.Policies-bttn');
-
 policies.style.color = '#810403';
+
 // Preload images
 const yellowIconPolicies = new Image();
 yellowIconPolicies.src = "/static/images/student-rep-policies-yellow-icon.png";
@@ -148,7 +148,27 @@ ContactUs.addEventListener("click", function () {
     homeIcon.src = normalIconHome.src;
 });
 
-// Back To Home
+// // Profile Toggle
+// const Profile =  document.querySelector('.Profile-Icon');
+// const ProfileContent = document.querySelector('.Profile-content');
+
+// Profile.addEventListener("click", function () {
+//     const isProfileContentVisible = window.getComputedStyle(ProfileContent).display !== "none";
+
+//     if (!isProfileContentVisible) {
+//         ProfileContent.style.display = "block";
+//         UpdatesContainer.style.display = "none";
+//     }
+
+//     homelinkClicked = false;
+
+//     homelink.style.borderBottom = '2px solid transparent';
+//     homelink.style.color =  '#810403';
+//     homeIcon.src = normalIconHome.src;
+// });
+
+
+// Back To Home - From Contact Page
 
 homelink.addEventListener("click", function () {
     const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
@@ -302,6 +322,10 @@ ReserveBttn.addEventListener("mouseout", function () {
     ReserveImg.src = "/static/images/student-rep-reserve.png";
     ReserveBttn.style.color = '#810403';
 });
+
+function handleProfileButtonClick() {
+    window.location.href = '/student-rep/profile';
+}
 
 function handleRoomsButtonClick() {
     window.location.href = '/student-rep/home/rooms';
