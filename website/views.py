@@ -155,7 +155,25 @@ def admin_login():
 
 @views.route('/student-rep/home/reservation')
 def student_rep_home_reservation():
-    return render_template("student-rep/student-rep-home-reservation.html")
+    # Execute SQL query to fetch all data from room_reservation table
+    mycursor.execute("SELECT roomNumber, reservationDate, reservationTime FROM room_reservation")
+    all_reservations = mycursor.fetchall()
+
+    # Map the fetched data inside the loop
+    mapped_reservations = []
+    for reservation in all_reservations:
+        room_number = reservation[0]
+        reservation_date = reservation[1]
+        reservation_time = reservation[2]
+        mapped_reservation = {
+            'roomNumber': room_number,
+            'reservationDate': reservation_date,
+            'reservationTime': reservation_time
+        }
+        mapped_reservations.append(mapped_reservation)
+
+    # Pass the mapped data to the template for rendering
+    return render_template("student-rep/student-rep-home-reservation.html", reservations=mapped_reservations)
 
 @views.route('/site-map')
 def site_map():

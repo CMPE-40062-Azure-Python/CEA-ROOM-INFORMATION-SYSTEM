@@ -118,14 +118,18 @@
           <div class="reservation-container">
             <div class="room-details">
               <div class="room-name">
-                <p>ROOM 313</p>
+                {% if reservations %}
+                <p>{{ reservations[1]['roomNumber'] }}</p>
               </div>
               <div class="room-description">
                 <p>COM ENG ROOM</p>
               </div>
               <div class="time-details">
-                <p>Time - in - Time - out: 12:00 pm - 1:30 pm</p>
+                <p>{{ reservations[1]['reservationDate'] }} {{ reservations[1]['reservationTime'] }}</p>
               </div>
+              {% else %}
+              <p>No data available.</p>
+              {% endif %}
             </div>
             <hr class="separator">
             <div class="containers-wrapper">
@@ -148,14 +152,18 @@
           <div class="reservation-container">
             <div class="room-details">
               <div class="room-name">
-                <p>ROOM 315</p>
+                {% if reservations %}
+                <p>{{ reservations[0]['roomNumber'] }}</p>
               </div>
               <div class="room-description">
                 <p>COM ENG ROOM</p>
               </div>
               <div class="time-details">
-                <p>Time - in - Time - out: 2:00 pm - 5:00 pm</p>
+                <p>{{ reservations[0]['reservationDate'] }} {{ reservations[0]['reservationTime'] }}</p>
               </div>
+              {% else %}
+              <p>No data available.</p>
+              {% endif %}
             </div>
             <hr class="separator">
             <div class="containers-wrapper">
@@ -186,14 +194,18 @@
           <div class="reservation-container">
             <div class="room-details">
               <div class="room-name">
-                <p>ROOM 314</p>
+                {% if reservations %}
+                <p>{{ reservations[2]['roomNumber'] }}</p>
               </div>
               <div class="room-description">
                 <p>COM ENG ROOM</p>
               </div>
               <div class="time-details">
-                <p>Time - in - Time - out: 2:30 pm - 5:30 pm</p>
+                <p>{{ reservations[2]['reservationDate'] }} {{ reservations[2]['reservationTime'] }}</p>
               </div>
+              {% else %}
+              <p>No data available.</p>
+              {% endif %}
             </div>
             <hr class="separator">
             <div class="containers-wrapper">

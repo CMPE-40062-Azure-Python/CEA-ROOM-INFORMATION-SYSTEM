@@ -269,13 +269,12 @@ document.querySelectorAll('.capturedRM').forEach(function (element) {
 // Make Reservation
 function submitReservation() {
     // Get input values
-    var roomDisplayed = $('#displayedRM').val();
+    var roomDisplayed = document.getElementById('displayedRM').innerText;
     var reservationDate = $('#dateInput').val();
     var timeIn = $('#timeIn').val();
     var timeOut = $('#timeOut').val();
 
-    var reservationTime = timeIn + "-" + timeOut;
-
+    var reservationTime = timeIn + " " + "-" + " " + timeOut;
     // Send data to Flask server
     $.ajax({
         url: '/student-rep/home/rooms', // Flask route to handle the request
