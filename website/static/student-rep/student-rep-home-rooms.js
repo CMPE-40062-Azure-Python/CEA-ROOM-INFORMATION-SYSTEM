@@ -265,3 +265,27 @@ document.querySelectorAll('.capturedRM').forEach(function (element) {
         handleRoomClick(roomNumber);
     });
 });
+
+//Submit Reservation
+function submitReservation() {
+    // Get input values
+    var reservationDate = $('#dateInput').val();
+    var reservationTime = $('#timeInput').val();
+
+    // Send data to Flask server
+    $.ajax({
+        url: '/student-rep/home/rooms', // Flask route to handle the request
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ reservationDate: reservationDate, reservationTime: reservationTime }),
+        success: function (response) {
+            alert('Reservation submitted successfully.');
+            // Optionally, you can redirect the user to another page or perform any other action upon successful submission
+        },
+        error: function (xhr, status, error) {
+            alert('Error: ' + error);
+        }
+    });
+}
+
+

@@ -89,7 +89,7 @@ def student_rep_home():
                            occupied_count=occupied_count,
                            maintenance_count=maintenance_count)
 
-@views.route('/student-rep/home/rooms')
+@views.route('/student-rep/home/rooms', methods=['GET', 'POST'])
 def student_rep_home_rooms():
     mycursor.execute("SELECT roomNumber FROM cpe_dept_rooms")
     
@@ -118,11 +118,20 @@ def student_rep_home_rooms():
 
         room_data_list.append(serializable_room_data)
 
-    # Check if a room number was clicked (replace 'clicked_room' with the actual parameter name)
-    clicked_room = request.args.get('clicked_room')
-    if clicked_room:
-        # Return JSON response for the clicked room
-        return jsonify({'clicked_room': clicked_room, 'room_data': room_data_list})
+    if request.method == 'POST':
+        # Get data from the form
+        reservationDate = request.json['reservationDate']
+        reservationTime = request.json['reservationTime']
+
+
+        # Insert data into the database
+        sql = "INSERT INTO room_reservation (reservationDate, reservationTime) VALUES (%s, %s)"
+        val = (reservationDate, reservationTime)
+
+        mycursor.execute(sql, val)
+        db.commit()
+        
+        return 'Reservation submitted successfully.'
 
     # Pass the room numbers and searchInput to the template
     return render_template("student-rep/student-rep-home-rooms.html", room_numbers=room_numbers, searchInput=search_input)

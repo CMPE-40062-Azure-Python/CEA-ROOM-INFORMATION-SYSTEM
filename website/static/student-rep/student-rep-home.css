@@ -315,7 +315,7 @@ button.Reserve-bttn{
 }
 
 .side-bar-and-content > .Updates-Schedule-Container > .Updates-Container {
-  height: 200px;
+  height: 100%;
   width: 100%; /* Calculate the remaining width */
   background-color: white;
   display: flex;

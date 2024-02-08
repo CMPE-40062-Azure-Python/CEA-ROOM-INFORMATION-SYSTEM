@@ -51,15 +51,15 @@
               <div class="Time">Time-in - Time-out</div>
             </div>
             <div class="Search-bar">
-                <input type="text" class="Search-Input" id="searchInput" placeholder="Search Room Name">
-                <!-- Display the filtered room numbers -->
-                <div class="room-list" id="roomList">
-                    {% for room_number in room_numbers %}
-                        <p class="roomNumber" style="display: none;">{{ room_number[0] }}</p>
-                    {% endfor %}
-                </div>
-                <div class="recent-Searches">Recent Searches</div>
-            </div>  
+              <input type="text" class="Search-Input" id="searchInput" placeholder="Search Room Name" />
+              <!-- Display the filtered room numbers -->
+              <div class="room-list" id="roomList">
+                {% for room_number in room_numbers %}
+                <p class="roomNumber" style="display: none;">{{ room_number[0] }}</p>
+                {% endfor %}
+              </div>
+              <div class="recent-Searches">Recent Searches</div>
+            </div>
           </div>
         </div>
       </div>
@@ -103,58 +103,32 @@
                 <div class="Left-content">
                   <div class="Long-empty-left"></div>
                   <div class="smallEmpty-left"></div>
-                  <div id="RM307" class="RM307">
-                    {% for room_number in room_numbers %} {% if loop.index == 12 %} <span class="capturedRM" data-room-number="307">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM308" class="RM308">
-                    {% for room_number in room_numbers %} {% if loop.index == 13 %} <span class="capturedRM" data-room-number="308">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
+                  <div id="RM307" class="RM307">{% for room_number in room_numbers %} {% if loop.index == 12 %} <span class="capturedRM" data-room-number="307">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM308" class="RM308">{% for room_number in room_numbers %} {% if loop.index == 13 %} <span class="capturedRM" data-room-number="308">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
                   <div class="mediumEmpty-left"></div>
                   <div class="rectangle-left"></div>
                 </div>
               </div>
               <div class="Rooms-column">
                 <div class="Room302-306">
-                  <div id="RM306b" class="306b">
-                    {% for room_number in room_numbers %} {% if loop.index == 11 %} <span class="capturedRM" data-room-number="306b">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM306a" class="306a">
-                    {% for room_number in room_numbers %} {% if loop.index == 10 %} <span class="capturedRM" data-room-number="306a">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM305b" class="305b">
-                    {% for room_number in room_numbers %} {% if loop.index == 9 %} <span class="capturedRM" data-room-number="305b">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM305a" class="305a">
-                    {% for room_number in room_numbers %} {% if loop.index == 8 %} <span class="capturedRM" data-room-number="305a">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM304b" class="304b">
-                    {% for room_number in room_numbers %} {% if loop.index == 7 %} <span class="capturedRM" data-room-number="304b">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM304a" class="304a">
-                    {% for room_number in room_numbers %} {% if loop.index == 6 %} <span class="capturedRM" data-room-number="304a">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM303b" class="303b">
-                    {% for room_number in room_numbers %} {% if loop.index == 5 %} <span class="capturedRM" data-room-number="303b">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM303a" class="303a">
-                    {% for room_number in room_numbers %} {% if loop.index == 4 %} <span class="capturedRM" data-room-number="303a">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM302" class="302">
-                    {% for room_number in room_numbers %} {% if loop.index == 3 %} <span class="capturedRM" data-room-number="302">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
+                  <div id="RM306b" class="306b">{% for room_number in room_numbers %} {% if loop.index == 11 %} <span class="capturedRM" data-room-number="306b">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM306a" class="306a">{% for room_number in room_numbers %} {% if loop.index == 10 %} <span class="capturedRM" data-room-number="306a">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM305b" class="305b">{% for room_number in room_numbers %} {% if loop.index == 9 %} <span class="capturedRM" data-room-number="305b">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM305a" class="305a">{% for room_number in room_numbers %} {% if loop.index == 8 %} <span class="capturedRM" data-room-number="305a">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM304b" class="304b">{% for room_number in room_numbers %} {% if loop.index == 7 %} <span class="capturedRM" data-room-number="304b">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM304a" class="304a">{% for room_number in room_numbers %} {% if loop.index == 6 %} <span class="capturedRM" data-room-number="304a">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM303b" class="303b">{% for room_number in room_numbers %} {% if loop.index == 5 %} <span class="capturedRM" data-room-number="303b">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM303a" class="303a">{% for room_number in room_numbers %} {% if loop.index == 4 %} <span class="capturedRM" data-room-number="303a">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM302" class="302">{% for room_number in room_numbers %} {% if loop.index == 3 %} <span class="capturedRM" data-room-number="302">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
                 </div>
                 <div class="Room-middle">
                   <div class="Rooms-left">
                     <div class="RM319-320">
                       <div id="RM319" class="RM319">
-                        <p>
-                          {% for room_number in room_numbers %} {% if loop.index == 22 %} <span class="capturedRM" data-room-number="319">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                        </p>
+                        <p>{% for room_number in room_numbers %} {% if loop.index == 22 %} <span class="capturedRM" data-room-number="319">{{ room_number[0] }}</span> {% endif %} {% endfor %}</p>
                       </div>
                       <div id="RM320" class="RM320">
-                        <p>
-                          {% for room_number in room_numbers %} {% if loop.index == 23 %} <span class="capturedRM" data-room-number="320">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                        </p>
+                        <p>{% for room_number in room_numbers %} {% if loop.index == 23 %} <span class="capturedRM" data-room-number="320">{{ room_number[0] }}</span> {% endif %} {% endfor %}</p>
                       </div>
                     </div>
                     <div class="RM-empty">
@@ -162,19 +136,13 @@
                     </div>
                     <div class="RM321-323">
                       <div id="RM321" class="RM321">
-                        <p>
-                          {% for room_number in room_numbers %} {% if loop.index == 24 %} <span class="capturedRM" data-room-number="321">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                        </p>
+                        <p>{% for room_number in room_numbers %} {% if loop.index == 24 %} <span class="capturedRM" data-room-number="321">{{ room_number[0] }}</span> {% endif %} {% endfor %}</p>
                       </div>
                       <div id="RM322" class="RM322">
-                        <p>
-                          {% for room_number in room_numbers %} {% if loop.index == 25 %} <span class="capturedRM" data-room-number="322">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                        </p>
+                        <p>{% for room_number in room_numbers %} {% if loop.index == 25 %} <span class="capturedRM" data-room-number="322">{{ room_number[0] }}</span> {% endif %} {% endfor %}</p>
                       </div>
                       <div id="RM323" class="RM323">
-                        <p>
-                          {% for room_number in room_numbers %} {% if loop.index == 26 %} <span class="capturedRM" data-room-number="323">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                        </p>
+                        <p>{% for room_number in room_numbers %} {% if loop.index == 26 %} <span class="capturedRM" data-room-number="323">{{ room_number[0] }}</span> {% endif %} {% endfor %}</p>
                       </div>
                     </div>
                   </div>
@@ -190,46 +158,26 @@
                       <div class="big-empty1"></div>
                     </div>
                     <div class="RM18">
-                      <div id="RM318" class="RM318">
-                        {% for room_number in room_numbers %} {% if loop.index == 21 %} <span class="capturedRM" data-room-number="318">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                      </div>
+                      <div id="RM318" class="RM318">{% for room_number in room_numbers %} {% if loop.index == 21 %} <span class="capturedRM" data-room-number="318">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
                     </div>
                   </div>
                 </div>
                 <div class="Room310-316">
-                  <div id="RM310" class="RM310">
-                    {% for room_number in room_numbers %} {% if loop.index == 14 %} <span class="capturedRM" data-room-number="310">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM311" class="RM311">
-                    {% for room_number in room_numbers %} {% if loop.index == 15 %} <span class="capturedRM" data-room-number="311">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM312" class="RM312">
-                    {% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="312">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM313" class="RM313">
-                    {% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="313">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>                  
-                  <div id="RM314" class="RM314">
-                    {% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="314">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM315" class="RM315">
-                    {% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="315">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM316" class="RM316">
-                    {% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="316">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
+                  <div id="RM310" class="RM310">{% for room_number in room_numbers %} {% if loop.index == 14 %} <span class="capturedRM" data-room-number="310">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM311" class="RM311">{% for room_number in room_numbers %} {% if loop.index == 15 %} <span class="capturedRM" data-room-number="311">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM312" class="RM312">{% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="312">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM313" class="RM313">{% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="313">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM314" class="RM314">{% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="314">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM315" class="RM315">{% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="315">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM316" class="RM316">{% for room_number in room_numbers %} {% if loop.index == 16 %} <span class="capturedRM" data-room-number="316">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
                 </div>
               </div>
               <div class="Right">
                 <div class="Right-content">
                   <div class="Long-empty-right"></div>
                   <div class="smallEmpty-right"></div>
-                  <div id="RM301" class="RM301">
-                    {% for room_number in room_numbers %} {% if loop.index == 2 %} <span class="capturedRM" data-room-number="301">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
-                  <div id="RM300" class="RM300">
-                    {% for room_number in room_numbers %} {% if loop.index == 1 %} <span class="capturedRM" data-room-number="300">{{ room_number[0] }}</span> {% endif %} {% endfor %}
-                  </div>
+                  <div id="RM301" class="RM301">{% for room_number in room_numbers %} {% if loop.index == 2 %} <span class="capturedRM" data-room-number="301">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
+                  <div id="RM300" class="RM300">{% for room_number in room_numbers %} {% if loop.index == 1 %} <span class="capturedRM" data-room-number="300">{{ room_number[0] }}</span> {% endif %} {% endfor %}</div>
                   <div class="mediumEmpty-right"></div>
                   <div class="rectangle-right"></div>
                 </div>
@@ -261,203 +209,64 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <!-- Your modal content goes here -->
         <h2 class="first-heading" id="displayedRM"></h2>
-        <h2 class="second-heading">COM ENG ROOM</h2>
-        <div class="paragraph-container">
-          <p class="first-paragraph">STATUS: </p>
-          <p class="second-paragraph">LOCATION: THIRD FLOOR</p>
-        </div>
-        <!-- New div structure for the layout -->
-        <div class="columns-container">
-          <div class="left-column">
-            <div class="left-top">Left Top Content</div>
-            <div class="left-bottom">
-              <div class="leftBottom-content">
-                <div class="left-upper">
-                  <div class="computers">
-                    <img 
-                    class="Computer-img" 
-                    src="{{ url_for('static', filename='images/student-rep-rooms-computer.png') }}" 
-                    alt="Computer" 
-                    />
-                    <p>25 Computers Available</p>
-                  </div>
-                  <div class="air-con">
-                    <img 
-                    class="AirCon-img" 
-                    src="{{ url_for('static', filename='images/student-rep-rooms-aircon.png') }}" 
-                    alt="Air Conditioner" 
-                    />
-                    <p>Air-condition room</p>
-                  </div>
-                </div>
-                <div class="left-lower">
-                  <div class="arm-chairs">
-                    <img 
-                    class="Chairs-img" 
-                    src="{{ url_for('static', filename='images/student-rep-rooms-chairs.png') }}" 
-                    alt="Chairs" 
-                    />
-                    <p>35 Armchairs Available</p>
-                  </div>
-                <div class="tables">
-                  <img 
-                    class="Tables-img" 
-                    src="{{ url_for('static', filename='images/student-rep-rooms-tables.png') }}" 
-                    alt="Tables" 
-                    />
-                    <p>Air-condition room</p>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="right-column">Right Column Content</div>
-        </div>
-    
-        <!-- New container for reservations with the same padding as columns-container -->
-        <div class="reservation-container">
-          <span>RESERVE NOW</span>
-        </div>
-        <div class="reservation-details-container">
-          <div class="Reserve-time">
-            <span id="Reservation-txt">RESERVATION TIME</span>
-            <div class="Reservation-Time-content">
-              <div class="Reservation-Time-Date">
-                <span>Date of Reservation:</span>
-                <div class="Reservation-Time-Date-Set">
-                  <div class="Date-Set">
-                    <p>10</p>
-                    <p>January</p>
-                    <P>2024</P>
-                  </div>
-                  <div class="Date-Set-Up-Down">
-                    <img 
-                    class="Date-Up" 
-                    src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
-                    alt="Up" 
-                    />
-                    <img 
-                    class="Date-Down" 
-                    src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
-                    alt="Down" 
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="Reservation-Time-Time">
-                <div class="Time-in">
-                  <span>Time - in:</span>
-                  <div class="Time-in-set">
-                    <div class="TimeIn-Set">
-                      <p>12:30 pm</p>
-                    </div>
-                    <div class="TimeIn-Set-Up-Down">
-                      <img 
-                      class="TimeIn-Up" 
-                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
-                      alt="Up" 
-                      />
-                      <img 
-                      class="TimeIn-Down" 
-                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
-                      alt="Down" 
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="dash">
-                  <span>-</span>
-                </div>
-                <div class="Time-out">
-                  <span>Time - out:</span>
-                  <div class="Time-out-set">
-                    <div class="TimeOut-Set">
-                      <p>01:30 pm</p>
-                    </div>
-                    <div class="TimeOut-Set-Up-Down">
-                      <img 
-                      class="TimeOut-Up" 
-                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
-                      alt="Up" 
-                      />
-                      <img 
-                      class="TimeOut-Down" 
-                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
-                      alt="Down" 
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="Reserve-purpose">
-            <span id="Reserve-PurposeId">RESERVATION PURPOSE</span>
-            <div class="Reservation-purpose-content">
-              <div class="Course">
-                <span>Course:</span>
-                <div class="Enter-Course">
-                  <input type="text" class="Course-Input" id="CourseInput" placeholder="Enter the Course">
-                  <img 
-                      class="Course-Up" 
-                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
-                      alt="Up" 
-                      />
-                </div>
-              </div>
-              <div class="Course-Instructor">
-                <span>Course Instructor:</span>
-                <div class="Enter-Course-Intsructor">
-                  <input type="text" class="Course-Intsructor-Input" id="CourseInstructorInput" placeholder="Enter the Course Instructor">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="check-reset">
-            <p>Reset</p>
-            <button class="Check-reservation-detail">Check Reservation Details</button>
-          </div>
-        </div>
-        <!-- New div with background color below all other divs -->
-        <div class="bgcolor-div"></div>
-      </div>
-    </div> 
-    
-    <div id="room312Modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <!-- Your modal content goes here -->
-        <h2 class="first-heading">RM 312</h2>
-        <h2 class="second-heading">COM ENG ROOM</h2>
-        <div class="paragraph-container">
-          <p class="first-paragraph">STATUS: </p>
-          <p class="second-paragraph">LOCATION: THIRD FLOOR</p>
-        </div>
-        <!-- New div structure for the layout -->
-        <div class="columns-container">
-          <div class="left-column">
-            <div class="left-top">Left Top Content</div>
-            <div class="left-bottom">Left Bottom Content</div>
-          </div>
-          <div class="right-column">Right Column Content</div>
-        </div>
-    
-        <!-- New container for reservations with the same padding as columns-container -->
-        <div class="reservation-container">
-          <span>RESERVE NOW</span>
-        </div>
-        <div class="reservation-details-container">
-          <span>RESERVATION TIME</span>
-          <span>RESERVATION PURPOSE</span>
-        </div>
-        <!-- New div with background color below all other divs -->
-        <div class="bgcolor-div"></div>
-      </div>
-    </div> 
 
+      </div>
+      <div class="reservation-details-container">
+        <div class="Reserve-time">
+          <span id="Reservation-txt">RESERVATION TIME</span>
+          <div class="Reservation-Time-content">
+            <div class="Reservation-Time-Date">
+              <span>Date of Reservation:</span>
+              <div class="Reservation-Time-Date-Set">
+                <div class="Date-Set">
+                  <input type="text" placeholder="Ex. February 8, 2024" id="dateInput" />
+                </div>
+              </div>
+            </div>
+            <div class="Reservation-Time-Time">
+              <div class="Time-in">
+                <span>Time - in:</span>
+                <div class="Time-in-set">
+                  <div class="TimeIn-Set">
+                    <input type="text" placeholder="Ex. 2:00pm - 4:00pm" id="timeInput" />
+                  </div>
+                  <div class="TimeIn-Set-Up-Down">
+                    <img class="TimeIn-Up" src="{{ url_for('static', filename='images/student-rep-up.png') }}" alt="Up" />
+                    <img class="TimeIn-Down" src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" alt="Down" />
+                  </div>
+                </div>
+              </div>
+              <div class="Time-out"></div>
+            </div>
+          </div>
+        </div>
+        <div class="Reserve-purpose">
+          <span id="Reserve-PurposeId">RESERVATION PURPOSE</span>
+          <div class="Reservation-purpose-content">
+            <div class="Course">
+              <span>Course:</span>
+              <div class="Enter-Course">
+                <input type="text" class="Course-Input" id="CourseInput" placeholder="Enter the Course" />
+                <img class="Course-Up" src="{{ url_for('static', filename='images/student-rep-up.png') }}" alt="Up" />
+              </div>
+            </div>
+            <div class="Course-Instructor">
+              <span>Course Instructor:</span>
+              <div class="Enter-Course-Intsructor">
+                <input type="text" class="Course-Intsructor-Input" id="CourseInstructorInput" placeholder="Enter the Course Instructor" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="check-reset">
+          <p>Reset</p>
+          <button class="Check-reservation-detail" onclick="submitReservation()">Check Reservation Details</button>
+        </div>
+      </div>
+      <!-- New div with background color below all other divs -->
+      <div class="bgcolor-div"></div>
     </div>
-    
-  
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="{{ url_for('static', filename='student-rep/student-rep-home-rooms.js') }}"></script>
   </body>
