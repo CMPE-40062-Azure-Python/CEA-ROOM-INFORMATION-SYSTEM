@@ -134,10 +134,12 @@ ContactUs.addEventListener("click", function () {
     if (!isContactContentVisible) {
         ContactContent.style.display = "block";
         UpdatesContainer.style.display = "none";
+        ProfileContent.style.display = "none";
     }
 
     contactUsClicked = true;
     homelinkClicked = false;
+    ProfileClicked = false;
 
     ContactUs.style.borderBottom = '2px solid #DBA729';
     ContactUs.style.color = '#DBA729';
@@ -148,27 +150,61 @@ ContactUs.addEventListener("click", function () {
     homeIcon.src = normalIconHome.src;
 });
 
-// // Profile Toggle
-// const Profile =  document.querySelector('.Profile-Icon');
-// const ProfileContent = document.querySelector('.Profile-content');
 
-// Profile.addEventListener("click", function () {
-//     const isProfileContentVisible = window.getComputedStyle(ProfileContent).display !== "none";
+//Profile - Hover
+const Profile = document.querySelector('.profile-container');
+const ProfileIcon = document.querySelector('.Profile-Icon');
 
-//     if (!isProfileContentVisible) {
-//         ProfileContent.style.display = "block";
-//         UpdatesContainer.style.display = "none";
-//     }
+//Preload Images
+const yellowIconProfile = new Image();
+yellowIconProfile.src = "/static/images/student-rep-profile-yellow-icon.png";
 
-//     homelinkClicked = false;
+const normalIconProfile = new Image();
+normalIconProfile.src = "/static/images/student-rep-profile.png";
 
-//     homelink.style.borderBottom = '2px solid transparent';
-//     homelink.style.color =  '#810403';
-//     homeIcon.src = normalIconHome.src;
-// });
+let ProfileClicked = false;
+
+Profile.style.color = '#810403';
+
+Profile.addEventListener("mouseover", function () {
+    if (!ProfileClicked || homelinkClicked) {
+        Profile.style.color = '#DBA729';
+       ProfileIcon.src = yellowIconProfile.src;
+    }
+});
+
+Profile.addEventListener("mouseout", function () {
+    if (!ProfileClicked || homelinkClicked) {
+        Profile.style.color = '#810403';
+        ProfileIcon.src = contactUsClicked ? yellowIconProfile.src : normalIconProfile.src;
+    }
+});
 
 
-// Back To Home - From Contact Page
+// Profile Toggle
+const ProfileContent = document.querySelector('.profile-CONTENT');
+
+Profile.addEventListener("click", function () {
+    const isProfileContentVisible = window.getComputedStyle(ProfileContent).display !== "none";
+
+    if (!isProfileContentVisible) {
+        ProfileContent.style.display = "block";
+        UpdatesContainer.style.display = "none";
+        ContactContent.style.display = "none";
+
+    }
+
+    ProfileClicked = true;
+    homelinkClicked = false;
+    contactUsClicked = false;
+    ProfileIcon.src = normalIconProfile.src;
+
+    homelink.style.borderBottom = '2px solid transparent';
+    homelink.style.color =  '#810403';
+    homeIcon.src = normalIconHome.src;
+});
+
+// Back To Home
 
 homelink.addEventListener("click", function () {
     const isHomeContentVisible = window.getComputedStyle(UpdatesContainer).display !== "none";
@@ -176,15 +212,18 @@ homelink.addEventListener("click", function () {
     if (!isHomeContentVisible) {
         UpdatesContainer.style.display = "block";
         ContactContent.style.display = "none";
+        ProfileContent.style.display = "none";
     }
 
     
     homelinkClicked = true;
     contactUsClicked = false;
+    ProfileClicked = false;
 
     ContactUs.style.borderBottom = '2px solid transparent';
     ContactUs.style.color = '#810403';
     ContactUsIcon.src = normalIconContactUs.src;
+    ProfileIcon.src = normalIconProfile.src;
 
     homelink.style.borderBottom = '2px solid #DBA729';
     homelink.style.color =  '#DBA729';
@@ -207,6 +246,7 @@ homelink.addEventListener("mouseout", function () {
         homeIcon.src = normalIconHome.src;
     }
 });
+
 
 
 //Menu - hover
@@ -323,9 +363,9 @@ ReserveBttn.addEventListener("mouseout", function () {
     ReserveBttn.style.color = '#810403';
 });
 
-function handleProfileButtonClick() {
-    window.location.href = '/student-rep/profile';
-}
+// function handleProfileButtonClick() {
+//     window.location.href = '/student-rep/profile';
+// }
 
 function handleRoomsButtonClick() {
     window.location.href = '/student-rep/home/rooms';
