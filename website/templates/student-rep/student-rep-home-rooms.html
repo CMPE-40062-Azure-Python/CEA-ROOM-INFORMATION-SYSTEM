@@ -326,10 +326,8 @@
                 <span>Date of Reservation:</span>
                 <div class="Reservation-Time-Date-Set">
                   <div class="Date-Set">
-                    <p>10</p>
-                    <p>January</p>
-                    <P>2024</P>
-                  </div>
+                    <input type="text" placeholder="Ex. February 8, 2024" id="dateInput" />
+                </div>
                   <div class="Date-Set-Up-Down">
                     <img 
                     class="Date-Up" 
@@ -349,8 +347,8 @@
                   <span>Time - in:</span>
                   <div class="Time-in-set">
                     <div class="TimeIn-Set">
-                      <p>12:30 pm</p>
-                    </div>
+                      <input type="text" placeholder="Ex. 2:00pm" id="timeIn" />
+                  </div>
                     <div class="TimeIn-Set-Up-Down">
                       <img 
                       class="TimeIn-Up" 
@@ -372,7 +370,7 @@
                   <span>Time - out:</span>
                   <div class="Time-out-set">
                     <div class="TimeOut-Set">
-                      <p>01:30 pm</p>
+                      <input type="text" placeholder="Ex. 4:00pm" id="timeOut" />
                     </div>
                     <div class="TimeOut-Set-Up-Down">
                       <img 
@@ -415,7 +413,7 @@
           </div>
           <div class="check-reset">
             <p>Reset</p>
-            <button class="Check-reservation-detail">Check Reservation Details</button>
+            <button class="Check-reservation-detail" onclick="submitReservation()">Check Reservation Details</button>
           </div>
         </div>
         <!-- New div with background color below all other divs -->
