@@ -265,3 +265,182 @@ document.querySelectorAll('.capturedRM').forEach(function (element) {
         handleRoomClick(roomNumber);
     });
 });
+
+// Date Toggle
+
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function updateDate(offset) {
+    const dayElement = document.getElementById('day');
+    const monthElement = document.getElementById('month');
+    const yearElement = document.getElementById('year');
+
+    // Convert month name to month index
+    const monthIndex = months.indexOf(monthElement.textContent);
+
+    const currentDate = new Date(yearElement.textContent, monthIndex, dayElement.textContent);
+    
+    currentDate.setDate(currentDate.getDate() + offset);
+
+    dayElement.textContent = currentDate.getDate().toString();
+    monthElement.textContent = months[currentDate.getMonth()];
+    yearElement.textContent = currentDate.getFullYear().toString();
+}
+
+// Function to update the date to the next day
+function updateNextDate() {
+    updateDate(1);
+}
+
+// Function to update the date to the previous day
+function updatePreviousDate() {
+    updateDate(-1);
+}
+
+function setInitialDate() {
+    var currentDate = new Date();
+    document.getElementById('day').textContent = currentDate.getDate().toString();
+    document.getElementById('month').textContent = months[currentDate.getMonth()];
+    document.getElementById('year').textContent = currentDate.getFullYear().toString();
+}
+
+// Initial Date
+setInitialDate();
+
+// Event listeners for the Date-Up and Date-Down
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.Date-Up').addEventListener('click', function () {
+        updatePreviousDate();
+    });
+
+    document.querySelector('.Date-Down').addEventListener('click', function () {
+        updateNextDate();
+    });
+});
+
+// Function to update the time
+function updateTime(offset) {
+    var hoursElement = document.getElementById('hours');
+    var minutesElement = document.getElementById('minutes');
+    var ampmElement = document.getElementById('ampm');
+
+    // Convert hours and minutes to integers
+    var hours = parseInt(hoursElement.textContent);
+    var minutes = parseInt(minutesElement.textContent);
+
+    // Calculate the total minutes and update based on the offset
+    var totalMinutes = hours * 60 + minutes + offset;
+
+    // Ensure the total minutes stay within the valid range (0 to 1439)
+    totalMinutes = (totalMinutes + 1440) % 1440;
+
+    // Update the hours and minutes
+    hours = Math.floor(totalMinutes / 60);
+    minutes = totalMinutes % 60;
+
+    // Update the AM/PM indicator based on the new hours
+    var isPM = hours >= 12;
+    ampmElement.textContent = isPM ? 'pm' : 'am';
+
+    // Update the hours (12-hour format) with correct AM/PM
+    hours = (hours + 12) % 12;
+    hours = hours === 0 ? 12 : hours;
+
+    // Update the HTML elements with the new time
+    hoursElement.textContent = hours.toString();
+    minutesElement.textContent = (minutes < 10 ? '0' : '') + minutes.toString();
+}
+
+// Function to update the time to the next 30 minutes
+function updateTimeUp() {
+    updateTime(30);
+}
+
+// Function to update the time to the previous 30 minutes
+function updateTimeDown() {
+    updateTime(-30);
+}
+
+// Add event listeners for the TimeIn-Up and TimeIn-Down buttons after the page has loaded
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.TimeIn-Up').addEventListener('click', function () {
+        updateTimeUp();
+    });
+
+    document.querySelector('.TimeIn-Down').addEventListener('click', function () {
+        updateTimeDown();
+    });
+});
+
+
+//TIME OUT
+
+// Function to update the time
+function updateTime(offset) {
+    var hoursElement = document.getElementById('hours-out');
+    var minutesElement = document.getElementById('minutes-out');
+    var ampmElement = document.getElementById('ampm-out');
+
+    // Convert hours and minutes to integers
+    var hours = parseInt(hoursElement.textContent);
+    var minutes = parseInt(minutesElement.textContent);
+
+    // Calculate the total minutes and update based on the offset
+    var totalMinutes = hours * 60 + minutes + offset;
+
+    // Ensure the total minutes stay within the valid range (0 to 1439)
+    totalMinutes = (totalMinutes + 1440) % 1440;
+
+    // Update the hours and minutes
+    hours = Math.floor(totalMinutes / 60);
+    minutes = totalMinutes % 60;
+
+    // Update the AM/PM indicator based on the new hours
+    var isPM = hours >= 12;
+    ampmElement.textContent = isPM ? 'pm' : 'am';
+
+    // Update the hours (12-hour format) with correct AM/PM
+    hours = (hours + 12) % 12;
+    hours = hours === 0 ? 12 : hours;
+
+    // Update the HTML elements with the new time
+    hoursElement.textContent = hours.toString();
+    minutesElement.textContent = (minutes < 10 ? '0' : '') + minutes.toString();
+}
+
+// Function to update the time to the next 30 minutes
+function updateTimeUp() {
+    updateTime(30);
+}
+
+// Function to update the time to the previous 30 minutes
+function updateTimeDown() {
+    updateTime(-30);
+}
+
+// Add event listeners for the TimeIn-Up and TimeIn-Down buttons after the page has loaded
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.TimeOut-Up').addEventListener('click', function () {
+        updateTimeUp();
+    });
+
+    document.querySelector('.TimeOut-Down').addEventListener('click', function () {
+        updateTimeDown();
+    });
+});
+
+//Reservation Details
+const reservationDetails = document.querySelector('.Check-reservation-detail');
+const modalContainer = document.querySelector('.modal-reservation-container');
+
+function openPopup() {
+    modalContainer.style.display = 'flex';
+    document.querySelector('.modal-reservation').style.display = 'block';
+  }
+
+function closePopup() {
+    modalContainer.style.display = 'none';
+    document.querySelector('.modal-reservation').style.display = 'none';
+  }
+
+  reservationDetails.addEventListener('click', openPopup);

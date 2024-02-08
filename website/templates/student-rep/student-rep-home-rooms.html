@@ -326,19 +326,19 @@
                 <span>Date of Reservation:</span>
                 <div class="Reservation-Time-Date-Set">
                   <div class="Date-Set">
-                    <p>10</p>
-                    <p>January</p>
-                    <P>2024</P>
+                    <p id="day">10</p>
+                    <p id="month">January</p>
+                    <P id="year">2024</P>
                   </div>
                   <div class="Date-Set-Up-Down">
                     <img 
                     class="Date-Up" 
-                    src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-up-gray.png') }}" 
                     alt="Up" 
                     />
                     <img 
                     class="Date-Down" 
-                    src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                    src="{{ url_for('static', filename='images/student-rep-rooms-down-red.png') }}" 
                     alt="Down" 
                     />
                   </div>
@@ -349,17 +349,17 @@
                   <span>Time - in:</span>
                   <div class="Time-in-set">
                     <div class="TimeIn-Set">
-                      <p>12:30 pm</p>
+                      <p id="hours">12</p><p id="colon">:</p><p id="minutes">30</p><p id="ampm">pm</p>
                     </div>
                     <div class="TimeIn-Set-Up-Down">
                       <img 
                       class="TimeIn-Up" 
-                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                      src="{{ url_for('static', filename='images/student-rep-rooms-up-gray.png') }}" 
                       alt="Up" 
                       />
                       <img 
                       class="TimeIn-Down" 
-                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                      src="{{ url_for('static', filename='images/student-rep-rooms-down-red.png') }}" 
                       alt="Down" 
                       />
                     </div>
@@ -372,17 +372,17 @@
                   <span>Time - out:</span>
                   <div class="Time-out-set">
                     <div class="TimeOut-Set">
-                      <p>01:30 pm</p>
+                      <p id="hours-out">12</p><p id="colon-out">:</p><p id="minutes-out">30</p><p id="ampm-out">pm</p>
                     </div>
                     <div class="TimeOut-Set-Up-Down">
                       <img 
                       class="TimeOut-Up" 
-                      src="{{ url_for('static', filename='images/student-rep-up.png') }}" 
+                      src="{{ url_for('static', filename='images/student-rep-rooms-up-gray.png') }}" 
                       alt="Up" 
                       />
                       <img 
                       class="TimeOut-Down" 
-                      src="{{ url_for('static', filename='images/student-rep-dropdown.png') }}" 
+                      src="{{ url_for('static', filename='images/student-rep-rooms-down-red.png') }}" 
                       alt="Down" 
                       />
                     </div>
@@ -418,6 +418,17 @@
             <button class="Check-reservation-detail">Check Reservation Details</button>
           </div>
         </div>
+
+        <!--Modal For Reservation Details-->
+       <div class="modal-reservation-container">
+        <div class="modal-reservation" id="reservationModal">
+          <div class="modal-reservation-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Reservation Details</h2>
+            <div id="modalContent"></div>
+          </div>
+        </div>
+       </div>
         <!-- New div with background color below all other divs -->
         <div class="bgcolor-div"></div>
       </div>
