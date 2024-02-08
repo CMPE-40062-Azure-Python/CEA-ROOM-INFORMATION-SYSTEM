@@ -13,7 +13,7 @@
 
 ## Description
 
-The CEA Room Information System is a versatile web-based application designed to streamline the management and accessibility of classroom-related information within the College of Engineering and Architecture (CEA) building at the Polytechnic University of the Philippines.
+The CEA Room Information System is a versatile web-based application designed to streamline the management and accessibility of classroom-related information within the College of Engineering and Architecture (CEA) building at the Polytechnic University of the Philippines (access codebase here: https://github.com/CMPE-40062-Azure-Python/CEA-ROOM-INFORMATION-SYSTEM/)
 
 ### Technologies
 
