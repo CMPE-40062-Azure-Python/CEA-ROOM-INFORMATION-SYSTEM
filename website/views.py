@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for
 import mysql.connector
 
 views = Blueprint('views', __name__)
@@ -182,4 +182,3 @@ def site_map():
 @views.route('/use-cases')
 def use_cases():
     return render_template("use-cases.html")
-
