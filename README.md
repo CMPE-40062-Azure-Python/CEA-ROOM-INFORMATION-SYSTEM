@@ -79,7 +79,7 @@ The CEA Room Information System is a versatile web-based application designed to
   ```
 - You may access codebase here:
   
-https://github.com/CMPE-40062-Azure-Python/CEA-ROOM-INFORMATION-SYSTEM/
+  https://github.com/CMPE-40062-Azure-Python/CEA-ROOM-INFORMATION-SYSTEM/
 
 - If an error occurs, try repeating the steps.
 
